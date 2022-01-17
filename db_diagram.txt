@@ -1,0 +1,53 @@
+//// -- link: https://dbdiagram.io/d
+
+// Creating tables
+Table users as U {
+  id int [pk, increment] // auto-increment
+  username string
+  password string
+}
+
+Table destinations as D {
+  id int [pk, increment]
+  name string
+  description string
+  address_id int
+  places_id int
+}
+
+Table address as A {
+  id int [pk, increment]
+  country string
+  city string
+  street string
+  house_number string
+  postal_code string
+  coordinates_id int
+}
+
+Table coordinates as C {
+  id int [pk, increment]
+  latitude decimal
+  longitude decimal
+}
+
+Table places as P {
+  id int [pk, increment]
+  name string
+  description string
+  address_id int
+  hotels_id int
+}
+
+Table hotels as H {
+  id int [pk, increment]
+  name string
+  rating string
+  price decimal
+  address_id int
+}
+
+Ref : destinations.address_id > address.id
+Ref : address.coordinates_id > coordinates.id
+Ref : destinations.places_id > places.id
+Ref : places.hotels_id > hotels.id
