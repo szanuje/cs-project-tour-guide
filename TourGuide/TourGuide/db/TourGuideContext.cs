@@ -14,7 +14,7 @@ namespace TourGuide.db
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-                    => options.UseInMemoryDatabase($"Data Source={DbPath}");
+                    => options.UseSqlite($"Data Source={DbPath}");
 
         public DbSet<User> Users { get; set; }
     }
