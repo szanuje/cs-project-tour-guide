@@ -26,7 +26,7 @@ namespace TourGuideTests.models
             using (var db = new TourGuideContext())
             {
                 var count = await db.Users.CountAsync();
-                Assert.AreEqual(1, count);
+                Assert.GreaterOrEqual(count, 1);
             }
         }
     }
