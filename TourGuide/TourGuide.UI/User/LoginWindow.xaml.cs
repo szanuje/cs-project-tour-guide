@@ -8,18 +8,18 @@ namespace TourGuideUI
     /// <summary>
     /// Interaction logic for LoginScreen.xaml
     /// </summary>
-    public partial class LoginScreen : Window
+    public partial class LoginWindow : Window
     {
         private UserService userService = new UserService();
 
-        public LoginScreen()
+        public LoginWindow()
         {
             InitializeComponent();
         }
 
         private void NewProfile_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            RegisterScreen registerScreen = new RegisterScreen();
+            RegisterWindow registerScreen = new RegisterWindow();
             registerScreen.Show();
             this.Close();
         }
@@ -28,7 +28,13 @@ namespace TourGuideUI
         {
             var user = userService.LoginUser(username.Text, password.Password);
 
-            Console.WriteLine("");
+            if(user != null)
+            {
+                MainWindow mainWindow = new MainWindow(user);
+                mainWindow.Show();
+
+                this.Close();
+            }
         }
     }
 }

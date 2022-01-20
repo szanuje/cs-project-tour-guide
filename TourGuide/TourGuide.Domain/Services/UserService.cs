@@ -24,7 +24,7 @@ namespace TourGuide.service
                 return db.Users
                     .Where(u => u.Username == username
                         && u.Password == password)
-                    .First();
+                    .FirstOrDefault();
             }
         }
     }

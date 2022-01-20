@@ -18,11 +18,11 @@ namespace TourGuideUI
     /// <summary>
     /// Interaction logic for RegisterScreen.xaml
     /// </summary>
-    public partial class RegisterScreen : Window
+    public partial class RegisterWindow : Window
     {
         private UserService userService = new UserService();
 
-        public RegisterScreen()
+        public RegisterWindow()
         {
             InitializeComponent();
         }
@@ -41,7 +41,7 @@ namespace TourGuideUI
         {
             userService.AddNewUser(username.Text, password.Password);
 
-            LoginScreen loginScreen = new LoginScreen();
+            LoginWindow loginScreen = new LoginWindow();
             loginScreen.Show();
             this.Close();
         }

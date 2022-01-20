@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TourGuide;
+using TourGuide.models;
 
 namespace TourGuideUI
 {
@@ -21,9 +22,15 @@ namespace TourGuideUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public User user;   
+
+        public MainWindow(User user)
         {
             InitializeComponent();
+
+            this.user = user;
+
+            this.username.Content = user.Username;
         }
     }
 }

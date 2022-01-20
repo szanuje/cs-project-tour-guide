@@ -6,5 +6,8 @@
         xmlns:local="clr-namespace:TourGuideUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid/>
+    <StackPanel>
+        <Label Content="Username" FontSize="30"/>
+        <Label Name="username" Content="" FontSize="30"/>
+    </StackPanel>
 </Window>
