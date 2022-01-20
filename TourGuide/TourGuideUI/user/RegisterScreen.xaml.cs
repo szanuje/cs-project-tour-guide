@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TourGuide.service;
 
 namespace TourGuideUI
 {
@@ -19,6 +20,8 @@ namespace TourGuideUI
     /// </summary>
     public partial class RegisterScreen : Window
     {
+        private UserService userService = new UserService();
+
         public RegisterScreen()
         {
             InitializeComponent();
@@ -36,6 +39,8 @@ namespace TourGuideUI
 
         private void userSubmit_Click(object sender, RoutedEventArgs e)
         {
+            userService.AddNewUser(username.Text, password.Password);
+
             LoginScreen loginScreen = new LoginScreen();
             loginScreen.Show();
             this.Close();

@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using TourGuide.service;
 
 namespace TourGuideUI
 {
@@ -19,6 +10,8 @@ namespace TourGuideUI
     /// </summary>
     public partial class LoginScreen : Window
     {
+        private UserService userService = new UserService();
+
         public LoginScreen()
         {
             InitializeComponent();
@@ -29,6 +22,13 @@ namespace TourGuideUI
             RegisterScreen registerScreen = new RegisterScreen();
             registerScreen.Show();
             this.Close();
+        }
+
+        private void userSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            var user = userService.LoginUser(username.Text, password.Password);
+
+            Console.WriteLine("");
         }
     }
 }

@@ -14,7 +14,7 @@ namespace TourGuide.db
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-                    => options.UseSqlite($"Data Source={DbPath}");
+            => options.UseSqlite(connectionString: $"Data Source={DbPath}");
 
         public DbSet<User> Users { get; set; }
     }

@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourGuide", "TourGuide\TourGuide.csproj", "{9F75E581-0DEE-4A8F-AC32-C514204FF581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourGuideTests", "TourGuideTests\TourGuideTests.csproj", "{68F22007-3898-4CDF-8922-3684AD0BF70E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourGuideTests", "TourGuideTests\TourGuideTests.csproj", "{68F22007-3898-4CDF-8922-3684AD0BF70E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourGuideUI", "TourGuideUI\TourGuideUI.csproj", "{3A5E5354-F4F8-4D4C-A008-46B002D10C6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{68F22007-3898-4CDF-8922-3684AD0BF70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68F22007-3898-4CDF-8922-3684AD0BF70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68F22007-3898-4CDF-8922-3684AD0BF70E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A5E5354-F4F8-4D4C-A008-46B002D10C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5E5354-F4F8-4D4C-A008-46B002D10C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5E5354-F4F8-4D4C-A008-46B002D10C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5E5354-F4F8-4D4C-A008-46B002D10C6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

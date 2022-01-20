@@ -10,7 +10,7 @@ using TourGuide.db;
 namespace TourGuide.Migrations
 {
     [DbContext(typeof(TourGuideContext))]
-    [Migration("20220119100821_InitialCreate")]
+    [Migration("20220120175106_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,17 +20,20 @@ namespace TourGuide.Migrations
 
             modelBuilder.Entity("TourGuide.models.User", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Username")
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.ToTable("Users");
+                    b.HasKey("Username");
+
+                    b.ToTable("users");
                 });
 #pragma warning restore 612, 618
         }

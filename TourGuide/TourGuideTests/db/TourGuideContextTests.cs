@@ -14,7 +14,7 @@ namespace TourGuideTests.models
         {
             using (var db = new TourGuideContext())
             {
-                var user = new User() { Email = "test@sample.com" };
+                var user = new User() { Username = "Test" };
                 db.Add(user);
                 db.SaveChanges();
             }
