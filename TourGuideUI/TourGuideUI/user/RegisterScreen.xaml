@@ -1,0 +1,22 @@
+﻿<Window x:Class="TourGuideUI.RegisterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TourGuideUI"
+        mc:Ignorable="d"
+        Title="Register"  Height="450" Width="350" FontSize="14" Background="#E0E0E0">
+    <Border Background="#FFFFFF" CornerRadius="4" Margin="30">
+        <StackPanel Margin="20">
+            <Label Content="Create new user" Foreground="Black" FontSize="25" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <Separator/>
+            <Label Content="Username" Foreground="Black"/>
+            <TextBox Name="username" Background="#FFFFFF" TextChanged="passwordConfirm_PasswordChanged"/>
+            <Label Content="Password" Foreground="Black"/>
+            <PasswordBox Name="password" Background="#FFFFFF" PasswordChanged="passwordConfirm_PasswordChanged"/>
+            <Label Content="Confirm password" Foreground="Black"/>
+            <PasswordBox Name="passwordConfirm" Background="#FFFFFF" PasswordChanged="passwordConfirm_PasswordChanged"/>
+            <Button Name="userSubmit" Content="Create" Background="#E0E0E0" BorderBrush="#E0E0E0" Foreground="White" Margin="20 30" Click="userSubmit_Click"/>
+        </StackPanel>
+    </Border>
+</Window>

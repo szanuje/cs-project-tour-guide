@@ -10,20 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TourGuide;
 
 namespace TourGuideUI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginScreen.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginScreen : Window
     {
-        public MainWindow()
+        public LoginScreen()
         {
             InitializeComponent();
+        }
+
+        private void NewProfile_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            RegisterScreen registerScreen = new RegisterScreen();
+            registerScreen.Show();
+            this.Close();
         }
     }
 }
