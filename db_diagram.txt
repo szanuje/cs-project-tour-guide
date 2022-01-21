@@ -11,24 +11,8 @@ Table destinations as D {
   id int [pk, increment]
   name string
   description string
-  address_id int
   places_id int
-}
-
-Table address as A {
-  id int [pk, increment]
-  country string
-  city string
-  street string
-  house_number string
-  postal_code string
-  coordinates_id int
-}
-
-Table coordinates as C {
-  id int [pk, increment]
-  latitude decimal
-  longitude decimal
+  hotels_id int
 }
 
 Table places as P {
@@ -36,7 +20,6 @@ Table places as P {
   name string
   description string
   address_id int
-  hotels_id int
 }
 
 Table hotels as H {
@@ -47,7 +30,20 @@ Table hotels as H {
   address_id int
 }
 
-Ref : destinations.address_id > address.id
-Ref : address.coordinates_id > coordinates.id
+Table addresses as A {
+  id int [pk, increment]
+  country string
+  city string
+  street string
+  house_number string
+  postal_code string
+  lat decimal
+  lng decimal
+}
+
+
 Ref : destinations.places_id > places.id
-Ref : places.hotels_id > hotels.id
+Ref : destinations.hotels_id > hotels.id
+
+Ref : places.address_id > addresses.id
+Ref : hotels.address_id > addresses.id

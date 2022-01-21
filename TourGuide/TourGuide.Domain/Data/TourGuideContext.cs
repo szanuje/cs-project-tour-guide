@@ -35,6 +35,7 @@ namespace TourGuide.Domain.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<Destination> Destinations { get; set; }
-        public DbSet<Place> Countries { get; set; }
+        public DbSet<Place> Places { get; set; }
+        public DbSet<Hotel> Hotels { get; set; }
     }
 }
