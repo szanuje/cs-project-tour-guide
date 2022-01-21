@@ -11,6 +11,8 @@ namespace TourGuide.Domain.Data
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);
             DbPath = Path.Join(path, "tourguide.db");
+
+            this.Database.Migrate();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
