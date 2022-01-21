@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TourGuide.models
+namespace TourGuide.Domain.Data.Models
 {
     [Table("users")]
     public class User

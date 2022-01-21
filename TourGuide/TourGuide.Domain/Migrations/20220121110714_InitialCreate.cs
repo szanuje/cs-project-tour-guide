@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace TourGuide.Migrations
+namespace TourGuide.Domain.Migrations
 {
     public partial class InitialCreate : Migration
     {
@@ -13,8 +13,7 @@ namespace TourGuide.Migrations
                 columns: table => new
                 {
                     Username = table.Column<string>(type: "TEXT", nullable: false),
-                    Password = table.Column<string>(type: "TEXT", nullable: false),
-                    Name = table.Column<string>(type: "TEXT", nullable: false)
+                    Password = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

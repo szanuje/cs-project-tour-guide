@@ -1,7 +1,7 @@
-﻿using TourGuide.db;
-using TourGuide.models;
+﻿using TourGuide.Domain.Data;
+using TourGuide.Domain.Data.Models;
 
-namespace TourGuide.service
+namespace TourGuide.Domain.Services
 {
     public class UserService
     {

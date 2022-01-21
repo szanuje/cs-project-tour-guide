@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NUnit.Framework;
 using System.Threading.Tasks;
-using TourGuide.db;
-using TourGuide.models;
+using TourGuide.Domain.Data;
+using TourGuide.Domain.Data.Models;
 
 namespace TourGuideTests.models
 {

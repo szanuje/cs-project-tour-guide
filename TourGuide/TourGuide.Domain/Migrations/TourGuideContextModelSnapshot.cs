@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TourGuide.db;
+using TourGuide.Domain.Data;
 
 #nullable disable
 
-namespace TourGuide.Migrations
+namespace TourGuide.Domain.Migrations
 {
     [DbContext(typeof(TourGuideContext))]
     partial class TourGuideContextModelSnapshot : ModelSnapshot
@@ -16,7 +16,7 @@ namespace TourGuide.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.1");
 
-            modelBuilder.Entity("TourGuide.models.User", b =>
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.User", b =>
                 {
                     b.Property<string>("Username")
                         .HasColumnType("TEXT");

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TourGuide.models;
+using TourGuide.Domain.Data.Models;
 
-namespace TourGuide.db
+namespace TourGuide.Domain.Data
 {
     public class TourGuideContext : DbContext
     {

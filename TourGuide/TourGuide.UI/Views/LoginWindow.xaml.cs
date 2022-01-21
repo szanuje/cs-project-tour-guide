@@ -1,9 +1,8 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
-using TourGuide.service;
+using TourGuide.Domain.Services;
 
-namespace TourGuideUI
+namespace TourGuide.UI
 {
     /// <summary>
     /// Interaction logic for LoginScreen.xaml

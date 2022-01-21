@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TourGuide.db;
+using TourGuide.Domain.Data;
 
 #nullable disable
 
-namespace TourGuide.Migrations
+namespace TourGuide.Domain.Migrations
 {
     [DbContext(typeof(TourGuideContext))]
-    [Migration("20220120175106_InitialCreate")]
+    [Migration("20220121110714_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -18,13 +18,9 @@ namespace TourGuide.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.1");
 
-            modelBuilder.Entity("TourGuide.models.User", b =>
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.User", b =>
                 {
                     b.Property<string>("Username")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
