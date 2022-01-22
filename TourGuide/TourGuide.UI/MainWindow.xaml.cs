@@ -1,5 +1,7 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using TourGuide.Domain.Data.Models;
+using TourGuide.Domain.Services;
 
 namespace TourGuide.UI
 {
@@ -8,7 +10,8 @@ namespace TourGuide.UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public User user;   
+        public User user;
+        public DestinationService destinationService;
 
         public MainWindow(User user)
         {
@@ -16,6 +19,12 @@ namespace TourGuide.UI
 
             this.user = user;
             this.navBar.user = user;
+
+            this.destinationService = new DestinationService();
+
+            List<Destination> dests = destinationService.GetAllDestinations();
+
+            this.DestinationList.ItemsSource = dests;
         }
     }
 }

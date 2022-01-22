@@ -25,7 +25,16 @@
                     <StackPanel>
                         <Label Content="1. Explore" FontSize="30"/>
                         <Label Content="Destinations" FontSize="24"/>
+                        <Label Name="destinationLabel" FontSize="18"/>
                     </StackPanel>
+                    <ListView Name="DestinationList" ItemsSource="{Binding Destinations}" Margin="10,90,920,360">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Description" Width="200"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </Grid>
             </Border>
         </Grid>

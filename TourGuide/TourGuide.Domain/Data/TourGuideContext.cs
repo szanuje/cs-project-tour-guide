@@ -14,6 +14,7 @@ namespace TourGuide.Domain.Data
 
             this.Database.Migrate();
             this.EnsureAdminCreated();
+            this.AddDestinations();
         }
 
         private void EnsureAdminCreated()
@@ -29,6 +30,19 @@ namespace TourGuide.Domain.Data
                 this.SaveChanges();
             }
         }
+        private void AddDestinations()
+        {
+            var destination = this.Destinations
+                .Where(d => d.Name == "Polska")
+                .FirstOrDefault();
+
+            if (destination == null)
+            {
+                var newDestination = new Destination() { Name = "Polska", Description = "Jak w lesie" };
+                this.Add(newDestination);
+                this.SaveChanges();
+            }
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite(connectionString: $"Data Source={DbPath}");
@@ -37,5 +51,6 @@ namespace TourGuide.Domain.Data
         public DbSet<Destination> Destinations { get; set; }
         public DbSet<Place> Places { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
+        public DbSet<Address> Addresses { get; set; }
     }
 }

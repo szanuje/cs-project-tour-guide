@@ -15,5 +15,8 @@ namespace TourGuide.Domain.Data.Models
         [ForeignKey("DestinationFK")]
         public Destination Destination { get; set; }
         public int DestinationFK { get; set; }
+        [ForeignKey("AddressFK")]
+        public Address Address { get; set; }
+        public int AddressFK { get; set; }
     }
 }
