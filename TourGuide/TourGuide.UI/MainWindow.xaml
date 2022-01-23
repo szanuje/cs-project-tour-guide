@@ -24,14 +24,34 @@
                 <Grid Background="#FFFFFF">
                     <StackPanel>
                         <Label Content="1. Explore" FontSize="30"/>
-                        <Label Content="Destinations" FontSize="24"/>
-                        <Label Name="destinationLabel" FontSize="18"/>
+                        <Label x:Name="Designations" Content="Destinations" FontSize="24" Width="140" HorizontalAlignment="Left"/>
+                        <Label x:Name="Hotels" Content="Hotels" FontSize="24" FontWeight="Normal" Width="108" RenderTransformOrigin="0.47,0.542" HorizontalAlignment="Right" Margin="0,0,324,37"/>
+                        <Label x:Name="Places" Content="Places" FontSize="24" HorizontalAlignment="Left" Margin="4,191,0,0" FontWeight="Normal" Width="107" RenderTransformOrigin="0.47,0.542" VerticalAlignment="Center"/>
                     </StackPanel>
-                    <ListView Name="DestinationList" ItemsSource="{Binding Destinations}" Margin="10,90,920,360">
+                    <ListView Name="DestinationList" ItemsSource="{Binding Destinations}" Margin="10,90,920,360" SelectionChanged="DestinationList_SelectionChanged_1">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" Width="150"/>
                                 <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Description" Width="200"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <StackPanel>
+                    </StackPanel>
+                    <ListView Name="PlacesList" ItemsSource="{Binding Places}" Margin="10,405,920,44" SelectionChanged="PlacesList_SelectionChanged">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Description" Width="200"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <ListView Name="HotelsList" ItemsSource="{Binding Hotels}" Margin="672,137,10,58" SelectionChanged="PlacesList_SelectionChanged">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Rating}" Header="Rating" Width="200"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Path=Price}" Header="Price" Width="200"/>
                             </GridView>
                         </ListView.View>
                     </ListView>

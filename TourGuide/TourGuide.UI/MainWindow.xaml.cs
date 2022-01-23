@@ -21,10 +21,25 @@ namespace TourGuide.UI
             this.navBar.user = user;
 
             this.destinationService = new DestinationService();
-
             List<Destination> dests = destinationService.GetAllDestinations();
 
             this.DestinationList.ItemsSource = dests;
+        }
+
+        private void DestinationList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+        }
+
+        private void DestinationList_SelectionChanged_1(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            System.Console.WriteLine("kupa");
+            Destination selectedDest = (Destination)(e.AddedItems[0]);
+            System.Console.WriteLine(e);
+            System.Console.WriteLine(sender);
+        }
+
+        private void PlacesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
         }
     }
 }

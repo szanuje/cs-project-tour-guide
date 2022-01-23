@@ -39,9 +39,35 @@ namespace TourGuide.Domain.Data
             if (destination == null)
             {
                 var newDestination = new Destination() { Name = "Polska", Description = "Jak w lesie" };
+                var address = new Address() { City = "Krakow", Country = "Polska", HouseNumber = 5, PostalCode = 30300, Street = "Smoleńska" };
+                var place = new Place() { Name = "Mazury", Description = "Jeziorka", Destination = newDestination, DestinationFK = newDestination.Id, Address = address, AddressFK = address.Id };
+                newDestination.Places.Add(place);
                 this.Add(newDestination);
                 this.SaveChanges();
             }
+
+            var destinationTest = this.Destinations
+            .Where(d => d.Name == "Austria7")
+            .FirstOrDefault();
+
+            if (destinationTest == null)
+            {
+                var newDestination = new Destination() { Name = "Austria7", Description = "Jak w lesiev5" };
+                var address = new Address() { City = "Ebe ebe", Country = "place", HouseNumber = 5, PostalCode = 30300, Street = "OrbanEz" };
+                var place = new Place() { Name = "Mazury", Description = "Jeziorka" ,Destination = newDestination ,Address = address };
+                this.Add(address);
+                this.Add(newDestination);
+                this.Add(place);
+                this.SaveChanges();
+                newDestination.Places.Add(place);
+
+                this.Add(newDestination);
+
+                this.SaveChanges();
+
+          
+            }
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
