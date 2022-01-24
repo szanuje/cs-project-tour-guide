@@ -60,7 +60,7 @@ namespace TourGuide.Domain.Migrations
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.BaseLocation", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("LocationId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -75,7 +75,7 @@ namespace TourGuide.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("LocationId");
 
                     b.ToTable("BaseLocation");
 
@@ -99,30 +99,6 @@ namespace TourGuide.Domain.Migrations
                     b.HasKey("DestinationId");
 
                     b.ToTable("Destinations");
-                });
-
-            modelBuilder.Entity("TourGuide.Domain.Data.Models.Place", b =>
-                {
-                    b.Property<int>("PostId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("DestinationFK")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("PostId");
-
-                    b.HasIndex("DestinationFK");
-
-                    b.ToTable("Places");
                 });
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.User", b =>
@@ -153,7 +129,22 @@ namespace TourGuide.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.HasIndex("DestinationFK");
+
                     b.HasDiscriminator().HasValue("Hotel");
+                });
+
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.Place", b =>
+                {
+                    b.HasBaseType("TourGuide.Domain.Data.Models.BaseLocation");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("DestinationFK");
+
+                    b.HasDiscriminator().HasValue("Place");
                 });
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.Address", b =>
@@ -165,6 +156,17 @@ namespace TourGuide.Domain.Migrations
                         .IsRequired();
 
                     b.Navigation("BaseLocation");
+                });
+
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.Hotel", b =>
+                {
+                    b.HasOne("TourGuide.Domain.Data.Models.Destination", "Destination")
+                        .WithMany("Hotels")
+                        .HasForeignKey("DestinationFK")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Destination");
                 });
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.Place", b =>
@@ -186,6 +188,8 @@ namespace TourGuide.Domain.Migrations
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.Destination", b =>
                 {
+                    b.Navigation("Hotels");
+
                     b.Navigation("Places");
                 });
 #pragma warning restore 612, 618

@@ -6,10 +6,11 @@ namespace TourGuide.Domain.Data.Models
     public abstract class BaseLocation
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int LocationId { get; set; }
         public string Name { get; set; }
         public int DestinationFK { get; set; }
+        [ForeignKey("DestinationFK")]
+        public Destination Destination { get; set; }
         public Address Address { get; set; }
     }
 }

@@ -41,8 +41,20 @@ namespace TourGuideTests.models
                 {
                     Name = "333333",
                     Description = "Kraj o wybitnych walorach turystycznych",
-                    Places = new List<Place> { new Place { Name = "Tatrzański Park Narodowy",
-                        Description = "Przepiękny park narodowy o wielkości 200 kilometrów kwadratowych", } }
+                    Places = new List<Place> { 
+                        new Place { 
+                            Name = "Tatrzański Park Narodowy",
+                            Description = "Przepiękny park narodowy o wielkości 200 kilometrów kwadratowych", 
+                            Address = new Address 
+                            {
+                                City = "Zakopane", 
+                                Country = "Polska", 
+                                HouseNumber = 1, 
+                                PostalCode = "34-500", 
+                                Street = "Kuźnice"
+                            }
+                        } 
+                    }
                 };
 
                 db.Add(destination);
@@ -55,32 +67,13 @@ namespace TourGuideTests.models
         {
             using (var db = new TourGuideContext())
             {
-                var destinatinon = db.Destinations
+                var destinations = db.Destinations
                     .ToList();
 
-                if (destinatinon == null)
+                if (destinations == null)
                 {
 
                 }
-
-
-                /*
-                var dest = (from d in db.Destinations
-                            select new Destination
-                            {
-                                Name=d.Name,
-                                Description=d.Description,
-                                Places = db.Places.Where(p => 
-                                    p.DestinationId == d.DestinationId).ToList()
-                            }).ToList();
-
-                foreach (var d in dest)
-                {
-                    if(d == null)
-                    {
-
-                    }
-                }*/
             }
         }
     }

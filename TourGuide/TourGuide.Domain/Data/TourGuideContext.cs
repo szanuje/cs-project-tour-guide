@@ -16,8 +16,8 @@ namespace TourGuide.Domain.Data
             this.Database.Migrate();
             this.EnsureAdminCreated();
 
-            //var data = new DataInit();
-            //this.AddDestinations();
+            var data = new DataInit();
+            data.AddDestinations(this);
         }
 
         private void EnsureAdminCreated()
@@ -34,49 +34,41 @@ namespace TourGuide.Domain.Data
             }
         }
 
-        private void AddDestinations()
-        {
-            var destination = this.Destinations
-                .Where(d => d.Name == "Polska")
-                .FirstOrDefault();
-
-            if (destination == null)
-            {
-                this.Add(new Destination
-                {
-                    Name = "Polska",
-                    Description = "Kraj o wybitnych walorach turystycznych",
-                    Places = new List<Place>() 
-                    {
-                        new Place()
-                        {
-                            Name = "Tatrzański Park Narodowy",
-                            Description = "Przepiękny park narodowy o wielkości 200 kilometrów kwadratowych",
-                        }
-                    }
-                });
-
-                this.SaveChanges();
-            }
-        }
-        
-
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite(connectionString: $"Data Source={DbPath}");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<BaseLocation>()
+                .HasOne(b => b.Address)
+                .WithOne(a => a.BaseLocation)
+                .HasForeignKey<Address>(a => a.BaseLocationFK);
+
             modelBuilder.Entity<Place>()
                 .HasOne(p => p.Destination)
                 .WithMany(d => d.Places)
                 .HasForeignKey(p => p.DestinationFK);
 
+            modelBuilder.Entity<Hotel>()
+                .HasOne(h => h.Destination)
+                .WithMany(d => d.Hotels)
+                .HasForeignKey(h => h.DestinationFK);
+
             modelBuilder.Entity<Destination>()
                 .HasMany(d => d.Places)
-                .WithOne(p => p.Destination);
+                .WithOne(p => p.Destination)
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Destination>()
                 .Navigation(d => d.Places)
+                .AutoInclude();
+
+            modelBuilder.Entity<Place>()
+                .Navigation(p => p.Address)
+                .AutoInclude();
+
+            modelBuilder.Entity<Hotel>()
+                .Navigation(h => h.Address)
                 .AutoInclude();
         }
 

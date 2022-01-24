@@ -10,26 +10,41 @@ namespace TourGuide.Domain.Data
     public class DataInit
     {
 
-        /*
         public void AddDestinations(TourGuideContext db)
         {
 
-            var destination = db
-                .Destinations
-            .Where(d => d.Name == "Polska")
-            .FirstOrDefault();
+            var destination = db.Destinations
+                .Where(d => d.Name == "Polska")
+                .FirstOrDefault();
 
             if (destination == null)
             {
-                var newDestination = new Destination() { Name = "Polska", Description = "Kraj o wybitnych walorach turystycznych" };
-                var address = new Address() { City = "Zakopane", Country = "Polska", HouseNumber = 1, PostalCode = 34500, Street = "Kuźnice" };
-                var place = new Place() { Name = "Tatrzański Park Narodowy", Description = "Przepiękny park narodowy o wielkości 200 kilometrów kwadratowych", Destination = newDestination, DestinationFK = newDestination.Id, Address = address };
-                newDestination.Places.Add(place);
-                db.Add(newDestination);
+                db.Add(new Destination
+                {
+                    Name = "Polska",
+                    Description = "Kraj o wybitnych walorach turystycznych",
+                    Places = new List<Place>()
+                    {
+                        new Place()
+                        {
+                            Name = "Tatrzański Park Narodowy",
+                            Description = "Przepiękny park narodowy o wielkości 200 kilometrów kwadratowych",
+                            Address = new Address
+                            {
+                                City = "Zakopane",
+                                Country = "Polska",
+                                HouseNumber = 1,
+                                PostalCode = "34-500",
+                                Street = "Kuźnice"
+                            }
+                        }
+                    }
+                });
+
                 db.SaveChanges();
             }
 
-            var destinationSpain = db.Destinations
+            /*var destinationSpain = db.Destinations
             .Where(d => d.Name == "Hiszpania")
             .FirstOrDefault();
 
@@ -103,7 +118,7 @@ namespace TourGuide.Domain.Data
                 db.Add(newDestination);
 
                 db.SaveChanges();
-            }
-        }*/
+            }*/
+        }
     }
 }

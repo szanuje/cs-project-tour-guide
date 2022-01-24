@@ -10,5 +10,6 @@ namespace TourGuide.Domain.Data.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public List<Place> Places;
+        public List<Hotel> Hotels;
     }
 }
