@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:TourGuide.UI"
              StartupUri="./Views/LoginWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes\MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Themes\MenuButtonThemeSelected.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

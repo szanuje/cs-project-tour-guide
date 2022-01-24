@@ -147,7 +147,7 @@ namespace TourGuide.Domain.Data
                         new Place()
                         {
                             Name = "Muzeum Brytyjskie",
-                            Description = "Monumentalny pomnik, znajdujący się w lizbońskiej dzielnicy Belém.",
+                            Description = "Muzeum narodowe z siedzibą w Londynie, największe muzeum Wielkiej Brytanii i jedno z największych na świecie",
                             Address = new Address
                             {
                                 City = "Londyn",
@@ -160,7 +160,7 @@ namespace TourGuide.Domain.Data
                         new Place()
                         {
                             Name = "London Eye",
-                            Description = "Największe oceanarium w Europie, w którym żyje przeszło 25 tysięcy morskich stworzeń z całego świata.",
+                            Description = "Koło obserwacyjne znajdujące się w dzielnicy Lambeth w Londynie, na południowym brzegu Tamizy.",
                             Address = new Address
                             {
                                 City = "Londyn",
