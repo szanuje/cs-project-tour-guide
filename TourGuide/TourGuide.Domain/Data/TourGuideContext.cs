@@ -63,12 +63,8 @@ namespace TourGuide.Domain.Data
                 .Navigation(d => d.Places)
                 .AutoInclude();
 
-            modelBuilder.Entity<Place>()
-                .Navigation(p => p.Address)
-                .AutoInclude();
-
-            modelBuilder.Entity<Hotel>()
-                .Navigation(h => h.Address)
+            modelBuilder.Entity<BaseLocation>()
+                .Navigation(b => b.Address)
                 .AutoInclude();
         }
 
