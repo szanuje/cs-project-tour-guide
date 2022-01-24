@@ -12,7 +12,8 @@ namespace TourGuide.UI
     {
         public User user;
         public DestinationService destinationService;
-
+        public Destination selectedDestination;
+        public IList<Place> places = new List<Place>();
         public MainWindow(User user)
         {
             InitializeComponent();
@@ -32,10 +33,19 @@ namespace TourGuide.UI
 
         private void DestinationList_SelectionChanged_1(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            System.Console.WriteLine("kupa");
             Destination selectedDest = (Destination)(e.AddedItems[0]);
-            System.Console.WriteLine(e);
-            System.Console.WriteLine(sender);
+            if (selectedDest != null) { 
+                loadPlacesOnDestinationSet(selectedDest);
+            }
+        }
+
+        private void loadPlacesOnDestinationSet(Destination selectedDestination) {
+            var placesUIList = (System.Windows.Controls.ListView)this.FindName("PlacesList");
+            placesUIList.Items.Clear();
+            foreach (Place place in selectedDestination.Places) { // todo nie chcialo dodac wszystkich naraz z jakiegos powodu, potem zerkne na to, teraz mi sie nie chce
+                placesUIList.Items.Add(place);
+            }
+            
         }
 
         private void PlacesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)

@@ -15,38 +15,62 @@
 
         <Grid Grid.Row="0">
             <Border Background="#FAFAFA" BorderBrush="#E0E0E0" BorderThickness="0 0 0 1" CornerRadius="4">
-                <components:NavigationBar x:Name="navBar"/>
+                <components:NavigationBar x:Name="navBar" Background="#FFCCC5C5"/>
             </Border>
         </Grid>
 
         <Grid Grid.Row="1" Margin="0 20">
             <Border Background="#FAFAFA" BorderBrush="#E0E0E0" BorderThickness="0 1" CornerRadius="4">
-                <Grid Background="#FFFFFF">
+                <Grid Background="White">
                     <StackPanel>
                         <Label Content="1. Explore" FontSize="30"/>
                         <Label x:Name="Designations" Content="Destinations" FontSize="24" Width="140" HorizontalAlignment="Left"/>
-                        <Label x:Name="Hotels" Content="Hotels" FontSize="24" FontWeight="Normal" Width="108" RenderTransformOrigin="0.47,0.542" HorizontalAlignment="Right" Margin="0,0,324,37"/>
+                        <Label x:Name="Hotels" Content="Hotels" FontSize="24" FontWeight="Normal" Width="108" RenderTransformOrigin="0.47,0.542" HorizontalAlignment="Right" Margin="0,0,324,37" Visibility="Hidden"/>
                         <Label x:Name="Places" Content="Places" FontSize="24" HorizontalAlignment="Left" Margin="4,191,0,0" FontWeight="Normal" Width="107" RenderTransformOrigin="0.47,0.542" VerticalAlignment="Center"/>
                     </StackPanel>
-                    <ListView Name="DestinationList" ItemsSource="{Binding Destinations}" Margin="10,90,920,360" SelectionChanged="DestinationList_SelectionChanged_1">
+                    <ListView Name="DestinationList" ItemsSource="{Binding Destinations}" Margin="10,88,820,302" SelectionMode="Single" SelectionChanged="DestinationList_SelectionChanged_1" Width="467">
                         <ListView.View>
-                            <GridView>
-                                <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" Width="150"/>
-                                <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Description" Width="200"/>
+                            <GridView AllowsColumnReorder="True">
+                                <GridViewColumn Header="Name" Width="150">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding  Path=Name}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Description" Width="300">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Description}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
                     <StackPanel>
                     </StackPanel>
-                    <ListView Name="PlacesList" ItemsSource="{Binding Places}" Margin="10,405,920,44" SelectionChanged="PlacesList_SelectionChanged">
+                    <ListView Name="PlacesList" ItemsSource="{Binding Places}" Margin="10,405,789,44" SelectionMode="Single" SelectionChanged="PlacesList_SelectionChanged" Width="482">
                         <ListView.View>
-                            <GridView>
-                                <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" Width="150"/>
-                                <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Description" Width="200"/>
+                            <GridView AllowsColumnReorder="True">
+                                <GridViewColumn Header="Name" Width="150">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding  Path=Name}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Description" Width="317">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Description}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Name="HotelsList" ItemsSource="{Binding Hotels}" Margin="672,137,10,58" SelectionChanged="PlacesList_SelectionChanged">
+                    <ListView Name="HotelsList" ItemsSource="{Binding Hotels}" Margin="672,137,10,58" SelectionChanged="PlacesList_SelectionChanged" Visibility="Hidden">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name" Width="150"/>

@@ -72,7 +72,7 @@ namespace TourGuide.Domain.Data
                         new Place()
                         {
                             Name = "Camp Nou",
-                            Description = "Jeden z cenniejszych przykładów architektury gotyckiej w Hiszpanii. ",
+                            Description = "Stadion piłkarski na którym są rozgrywane mecze FC Barcelona. ",
                             Address = new Address
                             {
                                 City = "Barcelona",
