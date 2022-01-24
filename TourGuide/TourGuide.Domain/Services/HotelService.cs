@@ -15,7 +15,7 @@ namespace TourGuide.Domain.Services
                     Name = name,
                     Rating = rating,
                     Price = price,
-                    Destination = destination,
+                    //Destination = destination,
                     Address = address
                 };
                 db.Add(hotel);

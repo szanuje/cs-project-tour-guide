@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TourGuide.Domain.Data.Models
 {
-    [Table("addresses")]
     public class Address
     {
         [Key]
@@ -13,7 +12,12 @@ namespace TourGuide.Domain.Data.Models
         public string Country { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
-        public int PostalCode { get; set; }
+        public string PostalCode { get; set; }
         public int HouseNumber { get; set; }
+        public double lat { get; set; }
+        public double lng { get; set; }
+        public int BaseLocationFK { get; set; }
+        [ForeignKey("BaseLocationFK")]
+        public BaseLocation BaseLocation { get; set; }
     }
 }

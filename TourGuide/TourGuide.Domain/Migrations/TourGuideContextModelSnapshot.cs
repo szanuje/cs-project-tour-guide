@@ -22,6 +22,9 @@ namespace TourGuide.Domain.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("BaseLocationFK")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -33,21 +36,55 @@ namespace TourGuide.Domain.Migrations
                     b.Property<int>("HouseNumber")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("PostalCode")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("PostalCode")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Street")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<double>("lat")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("lng")
+                        .HasColumnType("REAL");
+
                     b.HasKey("Id");
 
-                    b.ToTable("addresses");
+                    b.HasIndex("BaseLocationFK")
+                        .IsUnique();
+
+                    b.ToTable("Addresses");
+                });
+
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.BaseLocation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("DestinationFK")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BaseLocation");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("BaseLocation");
                 });
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.Destination", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("DestinationId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -59,50 +96,15 @@ namespace TourGuide.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("DestinationId");
 
-                    b.ToTable("destinations");
-                });
-
-            modelBuilder.Entity("TourGuide.Domain.Data.Models.Hotel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("AddressFK")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("DestinationFK")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("REAL");
-
-                    b.Property<string>("Rating")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AddressFK");
-
-                    b.HasIndex("DestinationFK");
-
-                    b.ToTable("hotels");
+                    b.ToTable("Destinations");
                 });
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.Place", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PostId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("AddressFK")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
@@ -116,13 +118,11 @@ namespace TourGuide.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("AddressFK");
+                    b.HasKey("PostId");
 
                     b.HasIndex("DestinationFK");
 
-                    b.ToTable("places");
+                    b.ToTable("Places");
                 });
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.User", b =>
@@ -139,45 +139,54 @@ namespace TourGuide.Domain.Migrations
 
                     b.HasKey("Username");
 
-                    b.ToTable("users");
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.Hotel", b =>
                 {
-                    b.HasOne("TourGuide.Domain.Data.Models.Address", "Address")
-                        .WithMany()
-                        .HasForeignKey("AddressFK")
+                    b.HasBaseType("TourGuide.Domain.Data.Models.BaseLocation");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Rating")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasDiscriminator().HasValue("Hotel");
+                });
+
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.Address", b =>
+                {
+                    b.HasOne("TourGuide.Domain.Data.Models.BaseLocation", "BaseLocation")
+                        .WithOne("Address")
+                        .HasForeignKey("TourGuide.Domain.Data.Models.Address", "BaseLocationFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TourGuide.Domain.Data.Models.Destination", "Destination")
-                        .WithMany()
-                        .HasForeignKey("DestinationFK")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Address");
-
-                    b.Navigation("Destination");
+                    b.Navigation("BaseLocation");
                 });
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.Place", b =>
                 {
-                    b.HasOne("TourGuide.Domain.Data.Models.Address", "Address")
-                        .WithMany()
-                        .HasForeignKey("AddressFK")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("TourGuide.Domain.Data.Models.Destination", "Destination")
-                        .WithMany()
+                        .WithMany("Places")
                         .HasForeignKey("DestinationFK")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Address");
-
                     b.Navigation("Destination");
+                });
+
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.BaseLocation", b =>
+                {
+                    b.Navigation("Address")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.Destination", b =>
+                {
+                    b.Navigation("Places");
                 });
 #pragma warning restore 612, 618
         }

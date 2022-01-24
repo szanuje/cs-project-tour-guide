@@ -6,7 +6,7 @@ namespace TourGuide.Domain.Services
     public class AddressService
     {
         public bool AddNewAddress(String country, String city, String street,
-            int postalCode, int houseNumber)
+            string postalCode, int houseNumber)
         {
             using(var db = new TourGuideContext())
             {
@@ -25,7 +25,7 @@ namespace TourGuide.Domain.Services
             }
         }
 
-        public Address GetAddress(int key)
+       /* public Address GetAddress(int key)
         {
             using (var db = new TourGuideContext())
             {
@@ -33,6 +33,6 @@ namespace TourGuide.Domain.Services
                     .Where(a => a.Id == key)
                     .FirstOrDefault();
             }
-        }
+        }*/
     }
 }
