@@ -60,7 +60,16 @@ namespace TourGuide.Domain.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Destination>()
+                .HasMany(d => d.Hotels)
+                .WithOne(p => p.Destination)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Destination>()
                 .Navigation(d => d.Places)
+                .AutoInclude();
+
+            modelBuilder.Entity<Destination>()
+                .Navigation(d => d.Hotels)
                 .AutoInclude();
 
             modelBuilder.Entity<BaseLocation>()
