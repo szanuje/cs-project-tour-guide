@@ -46,51 +46,59 @@
             <StackPanel Grid.Row="0" Grid.Column="1">
                 <components:NavigationBar x:Name="navBar"/>
             </StackPanel>
-            <StackPanel Grid.Row="1" Grid.Column="1"
-                        Margin="15">
-                <Label x:Name="Designations" Content="Destinations" FontSize="24" Width="140" HorizontalAlignment="Left" Foreground="White"/>
-                <ListView x:Name="DestinationList" ItemsSource="{Binding Destinations}" SelectionMode="Single" SelectionChanged="DestinationList_SelectionChanged_1" Width="467" Height="180" Margin="0,0,212,0">
-                    <ListView.View>
-                        <GridView AllowsColumnReorder="True">
-                            <GridViewColumn Header="Name" Width="150">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBlock TextWrapping="Wrap" Text="{Binding Name}"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                            <GridViewColumn Header="Description" Width="300">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBlock TextWrapping="Wrap" Text="{Binding Description}"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <Label x:Name="Places" Content="Places" FontSize="24" Width="140" HorizontalAlignment="Left" Foreground="White"/>
-                <ListView Name="PlacesList" ItemsSource="{Binding Places}" SelectionMode="Single" SelectionChanged="PlacesList_SelectionChanged" Width="485" Height="98" Margin="0,0,194,0">
-                    <ListView.View>
-                        <GridView AllowsColumnReorder="True">
-                            <GridViewColumn Header="Name" Width="150">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBlock TextWrapping="Wrap" Text="{Binding  Path=Name}"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                            <GridViewColumn Header="Description" Width="317">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=Description}"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-            </StackPanel>
+
+            <ScrollViewer  Grid.Row="1" Grid.Column="1"  Name="ScrollViewer1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="510" CanContentScroll="True">
+                <StackPanel  Grid.Row="1" Grid.Column="1" Margin="15,13,15,15">
+                    <Label x:Name="Designations" Content="Destinations" FontSize="24" Width="140" HorizontalAlignment="Left" Foreground="White"/>
+
+                    <ItemsControl x:Name="DestinationListTest" ItemsSource="{Binding Destinations}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Margin="0,8,0,0"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,8,0,0">
+                                    <Border Width="686" Height="134">
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                                <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                                                <GradientStop Color="#5bc3ff" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+
+                                        <Border.Clip>
+                                            <RectangleGeometry RadiusX="30"
+                                   RadiusY="30"
+                                   Rect="0,0,686,134">
+                                            </RectangleGeometry>
+                                        </Border.Clip>
+
+                                        <Grid>
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Name}" 
+                                   Foreground="White"
+                                   FontSize="48" HorizontalAlignment="Left" Width="410" Margin="14,0,0,0">
+
+                                                </TextBlock>
+                                                <TextBlock Text="{Binding Description}" 
+                                   Foreground="White"
+                                   TextWrapping="Wrap"
+                                   FontSize="24" HorizontalAlignment="Left" Width="639" Margin="27,9,0,0">
+
+                                                </TextBlock>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Border>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    
+                </StackPanel>
+            </ScrollViewer>
+
         </Grid>
 
     </Border>

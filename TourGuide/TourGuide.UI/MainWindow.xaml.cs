@@ -65,7 +65,9 @@ namespace TourGuide.UI
             this.destinationService = new DestinationService();
             List<Destination> dests = destinationService.GetAllDestinations();
 
-            this.DestinationList.ItemsSource = dests;
+            //this.DestinationList.ItemsSource = dests;
+            this.DestinationListTest.ItemsSource = dests;
+
         }
 
         private void DestinationList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -91,6 +93,14 @@ namespace TourGuide.UI
 
         private void PlacesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void StackPanel_Tap_1(object sender, RoutedEventArgs e) { 
         }
     }
 }
