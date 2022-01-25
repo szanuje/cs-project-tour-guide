@@ -75,6 +75,19 @@ namespace TourGuide.Domain.Data
             modelBuilder.Entity<BaseLocation>()
                 .Navigation(b => b.Address)
                 .AutoInclude();
+
+            modelBuilder.Entity<UserLocation>()
+                .HasKey(ub => new { ub.Username, ub.LocationId });
+
+            modelBuilder.Entity<UserLocation>()
+                .HasOne(ub => ub.User)
+                .WithMany(u => u.Locations)
+                .HasForeignKey(u => u.Username);
+
+            modelBuilder.Entity<UserLocation>()
+                .HasOne(ub => ub.BaseLocation)
+                .WithMany(b => b.Locations)
+                .HasForeignKey(b => b.LocationId);
         }
 
         public DbSet<User> Users { get; set; }
@@ -82,5 +95,6 @@ namespace TourGuide.Domain.Data
         public DbSet<Place> Places { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<UserLocation> UserLocations { get; set; }
     }
 }

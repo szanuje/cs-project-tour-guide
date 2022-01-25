@@ -118,6 +118,21 @@ namespace TourGuide.Domain.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.UserLocation", b =>
+                {
+                    b.Property<string>("Username")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("LocationId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Username", "LocationId");
+
+                    b.HasIndex("LocationId");
+
+                    b.ToTable("UserLocations");
+                });
+
             modelBuilder.Entity("TourGuide.Domain.Data.Models.Hotel", b =>
                 {
                     b.HasBaseType("TourGuide.Domain.Data.Models.BaseLocation");
@@ -158,6 +173,25 @@ namespace TourGuide.Domain.Migrations
                     b.Navigation("BaseLocation");
                 });
 
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.UserLocation", b =>
+                {
+                    b.HasOne("TourGuide.Domain.Data.Models.BaseLocation", "BaseLocation")
+                        .WithMany("Locations")
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TourGuide.Domain.Data.Models.User", "User")
+                        .WithMany("Locations")
+                        .HasForeignKey("Username")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BaseLocation");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("TourGuide.Domain.Data.Models.Hotel", b =>
                 {
                     b.HasOne("TourGuide.Domain.Data.Models.Destination", "Destination")
@@ -184,6 +218,8 @@ namespace TourGuide.Domain.Migrations
                 {
                     b.Navigation("Address")
                         .IsRequired();
+
+                    b.Navigation("Locations");
                 });
 
             modelBuilder.Entity("TourGuide.Domain.Data.Models.Destination", b =>
@@ -191,6 +227,11 @@ namespace TourGuide.Domain.Migrations
                     b.Navigation("Hotels");
 
                     b.Navigation("Places");
+                });
+
+            modelBuilder.Entity("TourGuide.Domain.Data.Models.User", b =>
+                {
+                    b.Navigation("Locations");
                 });
 #pragma warning restore 612, 618
         }
