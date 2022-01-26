@@ -30,15 +30,15 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1">
-                <RadioButton Content="Explore" Height="50" 
+                <RadioButton x:Name="ExploreMenu" Content="Explore" Height="50" 
                              Foreground="White" FontSize="20" Background="#FF271131"
                              Style="{StaticResource MenuButtonStyleSelected}" IsChecked="True" IsEnabled="False"/>
 
-                <RadioButton Content="Places" Height="50" 
+                <RadioButton x:Name="PlacesMenu" Content="Places" Height="50" 
                              Foreground="White" FontSize="20" 
                              Style="{StaticResource MenuButtonStyle}" IsEnabled="False" IsChecked="False"/>
 
-                <RadioButton Content="Hotels" Height="50" 
+                <RadioButton x:Name="HotelsMenu" Content="Hotels" Height="50" 
                              Foreground="White" FontSize="20" 
                              Style="{StaticResource MenuButtonStyle}" IsEnabled="False" IsChecked="False"/>
             </StackPanel>
@@ -46,54 +46,59 @@
             <StackPanel Grid.Row="0" Grid.Column="1">
                 <components:NavigationBar x:Name="navBar"/>
             </StackPanel>
-            <StackPanel Grid.Row="1" Grid.Column="1"
-                        Margin="15">
-                <Label x:Name="Designations" Content="Destinations" FontSize="24" Width="140" HorizontalAlignment="Left" Foreground="White"/>
-                <ListView x:Name="DestinationList" ItemsSource="{Binding Destinations}" SelectionMode="Single" SelectionChanged="DestinationList_SelectionChanged_1" Width="467" Height="180" Margin="0,0,212,0">
-                    <ListView.View>
-                        <GridView AllowsColumnReorder="True">
-                            <GridViewColumn Header="Name" Width="150">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBlock TextWrapping="Wrap" Text="{Binding Name}"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                            <GridViewColumn Header="Description" Width="300">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBlock TextWrapping="Wrap" Text="{Binding Description}"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-                <Label x:Name="Places" Content="Places" FontSize="24" Width="140" HorizontalAlignment="Left" Foreground="White"/>
-                <ListView Name="PlacesList" ItemsSource="{Binding Places}" SelectionMode="Single" SelectionChanged="PlacesList_SelectionChanged" Width="485" Height="98" Margin="0,0,194,0">
-                    <ListView.View>
-                        <GridView AllowsColumnReorder="True">
-                            <GridViewColumn Header="Name" Width="150">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBlock TextWrapping="Wrap" Text="{Binding  Path=Name}"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                            <GridViewColumn Header="Description" Width="317">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBlock TextWrapping="Wrap" Text="{Binding Path=Description}"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
+            
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="15">
+                
+                <StackPanel x:Name="DestinationPanel" Width="902" Visibility="Visible">
+                    <Label x:Name="Designations" Content="Destinations" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
+                    <ListView x:Name="DestinationList" ItemsSource="{Binding Destinations}" SelectionMode="Single" SelectionChanged="DestinationList_SelectionChanged_1" Width="1146" Height="352" Margin="0,0,212,0">
+                        <ListView.View>
+                            <GridView AllowsColumnReorder="True">
+                                <GridViewColumn Header="Name" Width="202">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Name}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Description" Width="478">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Description}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </StackPanel>
+
+                <StackPanel x:Name="PlacesPanel" Width="899" Visibility="Collapsed">
+                    <Label x:Name="Places" Content="Places" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
+                    <ListView Name="PlacesList" ItemsSource="{Binding Places}" SelectionMode="Single" SelectionChanged="PlacesList_SelectionChanged" Width="1146" Height="352" Margin="0,0,212,0">
+                        <ListView.View>
+                            <GridView AllowsColumnReorder="True">
+                                <GridViewColumn Header="Name" Width="202">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding  Path=Name}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Description" Width="478">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Description}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button x:Name="PlacesButtonBack" Content="Back" Click="goBackToDestinationMenu" Width="142" HorizontalAlignment="Left" Margin="0,34,0,0" Height="36"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
-
     </Border>
-
-
+    
 </Window>

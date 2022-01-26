@@ -77,7 +77,9 @@ namespace TourGuide.UI
             Destination selectedDest = (Destination)(e.AddedItems[0]);
             if (selectedDest != null) { 
                 loadPlacesOnDestinationSet(selectedDest);
+                switchToPlacesStack();
             }
+
         }
 
         private void loadPlacesOnDestinationSet(Destination selectedDestination) {
@@ -86,11 +88,52 @@ namespace TourGuide.UI
             foreach (Place place in selectedDestination.Places) { // todo nie chcialo dodac wszystkich naraz z jakiegos powodu, potem zerkne na to, teraz mi sie nie chce
                 placesUIList.Items.Add(place);
             }
-            
         }
 
         private void PlacesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
+        }
+
+        private void goBackToDestinationMenu(object sender, RoutedEventArgs e)
+        {
+            switchToDestinationStack();
+        }
+
+
+
+        private void switchToPlacesStack() {
+            var destinationPanel = (System.Windows.Controls.StackPanel)this.FindName("DestinationPanel");
+            destinationPanel.Visibility = Visibility.Collapsed;
+
+            var placesPanel = (System.Windows.Controls.StackPanel)this.FindName("PlacesPanel");
+            placesPanel.Visibility = Visibility.Visible;
+
+/*            var style = this.FindResource("MenuButtonStyle") as Style;
+            var exploreButton = (System.Windows.Controls.RadioButton)this.FindName("ExploreMenu");
+            exploreButton.Style = style;
+
+            var styleSelected = this.FindResource("MenuButtonStyleSelected") as Style;
+            var placesButton = (System.Windows.Controls.RadioButton)this.FindName("PlacesMenu");
+            placesButton.Style = styleSelected;*/
+
+            /*            var style = Application.Current.Resources["MenuButtonStyle"] as Style;
+                        var exploreButton = (System.Windows.Controls.RadioButton)this.FindName("ExploreMenu");
+                        exploreButton.Style = style;
+
+                        var styleSelected = Application.Current.Resources["MenuButtonStyleSelected"] as Style; // todo to też potem fixne, nie zmienia się to sadeg
+                        var placesButton = (System.Windows.Controls.RadioButton)this.FindName("PlacesMenu");
+                        placesButton.Style = styleSelected;*/
+        }
+
+        private void switchToDestinationStack()
+        {
+            
+            var destinationPanel = (System.Windows.Controls.StackPanel)this.FindName("PlacesPanel");
+            destinationPanel.Visibility = Visibility.Collapsed;
+
+            var placesPanel = (System.Windows.Controls.StackPanel)this.FindName("DestinationPanel");
+            placesPanel.Visibility = Visibility.Visible;
+
         }
     }
 }
