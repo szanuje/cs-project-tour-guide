@@ -9,6 +9,8 @@ namespace TourGuide.Domain.Services
         {
             using (var db = new TourGuideContext())
             {
+                if (db.Users.Any(u => u.Username == username)) return false;
+
                 var user = new User() { Username = username, Password = password };
                 db.Add(user);
                 int entries = db.SaveChanges();

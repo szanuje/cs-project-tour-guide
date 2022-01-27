@@ -28,13 +28,7 @@ namespace TourGuide.UI.Components
         {
             InitializeComponent();
         }
-
-        private void HomeButton_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void AccountButton_Click(object sender, RoutedEventArgs e)
+        private void ManagementButton_Click(object sender, RoutedEventArgs e)
         {
             var accountWindow = new AccountWindow(this.user);
             accountWindow.Show();

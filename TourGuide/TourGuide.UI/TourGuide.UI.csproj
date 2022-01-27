@@ -19,11 +19,4 @@
     <ProjectReference Include="..\TourGuide.Domain\TourGuide.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Page Update="Themes\MenuButtonThemeSelected.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-
 </Project>

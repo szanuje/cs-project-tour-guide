@@ -35,7 +35,9 @@ namespace TourGuide.Domain.Data
                                 Country = "Polska",
                                 HouseNumber = 1,
                                 PostalCode = "34-500",
-                                Street = "Kuźnice"
+                                Street = "Kuźnice",
+                                lat = 49.27141297798237,
+                                lng = 19.98262598104344
                             }
                         }
                     }
@@ -66,7 +68,9 @@ namespace TourGuide.Domain.Data
                                 Country = "Hiszpania",
                                 HouseNumber = 1,
                                 PostalCode = "08002",
-                                Street = "Pla de la Seu"
+                                Street = "Pla de la Seu",
+                                lat = 41.38399417837509, 
+                                lng = 2.1762098268703975
                             }
                         },
                         new Place()
@@ -79,7 +83,9 @@ namespace TourGuide.Domain.Data
                                 Country = "Hiszpania",
                                 HouseNumber = 12,
                                 PostalCode = "08028",
-                                Street = "C. d'Arístides Maillol"
+                                Street = "C. d'Arístides Maillol",
+                                lat = 41.38097458889179, 
+                                lng = 2.122872658540742
                             }
                         }
                     }
@@ -110,7 +116,9 @@ namespace TourGuide.Domain.Data
                                 Country = "Portugalia",
                                 HouseNumber = 1,
                                 PostalCode = "140038",
-                                Street = "Av. Brasília"
+                                Street = "Av. Brasília",
+                                lat = 38.693664270348975, 
+                                lng = -9.20569004435341
                             }
                         },
                         new Place()
@@ -123,7 +131,9 @@ namespace TourGuide.Domain.Data
                                 Country = "Portugalia",
                                 HouseNumber = 1,
                                 PostalCode = "1990005",
-                                Street = "Esplanada Dom Carlos I"
+                                Street = "Esplanada Dom Carlos I",
+                                lat = 38.7635853078075, 
+                                lng = -9.093752230857477
                             }
                         }
                     }
@@ -154,7 +164,9 @@ namespace TourGuide.Domain.Data
                                 Country = "Anglia",
                                 HouseNumber = 1,
                                 PostalCode = "0",
-                                Street = "Great Russell St"
+                                Street = "Great Russell St",
+                                lat = 51.51944665958745, 
+                                lng = -0.1270317035546863
                             }
                         },
                         new Place()
@@ -167,7 +179,9 @@ namespace TourGuide.Domain.Data
                                 Country = "Anglia",
                                 HouseNumber = 1,
                                 PostalCode = "0",
-                                Street = "Riverside Building"
+                                Street = "Riverside Building",
+                                lat = 51.50331063628315, 
+                                lng = -0.11957515937929862
                             }
                         }
                     }

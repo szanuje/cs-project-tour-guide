@@ -28,8 +28,21 @@ namespace TourGuide.UI
 
         private void userSubmit_Click(object sender, RoutedEventArgs e)
         {
-            userService.AddNewUser(username.Text, password.Password);
+            var response = userService.AddNewUser(username.Text, password.Password);
 
+            if (response)
+            {
+                this.switchToLogin();
+            }
+        }
+
+        private void backLabel_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            this.switchToLogin();
+        }
+
+        private void switchToLogin()
+        {
             LoginWindow loginScreen = new LoginWindow();
             loginScreen.Show();
             this.Close();

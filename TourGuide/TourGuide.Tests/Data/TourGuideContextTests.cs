@@ -51,7 +51,7 @@ namespace TourGuideTests.models
                                 Country = "Polska",
                                 HouseNumber = 1,
                                 PostalCode = "34-500",
-                                Street = "Kuźnice"
+                                Street = "Kuźnice",
                             }
                         }
                     }

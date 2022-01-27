@@ -11,10 +11,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="36"/>
@@ -28,25 +24,14 @@
             FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
         <Button
-            Name="HomeButton"
-            Grid.Column="1"
-            Margin="10 0 0 0"
-            Content="Home" 
-            Background="Transparent"
-            Foreground="#0062FF"
-            BorderThickness="0"
-            Click="HomeButton_Click"
-            />
-
-        <Button
-            Name="AccountButton"
+            Name="ManagementButton"
             Grid.Column="2"
             Margin="10 0 0 0"
-            Content="Account" 
+            Content="Manage" 
             Background="Transparent"
-            Foreground="#0062FF"
+            Foreground="White"
             BorderThickness="0"
-            Click="AccountButton_Click"
+            Click="ManagementButton_Click"
             />
     </Grid>
 </UserControl>
