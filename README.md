@@ -1,13 +1,43 @@
-Mamy destynacje turystyczne np. Karaiby, Hawaje itp. Zrobić tour guide, rekomendacje co można tam odwiedzić, informacje na temat hoteli, połączenia, odległości hoteli z destynacjami, polecenie najbliższych obiektów.
+# Tour Guide Project
+## Description
+Mamy destynacje turystyczne np. Karaiby, Hawaje itp. Nasz tour guide pozwala przejrzeć interesujące destynacje w poszukiwaniu ciekawych miejsc. Nastepnie miejsca mogą byc dodane przez użytkownika do zakładki 'My Trips". Jednocześnie użytkownik może przejrzeć hotele znajdującec się w poblizu interesujących go miejsc. Widok hoteli znajduje się w zakładce 'Hotels'.
+Zrobić tour guide, rekomendacje co można tam odwiedzić, informacje na temat hoteli, połączenia, odległości hoteli z destynacjami, polecenie najbliższych obiektów.
 
-Wybieramy hotel gdzie się zatrzymujemy, możemy zaproponować hotele za jakąś cenę, odleglość lub popularność. Z tych które się wyświetlą, użytkownik wybiera gdzie chce się udać.
+Aplikacja umożliwia także rejestrację i logowanie użytkownika.
 
-Aplikacja desktopowa, GUI, nie musi mieć bazy, wtedy np. odczyt na plikach. 
+## Tools
 
-Logowanie, personalizowanie dla użytkownika, zapisywanie w jakich destynacjach był. Zakładanie kont użytkownika, dodawanie destynacji, hoteli - konto admina.
+Aplikację stworzono przy pomocy:
+- Frameworków:
+    - Microsoft.NETCore.App (6.0.1)
+    - Microsoft.WindowsDesktop.App.WPF (6.0.0)
+- Pakietów:
+    - Microsoft.EntityFrameworkCore (6.0.1)
+    - Microsoft.EntityFrameworkCore.InMemory (6.0.1)
+    - Microsoft.EntityFrameworkCore.Sqlite (6.0.1)
+    - Microsoft.EntityFrameworkCore.Tools (6.0.1)
+    - Microsoft.EntityFrameworkCore.Design (6.0.1)
 
-Kod źródłowy, skompilowany projekt w formacie release, tak żeby można było uruchomić na każdym komputerze.
+## How To Run
+- Visual Studio:
+    - uruchomić solucję TourGuide.UI
+- Release:
+    - uruchomić plik wykonawczy `\TourGuide\TourGuide.UI\bin\Release\net6.0-windows\TourGuide.UI.exe`
 
-Dokuementacja: opis najważniejszych funkcji, dokumentacja kodu, w wymaganiach czego używaliśmy np. Visual Studio 2017. Informacja jak uruchomić program. Opis aplikacji, członkowie grupy, tutorial jak posługiwać się aplikacją.
+## Documentation
+W ramach dokumentacji opisano wszystkie używane metody oraz parametry w postaci znaczników XML w kodzie źródłowym programu.
 
-Testy jednostkowe munit, mstest.
+Pełna dokumentacja dostępna jest również w formacie HTML, po lokalnym uruchomieniu pliku:
+[https://github.com/szanuje/cs-project-tour-guide/blob/master/TourGuide/Help/index.html](https://github.com/szanuje/cs-project-tour-guide/blob/master/TourGuide/Help/index.html)
+
+![docs_preview](./images/docs_preview.png)
+
+## Authors
+- Konrad Ulman
+- Paweł Jelonek
+- Maksymilian Pleśniak
+
+## Screenshots
+
+![login](./images/login.png)
+![register](./images/register.png)
