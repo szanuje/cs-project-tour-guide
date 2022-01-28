@@ -16,11 +16,11 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="75"/>
-                <RowDefinition/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -29,7 +29,7 @@
                        FontSize="22" TextAlignment="Center"/>
             </StackPanel>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1" Grid.Column="0">
                 <RadioButton x:Name="ExploreMenu" Content="Explore" Height="50" 
                              Foreground="White" FontSize="20"
                              Click="ExploreMenu_Click"
@@ -51,10 +51,10 @@
             </StackPanel>
             
             <StackPanel Grid.Row="1" Grid.Column="1" Margin="15">
-                
-                <StackPanel x:Name="DestinationPanel" Width="899" Visibility="Visible">
+
+                <StackPanel x:Name="DestinationPanel" Width="auto" Visibility="Visible" Margin="50 0">
                     <Label x:Name="Designations" Content="Destinations" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
-                    <ListView x:Name="DestinationList" ItemsSource="{Binding Destinations}" SelectionMode="Single" SelectionChanged="DestinationList_SelectionChanged_1" Width="1146" Height="352" Margin="0,0,212,0">
+                    <ListView x:Name="DestinationList" ItemsSource="{Binding Destinations}" SelectionMode="Single" SelectionChanged="DestinationList_SelectionChanged" Width="auto" Height="450">
                         <ListView.View>
                             <GridView AllowsColumnReorder="True">
                                 <GridViewColumn Header="Name" Width="202">
@@ -76,9 +76,9 @@
                     </ListView>
                 </StackPanel>
 
-                <StackPanel x:Name="PlacesPanel" Width="899" Visibility="Collapsed">
+                <StackPanel x:Name="PlacesPanel" Width="auto" Visibility="Collapsed" Margin="50 0">
                     <Label x:Name="Places" Content="Places" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
-                    <ListView Name="PlacesList" ItemsSource="{Binding Places}" SelectionMode="Single" SelectionChanged="PlacesList_SelectionChanged" Width="1146" Height="352" Margin="0,0,212,0">
+                    <ListView Name="PlacesList" ItemsSource="{Binding Places}" SelectionMode="Single" SelectionChanged="PlacesList_SelectionChanged" Width="auto" Height="450">
                         <ListView.View>
                             <GridView AllowsColumnReorder="True">
                                 <GridViewColumn Header="Name" Width="202">
@@ -98,7 +98,7 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Grid>
+                    <Grid Margin="0 25">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="auto" />
@@ -106,14 +106,14 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
-                        <Button x:Name="PlacesButtonBack" Content="Back" Click="goBackToDestinationMenu" Width="142" HorizontalAlignment="Left" Margin="0,34,0,0" Height="36"/>
-                        <Button x:Name="PlacesButtonAdd" Content="Add to trip" Click="PlacesButtonAdd_Click" Width="142" HorizontalAlignment="Left" Margin="546,34,0,0" Height="36" Visibility="Collapsed" Background="MediumSpringGreen"/>
+                        <Button x:Name="PlacesButtonBack" Content="Back" Click="goBackToDestinationMenu" Width="142" HorizontalAlignment="Left" Height="36"/>
+                        <Button x:Name="PlacesButtonAdd" Content="Add to trip" Click="PlacesButtonAdd_Click" Width="142" HorizontalAlignment="Right" Height="36" Visibility="Visible" Background="MediumSpringGreen"/>
                     </Grid>
                 </StackPanel>
 
-                <StackPanel x:Name="HotelPanel" Width="899" Visibility="Collapsed">
-                    <Label x:Name="HotelLabel" Content="Hotels" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
-                    <ListView Name="HotelList" ItemsSource="{Binding Hotels}" SelectionMode="Single" Width="1146" Height="352" Margin="0,0,212,0">
+                <StackPanel x:Name="HotelPanel" Width="auto" Visibility="Collapsed" Margin="50 0">
+                    <Label x:Name="HotelLabel" Content="Hotels found for trip" FontSize="24" Width="auto" HorizontalAlignment="Left" Foreground="White"/>
+                    <ListView Name="HotelList" ItemsSource="{Binding Hotels}" SelectionMode="Single" Width="auto" Height="450">
                         <ListView.View>
                             <GridView AllowsColumnReorder="True">
                                 <GridViewColumn Header="Name" Width="202">
@@ -147,30 +147,39 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
+                    <Label Content="If hotel list is empty, please first add places to your trip." Foreground="LightGray"/>
                 </StackPanel>
 
-                <StackPanel x:Name="TripPanel" Width="899" Visibility="Collapsed">
-                    <Label x:Name="TripLabel" Content="Trip" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
-                    <ListView Name="UserTripList" ItemsSource="{Binding Places}" SelectionMode="Single" SelectionChanged="PlacesList_SelectionChanged" Width="1146" Height="352" Margin="0,0,212,0">
+                <StackPanel x:Name="TripPanel" Width="auto" Visibility="Collapsed" Margin="50 0">
+                    <Label x:Name="TripLabel" Content="Trip" FontSize="24" Width="auto" HorizontalAlignment="Left" Foreground="White"/>
+                    <ListView Name="UserTripList" ItemsSource="{Binding Places}" SelectionMode="Single" SelectionChanged="UserTripList_SelectionChanged" Width="auto" Height="450">
                         <ListView.View>
                             <GridView AllowsColumnReorder="True">
-                                <GridViewColumn Header="Name" Width="202">
+                                <GridViewColumn Header="Name" Width="200">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock TextWrapping="Wrap" Text="{Binding  Path=Name}"/>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Name}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Description" Width="478">
+                                <GridViewColumn Header="Description" Width="450">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <TextBlock TextWrapping="Wrap" Text="{Binding Path=Description}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
+                                <GridViewColumn Header="Address" Width="250">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Address}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
+                    <Button x:Name="TripRemove" Content="Remove from trip" Click="TripRemove_Click" Width="142" HorizontalAlignment="Left" Margin="0 40" Height="36" Visibility="Collapsed" Background="Red"/>
                 </StackPanel>
             </StackPanel>
         </Grid>

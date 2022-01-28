@@ -56,15 +56,18 @@ namespace TourGuide.UI
     public partial class MainWindow : Window
     {
         public User user;
+        
         public IList<Place> selectedPlaces;
         public IList<Place> userTrips;
         public IList<Destination> destinations;
-        public IList<Hotel> hotels; // todo
+        public ICollection<Hotel> hotels;
+        public IList<Place> placesToRemove;
+
         public Destination selectedDestination;
 
         public DestinationService destinationService;
         public UserLocationService locationService;
-
+        public HotelService hotelService;
 
         public MainWindow(User user)
         {
@@ -75,6 +78,7 @@ namespace TourGuide.UI
 
             this.destinationService = new DestinationService();
             this.locationService = new UserLocationService();
+            this.hotelService = new HotelService();
 
             this.destinations = destinationService.GetAllDestinations();
             this.DestinationList.ItemsSource = destinations;
@@ -82,15 +86,11 @@ namespace TourGuide.UI
             this.userTrips = locationService.GetAllUserPlaces(user.Username);
             this.UserTripList.ItemsSource = userTrips;
 
-            this.hotels = locationService.GetAllHotelsForTrip(userTrips);
+            this.hotels = hotelService.GetAllHotelsForTrip(userTrips);
             this.HotelList.ItemsSource = hotels;
         }
 
         private void DestinationList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-        }
-
-        private void DestinationList_SelectionChanged_1(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             Destination selectedDest = (Destination)(e.AddedItems[0]);
             if (selectedDest != null)
@@ -98,7 +98,6 @@ namespace TourGuide.UI
                 loadPlacesOnDestinationSet(selectedDest);
                 switchToPlacesStack();
             }
-
         }
 
         private void loadPlacesOnDestinationSet(Destination selectedDestination)
@@ -185,7 +184,7 @@ namespace TourGuide.UI
         private void RefreshHotels(IList<Place> places)
         {
             var hotelUIList = (System.Windows.Controls.ListView)this.FindName("HotelList");
-            hotelUIList.ItemsSource = locationService.GetAllHotelsForTrip(places);
+            hotelUIList.ItemsSource = hotelService.GetAllHotelsForTrip(places);
         }
 
         private void ExploreMenu_Click(object sender, RoutedEventArgs e)
@@ -204,6 +203,32 @@ namespace TourGuide.UI
         {
             this.TripMenu.IsChecked = true;
             switchToTripStack();
+        }
+        private void UserTripList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            this.placesToRemove = new List<Place>();
+
+            if (e.AddedItems.Count > 0)
+            {
+                this.TripRemove.Visibility = Visibility.Visible;
+                foreach (var place in e.AddedItems)
+                {
+                    this.placesToRemove.Add(place as Place);
+                }
+            }
+            else
+            {
+                this.TripRemove.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void TripRemove_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var place in this.placesToRemove)
+            {
+                this.locationService.RemoveLocationFromUser(place.LocationId, this.user.Username);
+            }
+            this.RefreshUserTrips(this.user.Username);
         }
     }
 }

@@ -25,9 +25,24 @@ namespace TourGuide.Domain.Services
             }
         }
 
-        public List<Hotel> GetAllHotelsForTrip(IList<Place> tripPlaces)
+        public bool RemoveLocationFromUser(int locationId, string username)
         {
-            return tripPlaces.SelectMany(p => p.Destination.Hotels).ToList();
+            using (var db = new TourGuideContext())
+            {
+                if (!db.UserLocations.Any(ub => ub.LocationId == locationId && ub.Username == username))
+                {
+                    return false;
+                }
+
+                db.Remove(new UserLocation()
+                {
+                    Username = username,
+                    LocationId = locationId,
+                });
+
+                int entries = db.SaveChanges();
+                return entries > 0;
+            }
         }
 
         public List<Place> GetAllUserPlaces(string username)

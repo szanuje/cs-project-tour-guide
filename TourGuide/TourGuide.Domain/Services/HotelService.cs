@@ -25,5 +25,10 @@ namespace TourGuide.Domain.Services
             }
 
         }
+
+        public ICollection<Hotel> GetAllHotelsForTrip(IList<Place> tripPlaces)
+        {
+            return tripPlaces.SelectMany(p => p.Destination.Hotels).ToHashSet();
+        }
     }
 }
