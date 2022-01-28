@@ -52,7 +52,7 @@
             
             <StackPanel Grid.Row="1" Grid.Column="1" Margin="15">
                 
-                <StackPanel x:Name="DestinationPanel" Width="902" Visibility="Visible">
+                <StackPanel x:Name="DestinationPanel" Width="899" Visibility="Visible">
                     <Label x:Name="Designations" Content="Destinations" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
                     <ListView x:Name="DestinationList" ItemsSource="{Binding Destinations}" SelectionMode="Single" SelectionChanged="DestinationList_SelectionChanged_1" Width="1146" Height="352" Margin="0,0,212,0">
                         <ListView.View>
@@ -107,7 +107,7 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <Button x:Name="PlacesButtonBack" Content="Back" Click="goBackToDestinationMenu" Width="142" HorizontalAlignment="Left" Margin="0,34,0,0" Height="36"/>
-                        <Button x:Name="PlacesButtonAdd" Content="Add to trip" Click="PlacesButtonAdd_Click" Width="142" HorizontalAlignment="Left" Margin="530,34,0,0" Height="36" Visibility="Collapsed"/>
+                        <Button x:Name="PlacesButtonAdd" Content="Add to trip" Click="PlacesButtonAdd_Click" Width="142" HorizontalAlignment="Left" Margin="546,34,0,0" Height="36" Visibility="Collapsed" Background="MediumSpringGreen"/>
                     </Grid>
                 </StackPanel>
 
