@@ -107,13 +107,13 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <Button x:Name="PlacesButtonBack" Content="Back" Click="goBackToDestinationMenu" Width="142" HorizontalAlignment="Left" Margin="0,34,0,0" Height="36"/>
-                        <Button x:Name="PlacesButtonAdd" Content="Add to trip" Click="PlacesButtonAdd_Click" Width="142" HorizontalAlignment="Right" Margin="0,34,0,0" Height="36" Visibility="Collapsed"/>
+                        <Button x:Name="PlacesButtonAdd" Content="Add to trip" Click="PlacesButtonAdd_Click" Width="142" HorizontalAlignment="Left" Margin="530,34,0,0" Height="36" Visibility="Collapsed"/>
                     </Grid>
                 </StackPanel>
 
                 <StackPanel x:Name="HotelPanel" Width="899" Visibility="Collapsed">
                     <Label x:Name="HotelLabel" Content="Hotels" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
-                    <ListView Name="HotelList" SelectionMode="Single" Width="1146" Height="352" Margin="0,0,212,0">
+                    <ListView Name="HotelList" ItemsSource="{Binding Hotels}" SelectionMode="Single" Width="1146" Height="352" Margin="0,0,212,0">
                         <ListView.View>
                             <GridView AllowsColumnReorder="True">
                                 <GridViewColumn Header="Name" Width="202">
@@ -123,10 +123,24 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Description" Width="478">
+                                <GridViewColumn Header="Rating" Width="47">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Description}"/>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Rating}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Price" Width="65">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Price}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Address" Width="450">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=Address}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
@@ -137,7 +151,7 @@
 
                 <StackPanel x:Name="TripPanel" Width="899" Visibility="Collapsed">
                     <Label x:Name="TripLabel" Content="Trip" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
-                    <ListView Name="TripList" ItemsSource="{Binding Places}" SelectionMode="Single" SelectionChanged="PlacesList_SelectionChanged" Width="1146" Height="352" Margin="0,0,212,0">
+                    <ListView Name="UserTripList" ItemsSource="{Binding Places}" SelectionMode="Single" SelectionChanged="PlacesList_SelectionChanged" Width="1146" Height="352" Margin="0,0,212,0">
                         <ListView.View>
                             <GridView AllowsColumnReorder="True">
                                 <GridViewColumn Header="Name" Width="202">

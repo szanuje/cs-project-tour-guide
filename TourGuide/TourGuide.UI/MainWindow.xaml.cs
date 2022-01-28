@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using System;
+using System.Diagnostics;
 
 namespace TourGuide.UI
 {
@@ -55,12 +56,15 @@ namespace TourGuide.UI
     public partial class MainWindow : Window
     {
         public User user;
+        public IList<Place> selectedPlaces;
+        public IList<Place> userTrips;
+        public IList<Destination> destinations;
+        public IList<Hotel> hotels; // todo
+        public Destination selectedDestination;
+
         public DestinationService destinationService;
         public UserLocationService locationService;
-        public Destination selectedDestination;
-        public IList<Place> selectedPlaces;
 
-        public IList<Place> tripPlaces;
 
         public MainWindow(User user)
         {
@@ -71,9 +75,15 @@ namespace TourGuide.UI
 
             this.destinationService = new DestinationService();
             this.locationService = new UserLocationService();
-            List<Destination> dests = destinationService.GetAllDestinations();
 
-            this.DestinationList.ItemsSource = dests;
+            this.destinations = destinationService.GetAllDestinations();
+            this.DestinationList.ItemsSource = destinations;
+
+            this.userTrips = locationService.GetAllUserPlaces(user.Username);
+            this.UserTripList.ItemsSource = userTrips;
+
+            this.hotels = locationService.GetAllHotelsForTrip(userTrips);
+            this.HotelList.ItemsSource = hotels;
         }
 
         private void DestinationList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -94,11 +104,7 @@ namespace TourGuide.UI
         private void loadPlacesOnDestinationSet(Destination selectedDestination)
         {
             var placesUIList = (System.Windows.Controls.ListView)this.FindName("PlacesList");
-            placesUIList.Items.Clear();
-            foreach (Place place in selectedDestination.Places)
-            { // todo nie chcialo dodac wszystkich naraz z jakiegos powodu, potem zerkne na to, teraz mi sie nie chce
-                placesUIList.Items.Add(place);
-            }
+            placesUIList.ItemsSource = selectedDestination.Places;
         }
 
         private void PlacesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -164,8 +170,22 @@ namespace TourGuide.UI
             {
                 this.locationService.AddLocationToUser(place.LocationId, this.user.Username);
             }
-
+            this.RefreshUserTrips(this.user.Username);
             switchToDestinationStack();
+        }
+
+        private void RefreshUserTrips(string username)
+        {
+            var userTripUIList = (System.Windows.Controls.ListView)this.FindName("UserTripList");
+            List<Place> places = locationService.GetAllUserPlaces(username);
+            userTripUIList.ItemsSource = places;
+            this.RefreshHotels(places);
+        }
+
+        private void RefreshHotels(IList<Place> places)
+        {
+            var hotelUIList = (System.Windows.Controls.ListView)this.FindName("HotelList");
+            hotelUIList.ItemsSource = locationService.GetAllHotelsForTrip(places);
         }
 
         private void ExploreMenu_Click(object sender, RoutedEventArgs e)

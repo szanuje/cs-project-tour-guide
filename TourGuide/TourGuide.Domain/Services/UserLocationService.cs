@@ -24,5 +24,24 @@ namespace TourGuide.Domain.Services
                 return entries > 0;
             }
         }
+
+        public List<Hotel> GetAllHotelsForTrip(IList<Place> tripPlaces)
+        {
+            return tripPlaces.SelectMany(p => p.Destination.Hotels).ToList();
+        }
+
+        public List<Place> GetAllUserPlaces(string username)
+        {
+            List<UserLocation> locations = GetAllUserLocations(username);
+            return locations.Select(loc => (Place)loc.BaseLocation).ToList();
+        }
+
+        private static List<UserLocation> GetAllUserLocations(string username)
+        {
+            using (var db = new TourGuideContext())
+            {
+                return db.UserLocations.Where(ub => ub.Username == username).ToList();
+            }
+        }
     }
 }

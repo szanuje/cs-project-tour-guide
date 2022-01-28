@@ -18,5 +18,10 @@ namespace TourGuide.Domain.Data.Models
         public int BaseLocationFK { get; set; }
         [ForeignKey("BaseLocationFK")]
         public BaseLocation BaseLocation { get; set; }
+
+        public override string ToString()
+        {
+            return String.Format("{0}, {1}, {2}, {3}, {4} ", Country, City, Street, HouseNumber, PostalCode);
+        }
     }
 }

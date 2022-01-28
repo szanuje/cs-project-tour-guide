@@ -9,7 +9,6 @@ namespace TourGuide.Domain.Data
 {
     public class DataInit
     {
-
         public void AddDestinations(TourGuideContext db)
         {
 
@@ -38,6 +37,25 @@ namespace TourGuide.Domain.Data
                                 Street = "Kuźnice",
                                 lat = 49.27141297798237,
                                 lng = 19.98262598104344
+                            }
+                        }
+                    },
+                    Hotels = new List<Hotel>()
+                    {
+                        new Hotel()
+                        {
+                            Name = "Hotel Marriott",
+                            Rating = "5/5",
+                            Price = 1199.90,
+                            Address = new Address
+                            {
+                                City = "Warszawa",
+                                Country = "Polska",
+                                HouseNumber = 79,
+                                PostalCode = "00-697",
+                                Street = "al. Jerozolimskie 65",
+                                lat = 52.228245070997936,
+                                lng = 21.004389484656446
                             }
                         }
                     }
@@ -88,6 +106,25 @@ namespace TourGuide.Domain.Data
                                 lng = 2.122872658540742
                             }
                         }
+                    },
+                    Hotels = new List<Hotel>()
+                    {
+                        new Hotel()
+                        {
+                            Name = "Wilson Boutique Hotel",
+                            Rating = "5/5",
+                            Price = 1199.90,
+                            Address = new Address
+                            {
+                                City = "Barcelona",
+                                Country = "Hiszpania",
+                                HouseNumber = 568,
+                                PostalCode = "08-021",
+                                Street = "Avinguda Diagonal",
+                                lat = 41.3949276085681, 
+                                lng = 2.1499965692942924
+                            }
+                        }
                     }
                 });
 
@@ -136,6 +173,25 @@ namespace TourGuide.Domain.Data
                                 lng = -9.093752230857477
                             }
                         }
+                    },
+                    Hotels = new List<Hotel>()
+                    {
+                        new Hotel()
+                        {
+                            Name = "Wilson Boutique Hotel",
+                            Rating = "5/5",
+                            Price = 1199.90,
+                            Address = new Address
+                            {
+                                City = "Lizbona",
+                                Country = "Portugalia",
+                                HouseNumber = 88,
+                                PostalCode = "1150-266",
+                                Street = "R. das Portas de Santo Antao",
+                                lat = 38.71667931664545,
+                                lng = -9.140503730687097
+                            }
+                        }
                     }
                 });
 
@@ -182,6 +238,25 @@ namespace TourGuide.Domain.Data
                                 Street = "Riverside Building",
                                 lat = 51.50331063628315, 
                                 lng = -0.11957515937929862
+                            }
+                        }
+                    },
+                    Hotels = new List<Hotel>()
+                    {
+                        new Hotel()
+                        {
+                            Name = "Kimpton Fitzroy London Hotel",
+                            Rating = "5/5",
+                            Price = 1440.0,
+                            Address = new Address
+                            {
+                                City = "Londyn",
+                                Country = "Wielka Brytania",
+                                HouseNumber = 1,
+                                PostalCode = "WC1B 5BE",
+                                Street = "Russell Square",
+                                lat = 51.52312233625544,
+                                lng = -0.12524934603064714
                             }
                         }
                     }
