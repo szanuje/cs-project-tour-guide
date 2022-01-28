@@ -35,6 +35,11 @@ namespace TourGuide.UI.Components
         {
             InitializeComponent();
         }
+
+        public void setUsernameUI()
+        {
+            this.ManagementButton.Content = user.Name + " " + user.Surname + " (" + user.Username + ")";
+        }
         /// <summary>
         /// Handles the Click event of the ManagementButton control.
         /// </summary>

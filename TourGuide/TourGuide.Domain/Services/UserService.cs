@@ -27,13 +27,13 @@ namespace TourGuide.Domain.Services
         /// <param name="username">The username.</param>
         /// <param name="password">The password.</param>
         /// <returns><c>true</c> if user added, <c>false</c> otherwise.</returns>
-        public bool AddNewUser(String username, String password)
+        public bool AddNewUser(String username, String name, String surname, String password)
         {
             using (var db = new TourGuideContext())
             {
                 if (db.Users.Any(u => u.Username == username)) return false;
 
-                var user = new User() { Username = username, Password = password };
+                var user = new User() { Username = username, Name = name, Surname = surname, Password = password };
                 db.Add(user);
                 int entries = db.SaveChanges();
 

@@ -27,12 +27,22 @@ namespace TourGuide.Domain.Data.Models
         [Key]
         public string Username { get; set; }
         /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>The name.</value>
+        public string Name { get; set; }
+        /// <summary>
+        /// Gets or sets the surname.
+        /// </summary>
+        /// <value>The surname.</value>
+        public string Surname { get; set; }
+        /// <summary>
         /// Gets or sets the password.
         /// </summary>
         /// <value>The password.</value>
         public string Password { get; set; }
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="User"/> is admin.
+        /// Gets or sets a value indicating whether this <see cref="User" /> is admin.
         /// </summary>
         /// <value><c>true</c> if admin; otherwise, <c>false</c>.</value>
         public bool Admin { get; set; } = false;

@@ -5,19 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TourGuide.UI"
         mc:Ignorable="d"
-        Title="Register"  Height="450" Width="350" FontSize="14" Background="#E0E0E0">
-    <Border Background="#FFFFFF" CornerRadius="4" Margin="30">
-        <StackPanel Margin="20">
+        Title="Register"  Height="508" Width="350" FontSize="14" Background="#E0E0E0">
+    <Border Background="#FFFFFF" CornerRadius="4" Margin="30,10,30,8">
+        <StackPanel Margin="20,20,20,0">
             <Label Content="Create new user" Foreground="Black" FontSize="25" HorizontalAlignment="Center" FontWeight="Bold"/>
             <Separator/>
             <Label Content="Username" Foreground="Black"/>
             <TextBox Name="username" Background="#FFFFFF" TextChanged="passwordConfirm_PasswordChanged"/>
+            <Label Content="Name" Foreground="Black"/>
+            <TextBox Name="name" Background="#FFFFFF" TextChanged="passwordConfirm_PasswordChanged"/>
+            <Label Content="Surname" Foreground="Black"/>
+            <TextBox Name="surname" Background="#FFFFFF" TextChanged="passwordConfirm_PasswordChanged"/>
             <Label Content="Password" Foreground="Black"/>
             <PasswordBox Name="password" Background="#FFFFFF" PasswordChanged="passwordConfirm_PasswordChanged"/>
             <Label Content="Confirm password" Foreground="Black"/>
             <PasswordBox Name="passwordConfirm" Background="#FFFFFF" PasswordChanged="passwordConfirm_PasswordChanged"/>
             <Button Name="userSubmit" Content="Create" Background="#E0E0E0" BorderBrush="#E0E0E0" Foreground="White" Margin="20 30" Click="userSubmit_Click"/>
-            <Label Name="backLabel" Content="← Back" Foreground="#0062FF" MouseDown="backLabel_MouseDown"/>
+            <Label x:Name="backLabel" Content="← Back" Foreground="#0062FF" MouseDown="backLabel_MouseDown" Height="29"/>
         </StackPanel>
     </Border>
 </Window>

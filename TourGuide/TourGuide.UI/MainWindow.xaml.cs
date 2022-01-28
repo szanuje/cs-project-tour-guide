@@ -162,6 +162,7 @@ namespace TourGuide.UI
 
             this.user = user;
             this.navBar.user = user;
+            this.navBar.setUsernameUI();
 
             this.destinationService = new DestinationService();
             this.locationService = new UserLocationService();

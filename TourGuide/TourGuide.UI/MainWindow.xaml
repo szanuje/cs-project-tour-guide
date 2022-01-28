@@ -30,24 +30,24 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="0">
-                <RadioButton x:Name="ExploreMenu" Content="Explore" Height="50" 
+                <RadioButton x:Name="ExploreMenu" Content=" Explore" Height="50" 
                              Foreground="White" FontSize="20"
                              Click="ExploreMenu_Click"
                              Style="{StaticResource MenuButtonStyle}" IsEnabled="True" IsChecked="True" />
 
-                <RadioButton x:Name="HotelsMenu" Content="Hotels" Height="50" 
+                <RadioButton x:Name="HotelsMenu" Content=" Hotels" Height="50" 
                              Foreground="White" FontSize="20" 
                              Click="HotelsMenu_Click"
                              Style="{StaticResource MenuButtonStyle}" IsEnabled="True" IsChecked="False"/>
 
-                <RadioButton x:Name="TripMenu" Content="My Trip" Height="50" 
+                <RadioButton x:Name="TripMenu" Content=" My Trip" Height="50" 
                              Foreground="White" FontSize="20" 
                              Click="TripMenu_Click"
                              Style="{StaticResource MenuButtonStyle}" IsEnabled="True" IsChecked="False"/>
             </StackPanel>
 
             <StackPanel Grid.Row="0" Grid.Column="1">
-                <components:NavigationBar x:Name="navBar"/>
+                <components:NavigationBar x:Name="navBar" Width="1034"/>
             </StackPanel>
             
             <StackPanel Grid.Row="1" Grid.Column="1" Margin="15">

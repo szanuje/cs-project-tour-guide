@@ -44,7 +44,9 @@ namespace TourGuide.UI
         {
             if(username.Text.Length > 0
                 && passwordConfirm.Password.Length > 0
-                && password.Password == passwordConfirm.Password)
+                && password.Password == passwordConfirm.Password
+                && name.Text.Length > 0
+                && surname.Text.Length > 0)
             {
                 userSubmit.Background = new SolidColorBrush(Color.FromRgb(0, 98, 255));
             } 
@@ -57,7 +59,7 @@ namespace TourGuide.UI
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void userSubmit_Click(object sender, RoutedEventArgs e)
         {
-            var response = userService.AddNewUser(username.Text, password.Password);
+            var response = userService.AddNewUser(username.Text, name.Text, surname.Text, password.Password);
 
             if (response)
             {

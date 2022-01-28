@@ -58,7 +58,7 @@ namespace TourGuide.Domain.Data
 
             if (admin == null)
             {
-                var user = new User() { Username = "admin", Password = "admin", Admin = true };
+                var user = new User() { Username = "admin", Name = "Tiger", Surname = "Bonzo", Password = "admin", Admin = true };
                 this.Add(user);
                 this.SaveChanges();
             }
