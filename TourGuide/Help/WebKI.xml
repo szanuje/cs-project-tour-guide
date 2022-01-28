@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+
+  <HelpKINode Title="AccountWindow class" Url="html/AllMembers.T-TourGuide.UI.Views.AccountWindow.htm" />
+  <HelpKINode Title="AccountWindow class" Url="html/T-TourGuide.UI.Views.AccountWindow.htm" />
+  <HelpKINode Title="AccountWindow class">
+    <HelpKINode Title="about AccountWindow class" Url="html/T-TourGuide.UI.Views.AccountWindow.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.UI.Views.AccountWindow.htm" />
+    <HelpKINode Title="constructor" Url="html/M-TourGuide.UI.Views.AccountWindow.-ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AccountWindow.AccountWindow constructor" Url="html/M-TourGuide.UI.Views.AccountWindow.-ctor.htm" />
+  <HelpKINode Title="AddDestinations method" Url="html/M-TourGuide.Domain.Data.DataInit.AddDestinations.htm" />
+  <HelpKINode Title="AddLocationToUser method" Url="html/M-TourGuide.Domain.Services.UserLocationService.AddLocationToUser.htm" />
+  <HelpKINode Title="AddNewAddress method" Url="html/M-TourGuide.Domain.Services.AddressService.AddNewAddress.htm" />
+  <HelpKINode Title="AddNewDestination method" Url="html/M-TourGuide.Domain.Services.DestinationService.AddNewDestination.htm" />
+  <HelpKINode Title="AddNewHotel method" Url="html/M-TourGuide.Domain.Services.HotelService.AddNewHotel.htm" />
+  <HelpKINode Title="AddNewUser method" Url="html/M-TourGuide.Domain.Services.UserService.AddNewUser.htm" />
+  <HelpKINode Title="Address class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Address.htm" />
+  <HelpKINode Title="Address class" Url="html/T-TourGuide.Domain.Data.Models.Address.htm" />
+  <HelpKINode Title="Address class">
+    <HelpKINode Title="about Address class" Url="html/T-TourGuide.Domain.Data.Models.Address.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Address.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Data.Models.Address.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-TourGuide.Domain.Data.Models.Address.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Address property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.Address.htm" />
+  <HelpKINode Title="Address.BaseLocation property" Url="html/P-TourGuide.Domain.Data.Models.Address.BaseLocation.htm" />
+  <HelpKINode Title="Address.BaseLocationFK property" Url="html/P-TourGuide.Domain.Data.Models.Address.BaseLocationFK.htm" />
+  <HelpKINode Title="Address.City property" Url="html/P-TourGuide.Domain.Data.Models.Address.City.htm" />
+  <HelpKINode Title="Address.Country property" Url="html/P-TourGuide.Domain.Data.Models.Address.Country.htm" />
+  <HelpKINode Title="Address.HouseNumber property" Url="html/P-TourGuide.Domain.Data.Models.Address.HouseNumber.htm" />
+  <HelpKINode Title="Address.Id property" Url="html/P-TourGuide.Domain.Data.Models.Address.Id.htm" />
+  <HelpKINode Title="Address.lat property" Url="html/P-TourGuide.Domain.Data.Models.Address.lat.htm" />
+  <HelpKINode Title="Address.lng property" Url="html/P-TourGuide.Domain.Data.Models.Address.lng.htm" />
+  <HelpKINode Title="Address.PostalCode property" Url="html/P-TourGuide.Domain.Data.Models.Address.PostalCode.htm" />
+  <HelpKINode Title="Address.Street property" Url="html/P-TourGuide.Domain.Data.Models.Address.Street.htm" />
+  <HelpKINode Title="Address.ToString method" Url="html/M-TourGuide.Domain.Data.Models.Address.ToString.htm" />
+  <HelpKINode Title="Addresses property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.Addresses.htm" />
+  <HelpKINode Title="AddressService class" Url="html/AllMembers.T-TourGuide.Domain.Services.AddressService.htm" />
+  <HelpKINode Title="AddressService class" Url="html/T-TourGuide.Domain.Services.AddressService.htm" />
+  <HelpKINode Title="AddressService class">
+    <HelpKINode Title="about AddressService class" Url="html/T-TourGuide.Domain.Services.AddressService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Services.AddressService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Services.AddressService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddressService.AddNewAddress method" Url="html/M-TourGuide.Domain.Services.AddressService.AddNewAddress.htm" />
+  <HelpKINode Title="AddUserDetails class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.AddUserDetails.htm" />
+  <HelpKINode Title="AddUserDetails class" Url="html/T-TourGuide.Domain.Migrations.AddUserDetails.htm" />
+  <HelpKINode Title="AddUserDetails class">
+    <HelpKINode Title="about AddUserDetails class" Url="html/T-TourGuide.Domain.Migrations.AddUserDetails.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Migrations.AddUserDetails.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Migrations.AddUserDetails.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddUserDetails.BuildTargetModel method" Url="html/M-TourGuide.Domain.Migrations.AddUserDetails.BuildTargetModel.htm" />
+  <HelpKINode Title="AddUserDetails.Down method" Url="html/M-TourGuide.Domain.Migrations.AddUserDetails.Down.htm" />
+  <HelpKINode Title="AddUserDetails.Up method" Url="html/M-TourGuide.Domain.Migrations.AddUserDetails.Up.htm" />
+  <HelpKINode Title="AddUserLocation class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.AddUserLocation.htm" />
+  <HelpKINode Title="AddUserLocation class" Url="html/T-TourGuide.Domain.Migrations.AddUserLocation.htm" />
+  <HelpKINode Title="AddUserLocation class">
+    <HelpKINode Title="about AddUserLocation class" Url="html/T-TourGuide.Domain.Migrations.AddUserLocation.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Migrations.AddUserLocation.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Migrations.AddUserLocation.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddUserLocation.BuildTargetModel method" Url="html/M-TourGuide.Domain.Migrations.AddUserLocation.BuildTargetModel.htm" />
+  <HelpKINode Title="AddUserLocation.Down method" Url="html/M-TourGuide.Domain.Migrations.AddUserLocation.Down.htm" />
+  <HelpKINode Title="AddUserLocation.Up method" Url="html/M-TourGuide.Domain.Migrations.AddUserLocation.Up.htm" />
+  <HelpKINode Title="Admin property" Url="html/P-TourGuide.Domain.Data.Models.User.Admin.htm" />
+  <HelpKINode Title="App class" Url="html/T-TourGuide.UI.App.htm" />
+  <HelpKINode Title="App class">
+    <HelpKINode Title="about App class" Url="html/T-TourGuide.UI.App.htm" />
+  </HelpKINode>
+  <HelpKINode Title="backLabel_MouseDown method" Url="html/M-TourGuide.UI.RegisterWindow.backLabel_MouseDown.htm" />
+  <HelpKINode Title="BaseLocation class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.BaseLocation.htm" />
+  <HelpKINode Title="BaseLocation class" Url="html/T-TourGuide.Domain.Data.Models.BaseLocation.htm" />
+  <HelpKINode Title="BaseLocation class">
+    <HelpKINode Title="about BaseLocation class" Url="html/T-TourGuide.Domain.Data.Models.BaseLocation.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.BaseLocation.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-TourGuide.Domain.Data.Models.BaseLocation.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BaseLocation property" Url="html/P-TourGuide.Domain.Data.Models.Address.BaseLocation.htm" />
+  <HelpKINode Title="BaseLocation property" Url="html/P-TourGuide.Domain.Data.Models.UserLocation.BaseLocation.htm" />
+  <HelpKINode Title="BaseLocation.Address property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.Address.htm" />
+  <HelpKINode Title="BaseLocation.Destination property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.Destination.htm" />
+  <HelpKINode Title="BaseLocation.DestinationFK property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.DestinationFK.htm" />
+  <HelpKINode Title="BaseLocation.LocationId property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.LocationId.htm" />
+  <HelpKINode Title="BaseLocation.Locations property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.Locations.htm" />
+  <HelpKINode Title="BaseLocation.Name property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.Name.htm" />
+  <HelpKINode Title="BaseLocationFK property" Url="html/P-TourGuide.Domain.Data.Models.Address.BaseLocationFK.htm" />
+  <HelpKINode Title="BuildModel method" Url="html/M-TourGuide.Domain.Migrations.TourGuideContextModelSnapshot.BuildModel.htm" />
+  <HelpKINode Title="BuildTargetModel method" Url="html/M-TourGuide.Domain.Migrations.AddUserDetails.BuildTargetModel.htm" />
+  <HelpKINode Title="BuildTargetModel method" Url="html/M-TourGuide.Domain.Migrations.AddUserLocation.BuildTargetModel.htm" />
+  <HelpKINode Title="BuildTargetModel method" Url="html/M-TourGuide.Domain.Migrations.DbRelations.BuildTargetModel.htm" />
+  <HelpKINode Title="BuildTargetModel method" Url="html/M-TourGuide.Domain.Migrations.InitialCreate.BuildTargetModel.htm" />
+  <HelpKINode Title="BuildTargetModel method" Url="html/M-TourGuide.Domain.Migrations.MoveLocationToAbstract.BuildTargetModel.htm" />
+  <HelpKINode Title="CanExecute method" Url="html/M-TourGuide.UI.RelayCommand.CanExecute.htm" />
+  <HelpKINode Title="CanExecuteChanged event" Url="html/E-TourGuide.UI.RelayCommand.CanExecuteChanged.htm" />
+  <HelpKINode Title="City property" Url="html/P-TourGuide.Domain.Data.Models.Address.City.htm" />
+  <HelpKINode Title="Country property" Url="html/P-TourGuide.Domain.Data.Models.Address.Country.htm" />
+  <HelpKINode Title="DataInit class" Url="html/AllMembers.T-TourGuide.Domain.Data.DataInit.htm" />
+  <HelpKINode Title="DataInit class" Url="html/T-TourGuide.Domain.Data.DataInit.htm" />
+  <HelpKINode Title="DataInit class">
+    <HelpKINode Title="about DataInit class" Url="html/T-TourGuide.Domain.Data.DataInit.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Data.DataInit.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Data.DataInit.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DataInit.AddDestinations method" Url="html/M-TourGuide.Domain.Data.DataInit.AddDestinations.htm" />
+  <HelpKINode Title="DbPath property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.DbPath.htm" />
+  <HelpKINode Title="DbRelations class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.DbRelations.htm" />
+  <HelpKINode Title="DbRelations class" Url="html/T-TourGuide.Domain.Migrations.DbRelations.htm" />
+  <HelpKINode Title="DbRelations class">
+    <HelpKINode Title="about DbRelations class" Url="html/T-TourGuide.Domain.Migrations.DbRelations.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Migrations.DbRelations.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Migrations.DbRelations.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DbRelations.BuildTargetModel method" Url="html/M-TourGuide.Domain.Migrations.DbRelations.BuildTargetModel.htm" />
+  <HelpKINode Title="DbRelations.Down method" Url="html/M-TourGuide.Domain.Migrations.DbRelations.Down.htm" />
+  <HelpKINode Title="DbRelations.Up method" Url="html/M-TourGuide.Domain.Migrations.DbRelations.Up.htm" />
+  <HelpKINode Title="Description property" Url="html/P-TourGuide.Domain.Data.Models.Destination.Description.htm" />
+  <HelpKINode Title="Description property" Url="html/P-TourGuide.Domain.Data.Models.Place.Description.htm" />
+  <HelpKINode Title="Destination class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Destination.htm" />
+  <HelpKINode Title="Destination class" Url="html/T-TourGuide.Domain.Data.Models.Destination.htm" />
+  <HelpKINode Title="Destination class">
+    <HelpKINode Title="about Destination class" Url="html/T-TourGuide.Domain.Data.Models.Destination.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Destination.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-TourGuide.Domain.Data.Models.Destination.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-TourGuide.Domain.Data.Models.Destination.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Destination property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.Destination.htm" />
+  <HelpKINode Title="Destination.Description property" Url="html/P-TourGuide.Domain.Data.Models.Destination.Description.htm" />
+  <HelpKINode Title="Destination.DestinationId property" Url="html/P-TourGuide.Domain.Data.Models.Destination.DestinationId.htm" />
+  <HelpKINode Title="Destination.Hotels field" Url="html/F-TourGuide.Domain.Data.Models.Destination.Hotels.htm" />
+  <HelpKINode Title="Destination.Name property" Url="html/P-TourGuide.Domain.Data.Models.Destination.Name.htm" />
+  <HelpKINode Title="Destination.Places field" Url="html/F-TourGuide.Domain.Data.Models.Destination.Places.htm" />
+  <HelpKINode Title="DestinationFK property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.DestinationFK.htm" />
+  <HelpKINode Title="DestinationId property" Url="html/P-TourGuide.Domain.Data.Models.Destination.DestinationId.htm" />
+  <HelpKINode Title="DestinationList_SelectionChanged method" Url="html/M-TourGuide.UI.MainWindow.DestinationList_SelectionChanged.htm" />
+  <HelpKINode Title="destinations field" Url="html/F-TourGuide.UI.MainWindow.destinations.htm" />
+  <HelpKINode Title="Destinations property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.Destinations.htm" />
+  <HelpKINode Title="DestinationService class" Url="html/AllMembers.T-TourGuide.Domain.Services.DestinationService.htm" />
+  <HelpKINode Title="DestinationService class" Url="html/T-TourGuide.Domain.Services.DestinationService.htm" />
+  <HelpKINode Title="DestinationService class">
+    <HelpKINode Title="about DestinationService class" Url="html/T-TourGuide.Domain.Services.DestinationService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Services.DestinationService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Services.DestinationService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="destinationService field" Url="html/F-TourGuide.UI.MainWindow.destinationService.htm" />
+  <HelpKINode Title="DestinationService.AddNewDestination method" Url="html/M-TourGuide.Domain.Services.DestinationService.AddNewDestination.htm" />
+  <HelpKINode Title="DestinationService.GetAllDestinations method" Url="html/M-TourGuide.Domain.Services.DestinationService.GetAllDestinations.htm" />
+  <HelpKINode Title="DestinationService.GetDestination method" Url="html/M-TourGuide.Domain.Services.DestinationService.GetDestination.htm" />
+  <HelpKINode Title="Down method" Url="html/M-TourGuide.Domain.Migrations.AddUserDetails.Down.htm" />
+  <HelpKINode Title="Down method" Url="html/M-TourGuide.Domain.Migrations.AddUserLocation.Down.htm" />
+  <HelpKINode Title="Down method" Url="html/M-TourGuide.Domain.Migrations.DbRelations.Down.htm" />
+  <HelpKINode Title="Down method" Url="html/M-TourGuide.Domain.Migrations.InitialCreate.Down.htm" />
+  <HelpKINode Title="Down method" Url="html/M-TourGuide.Domain.Migrations.MoveLocationToAbstract.Down.htm" />
+  <HelpKINode Title="EnsureAdminCreated method" Url="html/M-TourGuide.Domain.Data.TourGuideContext.EnsureAdminCreated.htm" />
+  <HelpKINode Title="Execute method" Url="html/M-TourGuide.UI.RelayCommand.Execute.htm" />
+  <HelpKINode Title="ExploreMenu_Click method" Url="html/M-TourGuide.UI.MainWindow.ExploreMenu_Click.htm" />
+  <HelpKINode Title="GetAllDestinations method" Url="html/M-TourGuide.Domain.Services.DestinationService.GetAllDestinations.htm" />
+  <HelpKINode Title="GetAllHotelsForTrip method" Url="html/M-TourGuide.Domain.Services.HotelService.GetAllHotelsForTrip.htm" />
+  <HelpKINode Title="GetAllUserLocations method" Url="html/M-TourGuide.Domain.Services.UserLocationService.GetAllUserLocations.htm" />
+  <HelpKINode Title="GetAllUserPlaces method" Url="html/M-TourGuide.Domain.Services.UserLocationService.GetAllUserPlaces.htm" />
+  <HelpKINode Title="GetDestination method" Url="html/M-TourGuide.Domain.Services.DestinationService.GetDestination.htm" />
+  <HelpKINode Title="goBackToDestinationMenu method" Url="html/M-TourGuide.UI.MainWindow.goBackToDestinationMenu.htm" />
+  <HelpKINode Title="Hotel class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Hotel.htm" />
+  <HelpKINode Title="Hotel class" Url="html/T-TourGuide.Domain.Data.Models.Hotel.htm" />
+  <HelpKINode Title="Hotel class">
+    <HelpKINode Title="about Hotel class" Url="html/T-TourGuide.Domain.Data.Models.Hotel.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Hotel.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-TourGuide.Domain.Data.Models.Hotel.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Hotel.Price property" Url="html/P-TourGuide.Domain.Data.Models.Hotel.Price.htm" />
+  <HelpKINode Title="Hotel.Rating property" Url="html/P-TourGuide.Domain.Data.Models.Hotel.Rating.htm" />
+  <HelpKINode Title="hotels field" Url="html/F-TourGuide.UI.MainWindow.hotels.htm" />
+  <HelpKINode Title="Hotels field" Url="html/F-TourGuide.Domain.Data.Models.Destination.Hotels.htm" />
+  <HelpKINode Title="Hotels property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.Hotels.htm" />
+  <HelpKINode Title="HotelService class" Url="html/AllMembers.T-TourGuide.Domain.Services.HotelService.htm" />
+  <HelpKINode Title="HotelService class" Url="html/T-TourGuide.Domain.Services.HotelService.htm" />
+  <HelpKINode Title="HotelService class">
+    <HelpKINode Title="about HotelService class" Url="html/T-TourGuide.Domain.Services.HotelService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Services.HotelService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Services.HotelService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="hotelService field" Url="html/F-TourGuide.UI.MainWindow.hotelService.htm" />
+  <HelpKINode Title="HotelService.AddNewHotel method" Url="html/M-TourGuide.Domain.Services.HotelService.AddNewHotel.htm" />
+  <HelpKINode Title="HotelService.GetAllHotelsForTrip method" Url="html/M-TourGuide.Domain.Services.HotelService.GetAllHotelsForTrip.htm" />
+  <HelpKINode Title="HotelsMenu_Click method" Url="html/M-TourGuide.UI.MainWindow.HotelsMenu_Click.htm" />
+  <HelpKINode Title="HouseNumber property" Url="html/P-TourGuide.Domain.Data.Models.Address.HouseNumber.htm" />
+  <HelpKINode Title="Id property" Url="html/P-TourGuide.Domain.Data.Models.Address.Id.htm" />
+  <HelpKINode Title="InitialCreate class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.InitialCreate.htm" />
+  <HelpKINode Title="InitialCreate class" Url="html/T-TourGuide.Domain.Migrations.InitialCreate.htm" />
+  <HelpKINode Title="InitialCreate class">
+    <HelpKINode Title="about InitialCreate class" Url="html/T-TourGuide.Domain.Migrations.InitialCreate.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Migrations.InitialCreate.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Migrations.InitialCreate.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InitialCreate.BuildTargetModel method" Url="html/M-TourGuide.Domain.Migrations.InitialCreate.BuildTargetModel.htm" />
+  <HelpKINode Title="InitialCreate.Down method" Url="html/M-TourGuide.Domain.Migrations.InitialCreate.Down.htm" />
+  <HelpKINode Title="InitialCreate.Up method" Url="html/M-TourGuide.Domain.Migrations.InitialCreate.Up.htm" />
+  <HelpKINode Title="lat property" Url="html/P-TourGuide.Domain.Data.Models.Address.lat.htm" />
+  <HelpKINode Title="lng property" Url="html/P-TourGuide.Domain.Data.Models.Address.lng.htm" />
+  <HelpKINode Title="loadPlacesOnDestinationSet method" Url="html/M-TourGuide.UI.MainWindow.loadPlacesOnDestinationSet.htm" />
+  <HelpKINode Title="LocationId property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.LocationId.htm" />
+  <HelpKINode Title="LocationId property" Url="html/P-TourGuide.Domain.Data.Models.UserLocation.LocationId.htm" />
+  <HelpKINode Title="Locations property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.Locations.htm" />
+  <HelpKINode Title="Locations property" Url="html/P-TourGuide.Domain.Data.Models.User.Locations.htm" />
+  <HelpKINode Title="locationService field" Url="html/F-TourGuide.UI.MainWindow.locationService.htm" />
+  <HelpKINode Title="LoginUser method" Url="html/M-TourGuide.Domain.Services.UserService.LoginUser.htm" />
+  <HelpKINode Title="LoginWindow class" Url="html/AllMembers.T-TourGuide.UI.LoginWindow.htm" />
+  <HelpKINode Title="LoginWindow class" Url="html/T-TourGuide.UI.LoginWindow.htm" />
+  <HelpKINode Title="LoginWindow class">
+    <HelpKINode Title="about LoginWindow class" Url="html/T-TourGuide.UI.LoginWindow.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.UI.LoginWindow.htm" />
+    <HelpKINode Title="constructor" Url="html/M-TourGuide.UI.LoginWindow.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-TourGuide.UI.LoginWindow.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.UI.LoginWindow.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LoginWindow.LoginWindow constructor" Url="html/M-TourGuide.UI.LoginWindow.-ctor.htm" />
+  <HelpKINode Title="LoginWindow.NewProfile_MouseDown method" Url="html/M-TourGuide.UI.LoginWindow.NewProfile_MouseDown.htm" />
+  <HelpKINode Title="LoginWindow.userService field" Url="html/F-TourGuide.UI.LoginWindow.userService.htm" />
+  <HelpKINode Title="LoginWindow.userSubmit_Click method" Url="html/M-TourGuide.UI.LoginWindow.userSubmit_Click.htm" />
+  <HelpKINode Title="MainWindow class" Url="html/AllMembers.T-TourGuide.UI.MainWindow.htm" />
+  <HelpKINode Title="MainWindow class" Url="html/T-TourGuide.UI.MainWindow.htm" />
+  <HelpKINode Title="MainWindow class">
+    <HelpKINode Title="about MainWindow class" Url="html/T-TourGuide.UI.MainWindow.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.UI.MainWindow.htm" />
+    <HelpKINode Title="constructor" Url="html/M-TourGuide.UI.MainWindow.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-TourGuide.UI.MainWindow.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.UI.MainWindow.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MainWindow.DestinationList_SelectionChanged method" Url="html/M-TourGuide.UI.MainWindow.DestinationList_SelectionChanged.htm" />
+  <HelpKINode Title="MainWindow.destinations field" Url="html/F-TourGuide.UI.MainWindow.destinations.htm" />
+  <HelpKINode Title="MainWindow.destinationService field" Url="html/F-TourGuide.UI.MainWindow.destinationService.htm" />
+  <HelpKINode Title="MainWindow.ExploreMenu_Click method" Url="html/M-TourGuide.UI.MainWindow.ExploreMenu_Click.htm" />
+  <HelpKINode Title="MainWindow.goBackToDestinationMenu method" Url="html/M-TourGuide.UI.MainWindow.goBackToDestinationMenu.htm" />
+  <HelpKINode Title="MainWindow.hotels field" Url="html/F-TourGuide.UI.MainWindow.hotels.htm" />
+  <HelpKINode Title="MainWindow.hotelService field" Url="html/F-TourGuide.UI.MainWindow.hotelService.htm" />
+  <HelpKINode Title="MainWindow.HotelsMenu_Click method" Url="html/M-TourGuide.UI.MainWindow.HotelsMenu_Click.htm" />
+  <HelpKINode Title="MainWindow.loadPlacesOnDestinationSet method" Url="html/M-TourGuide.UI.MainWindow.loadPlacesOnDestinationSet.htm" />
+  <HelpKINode Title="MainWindow.locationService field" Url="html/F-TourGuide.UI.MainWindow.locationService.htm" />
+  <HelpKINode Title="MainWindow.MainWindow constructor" Url="html/M-TourGuide.UI.MainWindow.-ctor.htm" />
+  <HelpKINode Title="MainWindow.PlacesButtonAdd_Click method" Url="html/M-TourGuide.UI.MainWindow.PlacesButtonAdd_Click.htm" />
+  <HelpKINode Title="MainWindow.PlacesList_SelectionChanged method" Url="html/M-TourGuide.UI.MainWindow.PlacesList_SelectionChanged.htm" />
+  <HelpKINode Title="MainWindow.placesToRemove field" Url="html/F-TourGuide.UI.MainWindow.placesToRemove.htm" />
+  <HelpKINode Title="MainWindow.RefreshHotels method" Url="html/M-TourGuide.UI.MainWindow.RefreshHotels.htm" />
+  <HelpKINode Title="MainWindow.RefreshUserTrips method" Url="html/M-TourGuide.UI.MainWindow.RefreshUserTrips.htm" />
+  <HelpKINode Title="MainWindow.selectedDestination field" Url="html/F-TourGuide.UI.MainWindow.selectedDestination.htm" />
+  <HelpKINode Title="MainWindow.selectedPlaces field" Url="html/F-TourGuide.UI.MainWindow.selectedPlaces.htm" />
+  <HelpKINode Title="MainWindow.switchToDestinationStack method" Url="html/M-TourGuide.UI.MainWindow.switchToDestinationStack.htm" />
+  <HelpKINode Title="MainWindow.switchToHotelStack method" Url="html/M-TourGuide.UI.MainWindow.switchToHotelStack.htm" />
+  <HelpKINode Title="MainWindow.switchToPlacesStack method" Url="html/M-TourGuide.UI.MainWindow.switchToPlacesStack.htm" />
+  <HelpKINode Title="MainWindow.switchToTripStack method" Url="html/M-TourGuide.UI.MainWindow.switchToTripStack.htm" />
+  <HelpKINode Title="MainWindow.TripMenu_Click method" Url="html/M-TourGuide.UI.MainWindow.TripMenu_Click.htm" />
+  <HelpKINode Title="MainWindow.TripRemove_Click method" Url="html/M-TourGuide.UI.MainWindow.TripRemove_Click.htm" />
+  <HelpKINode Title="MainWindow.user field" Url="html/F-TourGuide.UI.MainWindow.user.htm" />
+  <HelpKINode Title="MainWindow.UserTripList_SelectionChanged method" Url="html/M-TourGuide.UI.MainWindow.UserTripList_SelectionChanged.htm" />
+  <HelpKINode Title="MainWindow.userTrips field" Url="html/F-TourGuide.UI.MainWindow.userTrips.htm" />
+  <HelpKINode Title="ManagementButton_Click method" Url="html/M-TourGuide.UI.Components.NavigationBar.ManagementButton_Click.htm" />
+  <HelpKINode Title="MoveLocationToAbstract class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.MoveLocationToAbstract.htm" />
+  <HelpKINode Title="MoveLocationToAbstract class" Url="html/T-TourGuide.Domain.Migrations.MoveLocationToAbstract.htm" />
+  <HelpKINode Title="MoveLocationToAbstract class">
+    <HelpKINode Title="about MoveLocationToAbstract class" Url="html/T-TourGuide.Domain.Migrations.MoveLocationToAbstract.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Migrations.MoveLocationToAbstract.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Migrations.MoveLocationToAbstract.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MoveLocationToAbstract.BuildTargetModel method" Url="html/M-TourGuide.Domain.Migrations.MoveLocationToAbstract.BuildTargetModel.htm" />
+  <HelpKINode Title="MoveLocationToAbstract.Down method" Url="html/M-TourGuide.Domain.Migrations.MoveLocationToAbstract.Down.htm" />
+  <HelpKINode Title="MoveLocationToAbstract.Up method" Url="html/M-TourGuide.Domain.Migrations.MoveLocationToAbstract.Up.htm" />
+  <HelpKINode Title="Name property" Url="html/P-TourGuide.Domain.Data.Models.BaseLocation.Name.htm" />
+  <HelpKINode Title="Name property" Url="html/P-TourGuide.Domain.Data.Models.Destination.Name.htm" />
+  <HelpKINode Title="Name property" Url="html/P-TourGuide.Domain.Data.Models.User.Name.htm" />
+  <HelpKINode Title="NavigationBar class" Url="html/AllMembers.T-TourGuide.UI.Components.NavigationBar.htm" />
+  <HelpKINode Title="NavigationBar class" Url="html/T-TourGuide.UI.Components.NavigationBar.htm" />
+  <HelpKINode Title="NavigationBar class">
+    <HelpKINode Title="about NavigationBar class" Url="html/T-TourGuide.UI.Components.NavigationBar.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.UI.Components.NavigationBar.htm" />
+    <HelpKINode Title="constructor" Url="html/M-TourGuide.UI.Components.NavigationBar.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-TourGuide.UI.Components.NavigationBar.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.UI.Components.NavigationBar.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NavigationBar.ManagementButton_Click method" Url="html/M-TourGuide.UI.Components.NavigationBar.ManagementButton_Click.htm" />
+  <HelpKINode Title="NavigationBar.NavigationBar constructor" Url="html/M-TourGuide.UI.Components.NavigationBar.-ctor.htm" />
+  <HelpKINode Title="NavigationBar.setUsernameUI method" Url="html/M-TourGuide.UI.Components.NavigationBar.setUsernameUI.htm" />
+  <HelpKINode Title="NavigationBar.user field" Url="html/F-TourGuide.UI.Components.NavigationBar.user.htm" />
+  <HelpKINode Title="NewProfile_MouseDown method" Url="html/M-TourGuide.UI.LoginWindow.NewProfile_MouseDown.htm" />
+  <HelpKINode Title="ObservableObject class" Url="html/AllMembers.T-TourGuide.UI.ObservableObject.htm" />
+  <HelpKINode Title="ObservableObject class" Url="html/T-TourGuide.UI.ObservableObject.htm" />
+  <HelpKINode Title="ObservableObject class">
+    <HelpKINode Title="about ObservableObject class" Url="html/T-TourGuide.UI.ObservableObject.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.UI.ObservableObject.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-TourGuide.UI.ObservableObject.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.UI.ObservableObject.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ObservableObject.OnPropertyChanged method" Url="html/M-TourGuide.UI.ObservableObject.OnPropertyChanged.htm" />
+  <HelpKINode Title="ObservableObject.PropertyChanged event" Url="html/E-TourGuide.UI.ObservableObject.PropertyChanged.htm" />
+  <HelpKINode Title="OnConfiguring method" Url="html/M-TourGuide.Domain.Data.TourGuideContext.OnConfiguring.htm" />
+  <HelpKINode Title="OnModelCreating method" Url="html/M-TourGuide.Domain.Data.TourGuideContext.OnModelCreating.htm" />
+  <HelpKINode Title="OnPropertyChanged method" Url="html/M-TourGuide.UI.ObservableObject.OnPropertyChanged.htm" />
+  <HelpKINode Title="Password property" Url="html/P-TourGuide.Domain.Data.Models.User.Password.htm" />
+  <HelpKINode Title="passwordConfirm_PasswordChanged method" Url="html/M-TourGuide.UI.RegisterWindow.passwordConfirm_PasswordChanged.htm" />
+  <HelpKINode Title="Place class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Place.htm" />
+  <HelpKINode Title="Place class" Url="html/T-TourGuide.Domain.Data.Models.Place.htm" />
+  <HelpKINode Title="Place class">
+    <HelpKINode Title="about Place class" Url="html/T-TourGuide.Domain.Data.Models.Place.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Place.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-TourGuide.Domain.Data.Models.Place.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Place.Description property" Url="html/P-TourGuide.Domain.Data.Models.Place.Description.htm" />
+  <HelpKINode Title="Places field" Url="html/F-TourGuide.Domain.Data.Models.Destination.Places.htm" />
+  <HelpKINode Title="Places property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.Places.htm" />
+  <HelpKINode Title="PlacesButtonAdd_Click method" Url="html/M-TourGuide.UI.MainWindow.PlacesButtonAdd_Click.htm" />
+  <HelpKINode Title="PlacesList_SelectionChanged method" Url="html/M-TourGuide.UI.MainWindow.PlacesList_SelectionChanged.htm" />
+  <HelpKINode Title="placesToRemove field" Url="html/F-TourGuide.UI.MainWindow.placesToRemove.htm" />
+  <HelpKINode Title="PostalCode property" Url="html/P-TourGuide.Domain.Data.Models.Address.PostalCode.htm" />
+  <HelpKINode Title="Price property" Url="html/P-TourGuide.Domain.Data.Models.Hotel.Price.htm" />
+  <HelpKINode Title="PropertyChanged event" Url="html/E-TourGuide.UI.ObservableObject.PropertyChanged.htm" />
+  <HelpKINode Title="Rating property" Url="html/P-TourGuide.Domain.Data.Models.Hotel.Rating.htm" />
+  <HelpKINode Title="RefreshHotels method" Url="html/M-TourGuide.UI.MainWindow.RefreshHotels.htm" />
+  <HelpKINode Title="RefreshUserTrips method" Url="html/M-TourGuide.UI.MainWindow.RefreshUserTrips.htm" />
+  <HelpKINode Title="RegisterWindow class" Url="html/AllMembers.T-TourGuide.UI.RegisterWindow.htm" />
+  <HelpKINode Title="RegisterWindow class" Url="html/T-TourGuide.UI.RegisterWindow.htm" />
+  <HelpKINode Title="RegisterWindow class">
+    <HelpKINode Title="about RegisterWindow class" Url="html/T-TourGuide.UI.RegisterWindow.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.UI.RegisterWindow.htm" />
+    <HelpKINode Title="constructor" Url="html/M-TourGuide.UI.RegisterWindow.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-TourGuide.UI.RegisterWindow.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.UI.RegisterWindow.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RegisterWindow.backLabel_MouseDown method" Url="html/M-TourGuide.UI.RegisterWindow.backLabel_MouseDown.htm" />
+  <HelpKINode Title="RegisterWindow.passwordConfirm_PasswordChanged method" Url="html/M-TourGuide.UI.RegisterWindow.passwordConfirm_PasswordChanged.htm" />
+  <HelpKINode Title="RegisterWindow.RegisterWindow constructor" Url="html/M-TourGuide.UI.RegisterWindow.-ctor.htm" />
+  <HelpKINode Title="RegisterWindow.switchToLogin method" Url="html/M-TourGuide.UI.RegisterWindow.switchToLogin.htm" />
+  <HelpKINode Title="RegisterWindow.userService field" Url="html/F-TourGuide.UI.RegisterWindow.userService.htm" />
+  <HelpKINode Title="RegisterWindow.userSubmit_Click method" Url="html/M-TourGuide.UI.RegisterWindow.userSubmit_Click.htm" />
+  <HelpKINode Title="RelayCommand class" Url="html/AllMembers.T-TourGuide.UI.RelayCommand.htm" />
+  <HelpKINode Title="RelayCommand class" Url="html/T-TourGuide.UI.RelayCommand.htm" />
+  <HelpKINode Title="RelayCommand class">
+    <HelpKINode Title="about RelayCommand class" Url="html/T-TourGuide.UI.RelayCommand.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.UI.RelayCommand.htm" />
+    <HelpKINode Title="constructor" Url="html/M-TourGuide.UI.RelayCommand.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-TourGuide.UI.RelayCommand.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-TourGuide.UI.RelayCommand.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.UI.RelayCommand.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RelayCommand.CanExecute method" Url="html/M-TourGuide.UI.RelayCommand.CanExecute.htm" />
+  <HelpKINode Title="RelayCommand.CanExecuteChanged event" Url="html/E-TourGuide.UI.RelayCommand.CanExecuteChanged.htm" />
+  <HelpKINode Title="RelayCommand.Execute method" Url="html/M-TourGuide.UI.RelayCommand.Execute.htm" />
+  <HelpKINode Title="RelayCommand.RelayCommand constructor" Url="html/M-TourGuide.UI.RelayCommand.-ctor.htm" />
+  <HelpKINode Title="RelayCommand._canExecute field" Url="html/F-TourGuide.UI.RelayCommand._canExecute.htm" />
+  <HelpKINode Title="RelayCommand._execute field" Url="html/F-TourGuide.UI.RelayCommand._execute.htm" />
+  <HelpKINode Title="RemoveLocationFromUser method" Url="html/M-TourGuide.Domain.Services.UserLocationService.RemoveLocationFromUser.htm" />
+  <HelpKINode Title="selectedDestination field" Url="html/F-TourGuide.UI.MainWindow.selectedDestination.htm" />
+  <HelpKINode Title="selectedPlaces field" Url="html/F-TourGuide.UI.MainWindow.selectedPlaces.htm" />
+  <HelpKINode Title="setUsernameUI method" Url="html/M-TourGuide.UI.Components.NavigationBar.setUsernameUI.htm" />
+  <HelpKINode Title="Street property" Url="html/P-TourGuide.Domain.Data.Models.Address.Street.htm" />
+  <HelpKINode Title="Surname property" Url="html/P-TourGuide.Domain.Data.Models.User.Surname.htm" />
+  <HelpKINode Title="switchToDestinationStack method" Url="html/M-TourGuide.UI.MainWindow.switchToDestinationStack.htm" />
+  <HelpKINode Title="switchToHotelStack method" Url="html/M-TourGuide.UI.MainWindow.switchToHotelStack.htm" />
+  <HelpKINode Title="switchToLogin method" Url="html/M-TourGuide.UI.RegisterWindow.switchToLogin.htm" />
+  <HelpKINode Title="switchToPlacesStack method" Url="html/M-TourGuide.UI.MainWindow.switchToPlacesStack.htm" />
+  <HelpKINode Title="switchToTripStack method" Url="html/M-TourGuide.UI.MainWindow.switchToTripStack.htm" />
+  <HelpKINode Title="ToString method" Url="html/M-TourGuide.Domain.Data.Models.Address.ToString.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data namespace" Url="html/N-TourGuide.Domain.Data.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.DataInit class" Url="html/AllMembers.T-TourGuide.Domain.Data.DataInit.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.DataInit class" Url="html/T-TourGuide.Domain.Data.DataInit.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models namespace" Url="html/N-TourGuide.Domain.Data.Models.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.Address class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Address.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.Address class" Url="html/T-TourGuide.Domain.Data.Models.Address.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.BaseLocation class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.BaseLocation.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.BaseLocation class" Url="html/T-TourGuide.Domain.Data.Models.BaseLocation.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.Destination class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Destination.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.Destination class" Url="html/T-TourGuide.Domain.Data.Models.Destination.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.Hotel class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Hotel.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.Hotel class" Url="html/T-TourGuide.Domain.Data.Models.Hotel.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.Place class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.Place.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.Place class" Url="html/T-TourGuide.Domain.Data.Models.Place.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.User class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.User.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.User class" Url="html/T-TourGuide.Domain.Data.Models.User.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.UserLocation class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.UserLocation.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.Models.UserLocation class" Url="html/T-TourGuide.Domain.Data.Models.UserLocation.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.TourGuideContext class" Url="html/AllMembers.T-TourGuide.Domain.Data.TourGuideContext.htm" />
+  <HelpKINode Title="TourGuide.Domain.Data.TourGuideContext class" Url="html/T-TourGuide.Domain.Data.TourGuideContext.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations namespace" Url="html/N-TourGuide.Domain.Migrations.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.AddUserDetails class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.AddUserDetails.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.AddUserDetails class" Url="html/T-TourGuide.Domain.Migrations.AddUserDetails.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.AddUserLocation class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.AddUserLocation.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.AddUserLocation class" Url="html/T-TourGuide.Domain.Migrations.AddUserLocation.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.DbRelations class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.DbRelations.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.DbRelations class" Url="html/T-TourGuide.Domain.Migrations.DbRelations.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.InitialCreate class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.InitialCreate.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.InitialCreate class" Url="html/T-TourGuide.Domain.Migrations.InitialCreate.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.MoveLocationToAbstract class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.MoveLocationToAbstract.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.MoveLocationToAbstract class" Url="html/T-TourGuide.Domain.Migrations.MoveLocationToAbstract.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.TourGuideContextModelSnapshot class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.TourGuideContextModelSnapshot.htm" />
+  <HelpKINode Title="TourGuide.Domain.Migrations.TourGuideContextModelSnapshot class" Url="html/T-TourGuide.Domain.Migrations.TourGuideContextModelSnapshot.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services namespace" Url="html/N-TourGuide.Domain.Services.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services.AddressService class" Url="html/AllMembers.T-TourGuide.Domain.Services.AddressService.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services.AddressService class" Url="html/T-TourGuide.Domain.Services.AddressService.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services.DestinationService class" Url="html/AllMembers.T-TourGuide.Domain.Services.DestinationService.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services.DestinationService class" Url="html/T-TourGuide.Domain.Services.DestinationService.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services.HotelService class" Url="html/AllMembers.T-TourGuide.Domain.Services.HotelService.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services.HotelService class" Url="html/T-TourGuide.Domain.Services.HotelService.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services.UserLocationService class" Url="html/AllMembers.T-TourGuide.Domain.Services.UserLocationService.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services.UserLocationService class" Url="html/T-TourGuide.Domain.Services.UserLocationService.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services.UserService class" Url="html/AllMembers.T-TourGuide.Domain.Services.UserService.htm" />
+  <HelpKINode Title="TourGuide.Domain.Services.UserService class" Url="html/T-TourGuide.Domain.Services.UserService.htm" />
+  <HelpKINode Title="TourGuide.UI namespace" Url="html/N-TourGuide.UI.htm" />
+  <HelpKINode Title="TourGuide.UI.App class" Url="html/T-TourGuide.UI.App.htm" />
+  <HelpKINode Title="TourGuide.UI.Components namespace" Url="html/N-TourGuide.UI.Components.htm" />
+  <HelpKINode Title="TourGuide.UI.Components.NavigationBar class" Url="html/AllMembers.T-TourGuide.UI.Components.NavigationBar.htm" />
+  <HelpKINode Title="TourGuide.UI.Components.NavigationBar class" Url="html/T-TourGuide.UI.Components.NavigationBar.htm" />
+  <HelpKINode Title="TourGuide.UI.LoginWindow class" Url="html/AllMembers.T-TourGuide.UI.LoginWindow.htm" />
+  <HelpKINode Title="TourGuide.UI.LoginWindow class" Url="html/T-TourGuide.UI.LoginWindow.htm" />
+  <HelpKINode Title="TourGuide.UI.MainWindow class" Url="html/AllMembers.T-TourGuide.UI.MainWindow.htm" />
+  <HelpKINode Title="TourGuide.UI.MainWindow class" Url="html/T-TourGuide.UI.MainWindow.htm" />
+  <HelpKINode Title="TourGuide.UI.ObservableObject class" Url="html/AllMembers.T-TourGuide.UI.ObservableObject.htm" />
+  <HelpKINode Title="TourGuide.UI.ObservableObject class" Url="html/T-TourGuide.UI.ObservableObject.htm" />
+  <HelpKINode Title="TourGuide.UI.RegisterWindow class" Url="html/AllMembers.T-TourGuide.UI.RegisterWindow.htm" />
+  <HelpKINode Title="TourGuide.UI.RegisterWindow class" Url="html/T-TourGuide.UI.RegisterWindow.htm" />
+  <HelpKINode Title="TourGuide.UI.RelayCommand class" Url="html/AllMembers.T-TourGuide.UI.RelayCommand.htm" />
+  <HelpKINode Title="TourGuide.UI.RelayCommand class" Url="html/T-TourGuide.UI.RelayCommand.htm" />
+  <HelpKINode Title="TourGuide.UI.Views namespace" Url="html/N-TourGuide.UI.Views.htm" />
+  <HelpKINode Title="TourGuide.UI.Views.AccountWindow class" Url="html/AllMembers.T-TourGuide.UI.Views.AccountWindow.htm" />
+  <HelpKINode Title="TourGuide.UI.Views.AccountWindow class" Url="html/T-TourGuide.UI.Views.AccountWindow.htm" />
+  <HelpKINode Title="TourGuideContext class" Url="html/AllMembers.T-TourGuide.Domain.Data.TourGuideContext.htm" />
+  <HelpKINode Title="TourGuideContext class" Url="html/T-TourGuide.Domain.Data.TourGuideContext.htm" />
+  <HelpKINode Title="TourGuideContext class">
+    <HelpKINode Title="about TourGuideContext class" Url="html/T-TourGuide.Domain.Data.TourGuideContext.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Data.TourGuideContext.htm" />
+    <HelpKINode Title="constructor" Url="html/M-TourGuide.Domain.Data.TourGuideContext.-ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Data.TourGuideContext.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-TourGuide.Domain.Data.TourGuideContext.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TourGuideContext.Addresses property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.Addresses.htm" />
+  <HelpKINode Title="TourGuideContext.DbPath property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.DbPath.htm" />
+  <HelpKINode Title="TourGuideContext.Destinations property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.Destinations.htm" />
+  <HelpKINode Title="TourGuideContext.EnsureAdminCreated method" Url="html/M-TourGuide.Domain.Data.TourGuideContext.EnsureAdminCreated.htm" />
+  <HelpKINode Title="TourGuideContext.Hotels property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.Hotels.htm" />
+  <HelpKINode Title="TourGuideContext.OnConfiguring method" Url="html/M-TourGuide.Domain.Data.TourGuideContext.OnConfiguring.htm" />
+  <HelpKINode Title="TourGuideContext.OnModelCreating method" Url="html/M-TourGuide.Domain.Data.TourGuideContext.OnModelCreating.htm" />
+  <HelpKINode Title="TourGuideContext.Places property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.Places.htm" />
+  <HelpKINode Title="TourGuideContext.TourGuideContext constructor" Url="html/M-TourGuide.Domain.Data.TourGuideContext.-ctor.htm" />
+  <HelpKINode Title="TourGuideContext.UserLocations property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.UserLocations.htm" />
+  <HelpKINode Title="TourGuideContext.Users property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.Users.htm" />
+  <HelpKINode Title="TourGuideContextModelSnapshot class" Url="html/AllMembers.T-TourGuide.Domain.Migrations.TourGuideContextModelSnapshot.htm" />
+  <HelpKINode Title="TourGuideContextModelSnapshot class" Url="html/T-TourGuide.Domain.Migrations.TourGuideContextModelSnapshot.htm" />
+  <HelpKINode Title="TourGuideContextModelSnapshot class">
+    <HelpKINode Title="about TourGuideContextModelSnapshot class" Url="html/T-TourGuide.Domain.Migrations.TourGuideContextModelSnapshot.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Migrations.TourGuideContextModelSnapshot.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Migrations.TourGuideContextModelSnapshot.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TourGuideContextModelSnapshot.BuildModel method" Url="html/M-TourGuide.Domain.Migrations.TourGuideContextModelSnapshot.BuildModel.htm" />
+  <HelpKINode Title="TripMenu_Click method" Url="html/M-TourGuide.UI.MainWindow.TripMenu_Click.htm" />
+  <HelpKINode Title="TripRemove_Click method" Url="html/M-TourGuide.UI.MainWindow.TripRemove_Click.htm" />
+  <HelpKINode Title="Up method" Url="html/M-TourGuide.Domain.Migrations.AddUserDetails.Up.htm" />
+  <HelpKINode Title="Up method" Url="html/M-TourGuide.Domain.Migrations.AddUserLocation.Up.htm" />
+  <HelpKINode Title="Up method" Url="html/M-TourGuide.Domain.Migrations.DbRelations.Up.htm" />
+  <HelpKINode Title="Up method" Url="html/M-TourGuide.Domain.Migrations.InitialCreate.Up.htm" />
+  <HelpKINode Title="Up method" Url="html/M-TourGuide.Domain.Migrations.MoveLocationToAbstract.Up.htm" />
+  <HelpKINode Title="User class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.User.htm" />
+  <HelpKINode Title="User class" Url="html/T-TourGuide.Domain.Data.Models.User.htm" />
+  <HelpKINode Title="User class">
+    <HelpKINode Title="about User class" Url="html/T-TourGuide.Domain.Data.Models.User.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.User.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-TourGuide.Domain.Data.Models.User.htm" />
+  </HelpKINode>
+  <HelpKINode Title="user field" Url="html/F-TourGuide.UI.Components.NavigationBar.user.htm" />
+  <HelpKINode Title="user field" Url="html/F-TourGuide.UI.MainWindow.user.htm" />
+  <HelpKINode Title="User field" Url="html/F-TourGuide.Domain.Data.Models.UserLocation.User.htm" />
+  <HelpKINode Title="User.Admin property" Url="html/P-TourGuide.Domain.Data.Models.User.Admin.htm" />
+  <HelpKINode Title="User.Locations property" Url="html/P-TourGuide.Domain.Data.Models.User.Locations.htm" />
+  <HelpKINode Title="User.Name property" Url="html/P-TourGuide.Domain.Data.Models.User.Name.htm" />
+  <HelpKINode Title="User.Password property" Url="html/P-TourGuide.Domain.Data.Models.User.Password.htm" />
+  <HelpKINode Title="User.Surname property" Url="html/P-TourGuide.Domain.Data.Models.User.Surname.htm" />
+  <HelpKINode Title="User.Username property" Url="html/P-TourGuide.Domain.Data.Models.User.Username.htm" />
+  <HelpKINode Title="UserLocation class" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.UserLocation.htm" />
+  <HelpKINode Title="UserLocation class" Url="html/T-TourGuide.Domain.Data.Models.UserLocation.htm" />
+  <HelpKINode Title="UserLocation class">
+    <HelpKINode Title="about UserLocation class" Url="html/T-TourGuide.Domain.Data.Models.UserLocation.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Data.Models.UserLocation.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-TourGuide.Domain.Data.Models.UserLocation.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-TourGuide.Domain.Data.Models.UserLocation.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserLocation.BaseLocation property" Url="html/P-TourGuide.Domain.Data.Models.UserLocation.BaseLocation.htm" />
+  <HelpKINode Title="UserLocation.LocationId property" Url="html/P-TourGuide.Domain.Data.Models.UserLocation.LocationId.htm" />
+  <HelpKINode Title="UserLocation.User field" Url="html/F-TourGuide.Domain.Data.Models.UserLocation.User.htm" />
+  <HelpKINode Title="UserLocation.Username field" Url="html/F-TourGuide.Domain.Data.Models.UserLocation.Username.htm" />
+  <HelpKINode Title="UserLocations property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.UserLocations.htm" />
+  <HelpKINode Title="UserLocationService class" Url="html/AllMembers.T-TourGuide.Domain.Services.UserLocationService.htm" />
+  <HelpKINode Title="UserLocationService class" Url="html/T-TourGuide.Domain.Services.UserLocationService.htm" />
+  <HelpKINode Title="UserLocationService class">
+    <HelpKINode Title="about UserLocationService class" Url="html/T-TourGuide.Domain.Services.UserLocationService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Services.UserLocationService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Services.UserLocationService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserLocationService.AddLocationToUser method" Url="html/M-TourGuide.Domain.Services.UserLocationService.AddLocationToUser.htm" />
+  <HelpKINode Title="UserLocationService.GetAllUserLocations method" Url="html/M-TourGuide.Domain.Services.UserLocationService.GetAllUserLocations.htm" />
+  <HelpKINode Title="UserLocationService.GetAllUserPlaces method" Url="html/M-TourGuide.Domain.Services.UserLocationService.GetAllUserPlaces.htm" />
+  <HelpKINode Title="UserLocationService.RemoveLocationFromUser method" Url="html/M-TourGuide.Domain.Services.UserLocationService.RemoveLocationFromUser.htm" />
+  <HelpKINode Title="Username field" Url="html/F-TourGuide.Domain.Data.Models.UserLocation.Username.htm" />
+  <HelpKINode Title="Username property" Url="html/P-TourGuide.Domain.Data.Models.User.Username.htm" />
+  <HelpKINode Title="Users property" Url="html/P-TourGuide.Domain.Data.TourGuideContext.Users.htm" />
+  <HelpKINode Title="UserService class" Url="html/AllMembers.T-TourGuide.Domain.Services.UserService.htm" />
+  <HelpKINode Title="UserService class" Url="html/T-TourGuide.Domain.Services.UserService.htm" />
+  <HelpKINode Title="UserService class">
+    <HelpKINode Title="about UserService class" Url="html/T-TourGuide.Domain.Services.UserService.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-TourGuide.Domain.Services.UserService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-TourGuide.Domain.Services.UserService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="userService field" Url="html/F-TourGuide.UI.LoginWindow.userService.htm" />
+  <HelpKINode Title="userService field" Url="html/F-TourGuide.UI.RegisterWindow.userService.htm" />
+  <HelpKINode Title="UserService.AddNewUser method" Url="html/M-TourGuide.Domain.Services.UserService.AddNewUser.htm" />
+  <HelpKINode Title="UserService.LoginUser method" Url="html/M-TourGuide.Domain.Services.UserService.LoginUser.htm" />
+  <HelpKINode Title="userSubmit_Click method" Url="html/M-TourGuide.UI.LoginWindow.userSubmit_Click.htm" />
+  <HelpKINode Title="userSubmit_Click method" Url="html/M-TourGuide.UI.RegisterWindow.userSubmit_Click.htm" />
+  <HelpKINode Title="UserTripList_SelectionChanged method" Url="html/M-TourGuide.UI.MainWindow.UserTripList_SelectionChanged.htm" />
+  <HelpKINode Title="userTrips field" Url="html/F-TourGuide.UI.MainWindow.userTrips.htm" />
+  <HelpKINode Title="_canExecute field" Url="html/F-TourGuide.UI.RelayCommand._canExecute.htm" />
+  <HelpKINode Title="_execute field" Url="html/F-TourGuide.UI.RelayCommand._execute.htm" />
+</HelpKI>

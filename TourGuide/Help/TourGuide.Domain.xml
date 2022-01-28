@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TourGuide.Domain</name>
+  </assembly>
+  <members>
+    <member name="T:TourGuide.Domain.Data.Models.Address">
+      <summary>
+   Class Address.
+   </summary>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Address.Id">
+      <summary>
+   Gets or sets the identifier.
+   </summary>
+      <value>The identifier.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Address.Country">
+      <summary>
+   Gets or sets the country.
+   </summary>
+      <value>The country.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Address.City">
+      <summary>
+   Gets or sets the city.
+   </summary>
+      <value>The city.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Address.Street">
+      <summary>
+   Gets or sets the street.
+   </summary>
+      <value>The street.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Address.PostalCode">
+      <summary>
+   Gets or sets the postal code.
+   </summary>
+      <value>The postal code.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Address.HouseNumber">
+      <summary>
+   Gets or sets the house number.
+   </summary>
+      <value>The house number.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Address.lat">
+      <summary>
+   Gets or sets the lat.
+   </summary>
+      <value>The lat.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Address.lng">
+      <summary>
+   Gets or sets the LNG.
+   </summary>
+      <value>The LNG.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Address.BaseLocationFK">
+      <summary>
+   Gets or sets the base location fk.
+   </summary>
+      <value>The base location fk.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Address.BaseLocation">
+      <summary>
+   Gets or sets the base location.
+   </summary>
+      <value>The base location.</value>
+    </member>
+    <member name="M:TourGuide.Domain.Data.Models.Address.ToString">
+      <summary>
+   Returns a <see cref="System.String" /> that represents this instance.
+   </summary>
+      <returns>A <see cref="System.String" /> that represents this instance.</returns>
+    </member>
+    <member name="T:TourGuide.Domain.Data.Models.BaseLocation">
+      <summary>
+   Class BaseLocation.
+   </summary>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.BaseLocation.LocationId">
+      <summary>
+   Gets or sets the location identifier.
+   </summary>
+      <value>The location identifier.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.BaseLocation.Name">
+      <summary>
+   Gets or sets the name.
+   </summary>
+      <value>The name.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.BaseLocation.DestinationFK">
+      <summary>
+   Gets or sets the destination fk.
+   </summary>
+      <value>The destination fk.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.BaseLocation.Destination">
+      <summary>
+   Gets or sets the destination.
+   </summary>
+      <value>The destination.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.BaseLocation.Address">
+      <summary>
+   Gets or sets the address.
+   </summary>
+      <value>The address.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.BaseLocation.Locations">
+      <summary>
+   Gets or sets the locations.
+   </summary>
+      <value>The locations.</value>
+    </member>
+    <member name="T:TourGuide.Domain.Data.Models.Destination">
+      <summary>
+   Class Destination.
+   </summary>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Destination.DestinationId">
+      <summary>
+   Gets or sets the destination identifier.
+   </summary>
+      <value>The destination identifier.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Destination.Name">
+      <summary>
+   Gets or sets the name.
+   </summary>
+      <value>The name.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Destination.Description">
+      <summary>
+   Gets or sets the description.
+   </summary>
+      <value>The description.</value>
+    </member>
+    <member name="F:TourGuide.Domain.Data.Models.Destination.Places">
+      <summary>
+   The places
+   </summary>
+    </member>
+    <member name="F:TourGuide.Domain.Data.Models.Destination.Hotels">
+      <summary>
+   The hotels
+   </summary>
+    </member>
+    <member name="T:TourGuide.Domain.Data.Models.Hotel">
+      <summary>
+   Class Hotel.
+   Implements the <see cref="T:TourGuide.Domain.Data.Models.BaseLocation" /></summary>
+      <seealso cref="T:TourGuide.Domain.Data.Models.BaseLocation" />
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Hotel.Rating">
+      <summary>
+   Gets or sets the rating.
+   </summary>
+      <value>The rating.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Hotel.Price">
+      <summary>
+   Gets or sets the price.
+   </summary>
+      <value>The price.</value>
+    </member>
+    <member name="T:TourGuide.Domain.Data.Models.Place">
+      <summary>
+   Class Place.
+   Implements the <see cref="T:TourGuide.Domain.Data.Models.BaseLocation" /></summary>
+      <seealso cref="T:TourGuide.Domain.Data.Models.BaseLocation" />
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.Place.Description">
+      <summary>
+   Gets or sets the description.
+   </summary>
+      <value>The description.</value>
+    </member>
+    <member name="T:TourGuide.Domain.Data.Models.User">
+      <summary>
+   Class User.
+   </summary>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.User.Username">
+      <summary>
+   Gets or sets the username.
+   </summary>
+      <value>The username.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.User.Name">
+      <summary>
+   Gets or sets the name.
+   </summary>
+      <value>The name.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.User.Surname">
+      <summary>
+   Gets or sets the surname.
+   </summary>
+      <value>The surname.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.User.Password">
+      <summary>
+   Gets or sets the password.
+   </summary>
+      <value>The password.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.User.Admin">
+      <summary>
+   Gets or sets a value indicating whether this <see cref="T:TourGuide.Domain.Data.Models.User" /> is admin.
+   </summary>
+      <value>
+        <c>true</c> if admin; otherwise, <c>false</c>.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.User.Locations">
+      <summary>
+   Gets or sets the locations.
+   </summary>
+      <value>The locations.</value>
+    </member>
+    <member name="T:TourGuide.Domain.Data.Models.UserLocation">
+      <summary>
+   Class UserLocation.
+   </summary>
+    </member>
+    <member name="F:TourGuide.Domain.Data.Models.UserLocation.Username">
+      <summary>
+   The username
+   </summary>
+    </member>
+    <member name="F:TourGuide.Domain.Data.Models.UserLocation.User">
+      <summary>
+   The user
+   </summary>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.UserLocation.LocationId">
+      <summary>
+   Gets or sets the location identifier.
+   </summary>
+      <value>The location identifier.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.Models.UserLocation.BaseLocation">
+      <summary>
+   Gets or sets the base location.
+   </summary>
+      <value>The base location.</value>
+    </member>
+    <member name="T:TourGuide.Domain.Data.DataInit">
+      <summary>
+   Class DataInit.
+   </summary>
+    </member>
+    <member name="M:TourGuide.Domain.Data.DataInit.AddDestinations(TourGuideContext)">
+      <summary>
+   Adds the destinations.
+   </summary>
+      <param name="db">The database.</param>
+    </member>
+    <member name="T:TourGuide.Domain.Data.TourGuideContext">
+      <summary>
+   Class TourGuideContext.
+   Implements the <see cref="Microsoft.EntityFrameworkCore.DbContext" /></summary>
+      <seealso cref="Microsoft.EntityFrameworkCore.DbContext" />
+    </member>
+    <member name="P:TourGuide.Domain.Data.TourGuideContext.DbPath">
+      <summary>
+   Gets the database path.
+   </summary>
+      <value>The database path.</value>
+    </member>
+    <member name="M:TourGuide.Domain.Data.TourGuideContext.#ctor">
+      <summary>
+   Initializes a new instance of the <see cref="T:TourGuide.Domain.Data.TourGuideContext" /> class.
+   </summary>
+      <remarks>See <see href="https://aka.ms/efcore-docs-dbcontext">DbContext lifetime, configuration, and initialization</see>
+   for more information.</remarks>
+    </member>
+    <member name="M:TourGuide.Domain.Data.TourGuideContext.EnsureAdminCreated">
+      <summary>
+   Ensures the admin created.
+   </summary>
+    </member>
+    <member name="M:TourGuide.Domain.Data.TourGuideContext.OnConfiguring(DbContextOptionsBuilder)">
+      <summary>
+   Called when [configuring].
+   </summary>
+      <param name="options">The options.</param>
+    </member>
+    <member name="M:TourGuide.Domain.Data.TourGuideContext.OnModelCreating(ModelBuilder)">
+      <summary>
+   Override this method to further configure the model that was discovered by convention from the entity types
+   exposed in <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> properties on your derived context. The resulting model may be cached
+   and re-used for subsequent instances of your derived context.
+   </summary>
+      <param name="modelBuilder">The builder being used to construct the model for this context. Databases (and other extensions) typically
+   define extension methods on this object that allow you to configure aspects of the model that are specific
+   to a given database.</param>
+      <remarks>
+        <para>
+   If a model is explicitly set on the options for this context (via <see cref="M:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)" />)
+   then this method will not be run.
+   </para>
+        <para>
+   See <see href="https://aka.ms/efcore-docs-modeling">Modeling entity types and relationships</see> for more information.
+   </para>
+      </remarks>
+    </member>
+    <member name="P:TourGuide.Domain.Data.TourGuideContext.Users">
+      <summary>
+   Gets or sets the users.
+   </summary>
+      <value>The users.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.TourGuideContext.Destinations">
+      <summary>
+   Gets or sets the destinations.
+   </summary>
+      <value>The destinations.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.TourGuideContext.Places">
+      <summary>
+   Gets or sets the places.
+   </summary>
+      <value>The places.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.TourGuideContext.Hotels">
+      <summary>
+   Gets or sets the hotels.
+   </summary>
+      <value>The hotels.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.TourGuideContext.Addresses">
+      <summary>
+   Gets or sets the addresses.
+   </summary>
+      <value>The addresses.</value>
+    </member>
+    <member name="P:TourGuide.Domain.Data.TourGuideContext.UserLocations">
+      <summary>
+   Gets or sets the user locations.
+   </summary>
+      <value>The user locations.</value>
+    </member>
+    <member name="T:TourGuide.Domain.Services.AddressService">
+      <summary>
+   Class AddressService.
+   </summary>
+    </member>
+    <member name="M:TourGuide.Domain.Services.AddressService.AddNewAddress(String,String,String,System.String,System.Int32)">
+      <summary>
+   Adds the new address.
+   </summary>
+      <param name="country">The country.</param>
+      <param name="city">The city.</param>
+      <param name="street">The street.</param>
+      <param name="postalCode">The postal code.</param>
+      <param name="houseNumber">The house number.</param>
+      <returns>
+        <c>true</c> if address added, <c>false</c> otherwise.</returns>
+    </member>
+    <member name="T:TourGuide.Domain.Services.DestinationService">
+      <summary>
+   Class DestinationService.
+   </summary>
+    </member>
+    <member name="M:TourGuide.Domain.Services.DestinationService.AddNewDestination(String,String)">
+      <summary>
+   Adds the new destination.
+   </summary>
+      <param name="Name">The name.</param>
+      <param name="Description">The description.</param>
+      <returns>
+        <c>true</c> if destination added, <c>false</c> otherwise.</returns>
+    </member>
+    <member name="M:TourGuide.Domain.Services.DestinationService.GetDestination(String)">
+      <summary>
+   Gets the destination.
+   </summary>
+      <param name="name">The name of destination.</param>
+      <returns>Destination.</returns>
+    </member>
+    <member name="M:TourGuide.Domain.Services.DestinationService.GetAllDestinations">
+      <summary>
+   Gets all destinations.
+   </summary>
+      <returns>List&lt;Destination&gt;.</returns>
+    </member>
+    <member name="T:TourGuide.Domain.Services.HotelService">
+      <summary>
+   Class HotelService.
+   </summary>
+    </member>
+    <member name="M:TourGuide.Domain.Services.HotelService.AddNewHotel(String,String,Double,Destination,Address)">
+      <summary>
+   Adds the new hotel.
+   </summary>
+      <param name="name">The name.</param>
+      <param name="rating">The rating.</param>
+      <param name="price">The price.</param>
+      <param name="destination">The destination.</param>
+      <param name="address">The address.</param>
+      <returns>
+        <c>true</c> if hotel added, <c>false</c> otherwise.</returns>
+    </member>
+    <member name="M:TourGuide.Domain.Services.HotelService.GetAllHotelsForTrip(IList{Place})">
+      <summary>
+   Gets all hotels for trip.
+   </summary>
+      <param name="tripPlaces">The trip places.</param>
+      <returns>ICollection&lt;Hotel&gt;.</returns>
+    </member>
+    <member name="T:TourGuide.Domain.Services.UserLocationService">
+      <summary>
+   Class UserLocationService.
+   </summary>
+    </member>
+    <member name="M:TourGuide.Domain.Services.UserLocationService.AddLocationToUser(System.Int32,System.String)">
+      <summary>
+   Adds the location to user.
+   </summary>
+      <param name="locationId">The location identifier.</param>
+      <param name="username">The username.</param>
+      <returns>
+        <c>true</c> if location added, <c>false</c> otherwise.</returns>
+    </member>
+    <member name="M:TourGuide.Domain.Services.UserLocationService.RemoveLocationFromUser(System.Int32,System.String)">
+      <summary>
+   Removes the location from user.
+   </summary>
+      <param name="locationId">The location identifier.</param>
+      <param name="username">The username.</param>
+      <returns>
+        <c>true</c> if location removed, <c>false</c> otherwise.</returns>
+    </member>
+    <member name="M:TourGuide.Domain.Services.UserLocationService.GetAllUserPlaces(System.String)">
+      <summary>
+   Gets all user places.
+   </summary>
+      <param name="username">The username.</param>
+      <returns>List&lt;Place&gt;.</returns>
+    </member>
+    <member name="M:TourGuide.Domain.Services.UserLocationService.GetAllUserLocations(System.String)">
+      <summary>
+   Gets all user locations.
+   </summary>
+      <param name="username">The username.</param>
+      <returns>List&lt;UserLocation&gt;.</returns>
+    </member>
+    <member name="T:TourGuide.Domain.Services.UserService">
+      <summary>
+   Class UserService.
+   </summary>
+    </member>
+    <member name="M:TourGuide.Domain.Services.UserService.AddNewUser(String,String,String,String)">
+      <summary>
+   Adds the new user.
+   </summary>
+      <param name="username">The username.</param>
+      <param name="password">The password.</param>
+      <returns>
+        <c>true</c> if user added, <c>false</c> otherwise.</returns>
+    </member>
+    <member name="M:TourGuide.Domain.Services.UserService.LoginUser(String,String)">
+      <summary>
+   Logins the user.
+   </summary>
+      <param name="username">The username.</param>
+      <param name="password">The password.</param>
+      <returns>User.</returns>
+    </member>
+  </members>
+</doc>

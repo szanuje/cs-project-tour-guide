@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TourGuide.UI</name>
+  </assembly>
+  <members>
+    <member name="T:TourGuide.UI.Components.NavigationBar">
+      <summary> Interaction logic for NavigationBar.xaml </summary>
+    </member>
+    <member name="F:TourGuide.UI.Components.NavigationBar.user">
+      <summary>
+   The user
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.Components.NavigationBar.#ctor">
+      <summary>
+   Initializes a new instance of the <see cref="T:TourGuide.UI.Components.NavigationBar" /> class.
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.Components.NavigationBar.ManagementButton_Click(System.Object,RoutedEventArgs)">
+      <summary>
+   Handles the Click event of the ManagementButton control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="T:TourGuide.UI.Views.AccountWindow">
+      <summary> Interaction logic for AccountWindow.xaml </summary>
+    </member>
+    <member name="M:TourGuide.UI.Views.AccountWindow.#ctor(User)">
+      <summary>
+   Initializes a new instance of the <see cref="T:TourGuide.UI.Views.AccountWindow" /> class.
+   </summary>
+      <param name="user">The user.</param>
+    </member>
+    <member name="T:TourGuide.UI.LoginWindow">
+      <summary> Interaction logic for LoginScreen.xaml </summary>
+    </member>
+    <member name="F:TourGuide.UI.LoginWindow.userService">
+      <summary>
+   The user service
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.LoginWindow.#ctor">
+      <summary>
+   Initializes a new instance of the <see cref="T:TourGuide.UI.LoginWindow" /> class.
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.LoginWindow.NewProfile_MouseDown(System.Object,MouseButtonEventArgs)">
+      <summary>
+   Creates new profile_mousedown.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="MouseButtonEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.LoginWindow.userSubmit_Click(System.Object,RoutedEventArgs)">
+      <summary>
+   Handles the Click event of the userSubmit control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="T:TourGuide.UI.RegisterWindow">
+      <summary> Interaction logic for RegisterScreen.xaml </summary>
+    </member>
+    <member name="F:TourGuide.UI.RegisterWindow.userService">
+      <summary>
+   The user service
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.RegisterWindow.#ctor">
+      <summary>
+   Initializes a new instance of the <see cref="T:TourGuide.UI.RegisterWindow" /> class.
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.RegisterWindow.passwordConfirm_PasswordChanged(System.Object,RoutedEventArgs)">
+      <summary>
+   Handles the PasswordChanged event of the passwordConfirm control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.RegisterWindow.userSubmit_Click(System.Object,RoutedEventArgs)">
+      <summary>
+   Handles the Click event of the userSubmit control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.RegisterWindow.backLabel_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+      <summary>
+   Handles the MouseDown event of the backLabel control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="System.Windows.Input.MouseButtonEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.RegisterWindow.switchToLogin">
+      <summary>
+   Switches to login.
+   </summary>
+    </member>
+    <member name="T:TourGuide.UI.App">
+      <summary> Interaction logic for App.xaml </summary>
+    </member>
+    <member name="T:TourGuide.UI.ObservableObject">
+      <summary>
+   Interaction logic for MainWindow.xaml
+   </summary>
+    </member>
+    <member name="T:TourGuide.UI.RelayCommand">
+      <summary>
+   Class RelayCommand.
+   Implements the <see cref="System.Windows.Input.ICommand" /></summary>
+      <seealso cref="System.Windows.Input.ICommand" />
+    </member>
+    <member name="T:TourGuide.UI.MainWindow">
+      <summary> Class MainWindow. Implements the <see cref="System.Windows.Window" /> Implements the <see cref="System.Windows.Markup.IComponentConnector" /></summary>
+      <seealso cref="System.Windows.Window" />
+      <seealso cref="System.Windows.Markup.IComponentConnector" />
+    </member>
+    <member name="E:TourGuide.UI.ObservableObject.PropertyChanged">
+      <summary>
+   Occurs when a property value changes.
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.ObservableObject.OnPropertyChanged(System.String)">
+      <summary>
+   Called when [property changed].
+   </summary>
+      <param name="name">The name.</param>
+    </member>
+    <member name="F:TourGuide.UI.RelayCommand._execute">
+      <summary>
+   The execute
+   </summary>
+    </member>
+    <member name="F:TourGuide.UI.RelayCommand._canExecute">
+      <summary>
+   The can execute
+   </summary>
+    </member>
+    <member name="E:TourGuide.UI.RelayCommand.CanExecuteChanged">
+      <summary>
+   Occurs when changes occur that affect whether or not the command should execute.
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.RelayCommand.#ctor(Action{System.Object},Func{System.Object, System.Boolean})">
+      <summary>
+   Initializes a new instance of the <see cref="T:TourGuide.UI.RelayCommand" /> class.
+   </summary>
+      <param name="execute">The execute.</param>
+      <param name="canExecute">The can execute.</param>
+    </member>
+    <member name="M:TourGuide.UI.RelayCommand.CanExecute(System.Object)">
+      <summary>
+   Defines the method that determines whether the command can execute in its current state.
+   </summary>
+      <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to <see langword="null" />.</param>
+      <returns>
+        <see langword="true" /> if this command can be executed; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:TourGuide.UI.RelayCommand.Execute(System.Object)">
+      <summary>
+   Defines the method to be called when the command is invoked.
+   </summary>
+      <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to <see langword="null" />.</param>
+    </member>
+    <member name="F:TourGuide.UI.MainWindow.user">
+      <summary>
+   The user
+   </summary>
+    </member>
+    <member name="F:TourGuide.UI.MainWindow.selectedPlaces">
+      <summary>
+   The selected places
+   </summary>
+    </member>
+    <member name="F:TourGuide.UI.MainWindow.userTrips">
+      <summary>
+   The user trips
+   </summary>
+    </member>
+    <member name="F:TourGuide.UI.MainWindow.destinations">
+      <summary>
+   The destinations
+   </summary>
+    </member>
+    <member name="F:TourGuide.UI.MainWindow.hotels">
+      <summary>
+   The hotels
+   </summary>
+    </member>
+    <member name="F:TourGuide.UI.MainWindow.placesToRemove">
+      <summary>
+   The places to remove
+   </summary>
+    </member>
+    <member name="F:TourGuide.UI.MainWindow.selectedDestination">
+      <summary>
+   The selected destination
+   </summary>
+    </member>
+    <member name="F:TourGuide.UI.MainWindow.destinationService">
+      <summary>
+   The destination service
+   </summary>
+    </member>
+    <member name="F:TourGuide.UI.MainWindow.locationService">
+      <summary>
+   The location service
+   </summary>
+    </member>
+    <member name="F:TourGuide.UI.MainWindow.hotelService">
+      <summary>
+   The hotel service
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.#ctor(User)">
+      <summary>
+   Initializes a new instance of the <see cref="T:TourGuide.UI.MainWindow" /> class.
+   </summary>
+      <param name="user">The user.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.DestinationList_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+      <summary>
+   Handles the SelectionChanged event of the DestinationList control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.loadPlacesOnDestinationSet(Destination)">
+      <summary>
+   Loads the places on destination set.
+   </summary>
+      <param name="selectedDestination">The selected destination.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.PlacesList_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+      <summary>
+   Handles the SelectionChanged event of the PlacesList control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.goBackToDestinationMenu(System.Object,RoutedEventArgs)">
+      <summary>
+   Goes the back to destination menu.
+   </summary>
+      <param name="sender">The sender.</param>
+      <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.switchToPlacesStack">
+      <summary>
+   Switches to places stack.
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.switchToDestinationStack">
+      <summary>
+   Switches to destination stack.
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.switchToTripStack">
+      <summary>
+   Switches to trip stack.
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.switchToHotelStack">
+      <summary>
+   Switches to hotel stack.
+   </summary>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.PlacesButtonAdd_Click(System.Object,RoutedEventArgs)">
+      <summary>
+   Handles the Click event of the PlacesButtonAdd control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.RefreshUserTrips(System.String)">
+      <summary>
+   Refreshes the user trips.
+   </summary>
+      <param name="username">The username.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.RefreshHotels(IList{Place})">
+      <summary>
+   Refreshes the hotels.
+   </summary>
+      <param name="places">The places.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.ExploreMenu_Click(System.Object,RoutedEventArgs)">
+      <summary>
+   Handles the Click event of the ExploreMenu control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.HotelsMenu_Click(System.Object,RoutedEventArgs)">
+      <summary>
+   Handles the Click event of the HotelsMenu control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.TripMenu_Click(System.Object,RoutedEventArgs)">
+      <summary>
+   Handles the Click event of the TripMenu control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.UserTripList_SelectionChanged(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+      <summary>
+   Handles the SelectionChanged event of the UserTripList control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs" /> instance containing the event data.</param>
+    </member>
+    <member name="M:TourGuide.UI.MainWindow.TripRemove_Click(System.Object,RoutedEventArgs)">
+      <summary>
+   Handles the Click event of the TripRemove control.
+   </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
+    </member>
+  </members>
+</doc>
