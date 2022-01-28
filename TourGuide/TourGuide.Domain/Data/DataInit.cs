@@ -1,14 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// ***********************************************************************
+// Assembly         : TourGuide.Domain
+// Author           : szanu
+// Created          : 01-28-2022
+//
+// Last Modified By : szanu
+// Last Modified On : 01-28-2022
+// ***********************************************************************
+// <copyright file="DataInit.cs" company="TourGuide.Domain">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
 using TourGuide.Domain.Data.Models;
 
 namespace TourGuide.Domain.Data
 {
+    /// <summary>
+    /// Class DataInit.
+    /// </summary>
     public class DataInit
     {
+        /// <summary>
+        /// Adds the destinations.
+        /// </summary>
+        /// <param name="db">The database.</param>
         public void AddDestinations(TourGuideContext db)
         {
 
