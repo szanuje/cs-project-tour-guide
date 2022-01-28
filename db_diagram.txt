@@ -2,9 +2,11 @@
 
 // Creating tables
 Table users as U {
-  id int [pk, increment] // auto-increment
   username string
+  name string
+  surname string
   password string
+  admin boolean
 }
 
 Table destinations as D {
@@ -18,16 +20,18 @@ Table destinations as D {
 Table places as P {
   id int [pk, increment]
   name string
-  description string
+  destination_id string
   address_id int
+  description string
 }
 
 Table hotels as H {
   id int [pk, increment]
   name string
+  destination_id string
+  address_id int
   rating string
   price decimal
-  address_id int
 }
 
 Table addresses as A {
@@ -41,9 +45,17 @@ Table addresses as A {
   lng decimal
 }
 
+Table userLocations as UL {
+  location_id int
+  user_id int
+}
+
 
 Ref : destinations.places_id > places.id
 Ref : destinations.hotels_id > hotels.id
 
 Ref : places.address_id > addresses.id
 Ref : hotels.address_id > addresses.id
+
+Ref: users.username > userLocations.user_id
+Ref: places.id > userLocations.location_id

@@ -37,7 +37,9 @@ Pełna dokumentacja dostępna jest również w formacie HTML, po lokalnym urucho
 - Paweł Jelonek
 - Maksymilian Pleśniak
 
-## Screenshots
+## Database
+![login](./images/db.png)
 
+## Screenshots
 ![login](./images/login.png)
 ![register](./images/register.png)
