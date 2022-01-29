@@ -24,14 +24,19 @@ namespace TourGuide.Domain.Services
         /// <summary>
         /// Adds the new destination.
         /// </summary>
-        /// <param name="Name">The name.</param>
-        /// <param name="Description">The description.</param>
+        /// <param name="name">The name.</param>
+        /// <param name="description">The description.</param>
         /// <returns><c>true</c> if destination added, <c>false</c> otherwise.</returns>
-        public bool AddNewDestination(String Name, String Description)
+        public bool AddNewDestination(String name, String description)
         {
             using (var db = new TourGuideContext())
             {
-                var destination = new Destination() { Name = Name, Description = Description };
+                if (db.Destinations.Any(d => d.Name.ToLower().Equals(name.ToLower())))
+                {
+                    return false;
+                }
+
+                var destination = new Destination() { Name = name, Description = description };
                 db.Add(destination);
                 int entries = db.SaveChanges();
 

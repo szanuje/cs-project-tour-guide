@@ -162,7 +162,8 @@ namespace TourGuide.UI
 
             this.user = user;
             this.navBar.user = user;
-            this.navBar.setUsernameUI();
+            this.navBar.MainWindow = this;
+            this.navBar.InitializeContent();
 
             this.destinationService = new DestinationService();
             this.locationService = new UserLocationService();
@@ -386,6 +387,12 @@ namespace TourGuide.UI
                 this.locationService.RemoveLocationFromUser(place.LocationId, this.user.Username);
             }
             this.RefreshUserTrips(this.user.Username);
+        }
+
+        public void UpdateDestinations()
+        {
+            this.destinations = destinationService.GetAllDestinations();
+            this.DestinationList.ItemsSource = destinations;
         }
     }
 }

@@ -7,9 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="#272537">
 
-    <Grid MaxWidth="1000" MaxHeight="50" Margin="130,10,50,10">
+    <Grid MaxWidth="1000" MaxHeight="50"  Margin="0 20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -23,19 +24,28 @@
             Text="Tour Guide" 
             FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
-        <Button
-            Name="ManagementButton"
-            Grid.Column="1"
-            Margin="10,0,0,0"
+        <Label 
+            Grid.Column="1" 
+            Name="AccountNameLabel"
             Content="--" 
+            Foreground="White"
+            VerticalAlignment="Center"
+            Margin="50 0 0 0"
+            />
+
+        <Button
+            Grid.Column="2"
+            Name="ManagementButton"
+            Click="ManagementButton_Click"
+            Margin="10,0,0,0"
+            Content="⚙️ Manage" 
             Background="Transparent"
             Foreground="White"
             BorderThickness="0"
-            Click="ManagementButton_Click"
+            FontSize="24"
             Height="36"
             VerticalAlignment="Center"
-            HorizontalAlignment="Right"
-            HorizontalContentAlignment="Right"
+            Visibility="Collapsed"
             />
     </Grid>
 </UserControl>

@@ -47,7 +47,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="0" Grid.Column="1">
-                <components:NavigationBar x:Name="navBar" Width="1034"/>
+                <components:NavigationBar x:Name="navBar" Width="auto"/>
             </StackPanel>
             
             <StackPanel Grid.Row="1" Grid.Column="1" Margin="15">

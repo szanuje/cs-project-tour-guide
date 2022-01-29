@@ -27,6 +27,7 @@ namespace TourGuide.UI.Components
         /// The user
         /// </summary>
         public User user;
+        public MainWindow MainWindow;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NavigationBar"/> class.
@@ -36,19 +37,19 @@ namespace TourGuide.UI.Components
             InitializeComponent();
         }
 
-        public void setUsernameUI()
+        public void InitializeContent()
         {
-            this.ManagementButton.Content = user.Name + " " + user.Surname + " (" + user.Username + ")";
+            this.AccountNameLabel.Content = user.Name + " " + user.Surname + (user.Admin ? " (Admin)" : "");
+            if (user.Admin)
+            {
+                this.ManagementButton.Visibility = Visibility.Visible;
+            }
         }
-        /// <summary>
-        /// Handles the Click event of the ManagementButton control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+
         private void ManagementButton_Click(object sender, RoutedEventArgs e)
         {
-            var accountWindow = new AccountWindow(this.user);
-            accountWindow.Show();
+            var managementWindow = new ManagementWindow(this.MainWindow);
+            managementWindow.Show();
         }
     }
 }
