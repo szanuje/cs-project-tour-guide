@@ -49,7 +49,13 @@ namespace TourGuide.UI
                 && surname.Text.Length > 0)
             {
                 userSubmit.Background = new SolidColorBrush(Color.FromRgb(0, 98, 255));
-            } 
+                userSubmit.IsEnabled = true;
+            }
+            else
+            {
+                userSubmit.Background = new SolidColorBrush(Color.FromRgb(224, 224, 224));
+                userSubmit.IsEnabled = false;
+            }
         }
 
         /// <summary>

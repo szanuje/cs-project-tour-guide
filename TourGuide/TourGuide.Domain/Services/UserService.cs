@@ -32,6 +32,13 @@ namespace TourGuide.Domain.Services
             using (var db = new TourGuideContext())
             {
                 if (db.Users.Any(u => u.Username == username)) return false;
+                if (string.IsNullOrEmpty(username)
+                    || string.IsNullOrEmpty(name)
+                    || string.IsNullOrEmpty(surname)
+                    || string.IsNullOrEmpty(password))
+                {
+                    return false;
+                }
 
                 var user = new User() { Username = username, Name = name, Surname = surname, Password = password };
                 db.Add(user);

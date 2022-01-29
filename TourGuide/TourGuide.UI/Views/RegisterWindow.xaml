@@ -20,7 +20,7 @@
             <PasswordBox Name="password" Background="#FFFFFF" PasswordChanged="passwordConfirm_PasswordChanged"/>
             <Label Content="Confirm password" Foreground="Black"/>
             <PasswordBox Name="passwordConfirm" Background="#FFFFFF" PasswordChanged="passwordConfirm_PasswordChanged"/>
-            <Button Name="userSubmit" Content="Create" Background="#E0E0E0" BorderBrush="#E0E0E0" Foreground="White" Margin="20 30" Click="userSubmit_Click"/>
+            <Button Name="userSubmit" Content="Create" IsEnabled="false" Background="#E0E0E0" BorderBrush="#E0E0E0" Foreground="White" Margin="20 30" Click="userSubmit_Click"/>
             <Label x:Name="backLabel" Content="← Back" Foreground="#0062FF" MouseDown="backLabel_MouseDown" Height="29"/>
         </StackPanel>
     </Border>
