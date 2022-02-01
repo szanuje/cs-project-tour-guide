@@ -31,7 +31,7 @@ namespace TourGuide.Domain.Services
         /// <param name="houseNumber">The house number.</param>
         /// <returns><c>true</c> if address added, <c>false</c> otherwise.</returns>
         public bool AddNewAddress(String country, String city, String street,
-            string postalCode, int houseNumber)
+            string postalCode, string houseNumber)
         {
             using(var db = new TourGuideContext())
             {

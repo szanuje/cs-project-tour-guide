@@ -36,7 +36,7 @@ namespace TourGuide.Domain.Services
                     return false;
                 }
 
-                var destination = new Destination() { Name = name, Description = description };
+                var destination = new Destination() { Name = name, Description = description, Hotels = new List<Hotel>(), Places = new List<Place>() };
                 db.Add(destination);
                 int entries = db.SaveChanges();
 
@@ -68,6 +68,23 @@ namespace TourGuide.Domain.Services
             using (var db = new TourGuideContext())
             {
                 return db.Destinations.ToList();
+            }
+        }
+
+        public bool RemoveDestination(int destinationId)
+        {
+            using (var db = new TourGuideContext())
+            {
+                var destination =  db.Destinations
+                    .Where(d => d.DestinationId == destinationId)
+                    .FirstOrDefault();
+
+                if (destination == null) return false;
+
+                db.Destinations.Remove(destination);
+                int entries = db.SaveChanges();
+
+                return entries > 0;
             }
         }
     }

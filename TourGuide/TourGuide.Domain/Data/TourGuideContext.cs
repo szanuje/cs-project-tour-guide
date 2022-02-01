@@ -125,18 +125,32 @@ namespace TourGuide.Domain.Data
                 .Navigation(b => b.Address)
                 .AutoInclude();
 
+            modelBuilder.Entity<Place>()
+                .Navigation(p => p.Destination)
+                .AutoInclude();
+
+            modelBuilder.Entity<Hotel>()
+                .Navigation(h => h.Destination)
+                .AutoInclude();
+
             modelBuilder.Entity<UserLocation>()
                 .HasKey(ub => new { ub.Username, ub.LocationId });
 
             modelBuilder.Entity<UserLocation>()
                 .HasOne(ub => ub.User)
                 .WithMany(u => u.Locations)
-                .HasForeignKey(u => u.Username);
+                .HasForeignKey(u => u.Username)
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<UserLocation>()
                 .HasOne(ub => ub.BaseLocation)
                 .WithMany(b => b.Locations)
-                .HasForeignKey(b => b.LocationId);
+                .HasForeignKey(b => b.LocationId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<UserLocation>()
+                .Navigation(ul => ul.BaseLocation)
+                .AutoInclude();
         }
 
         /// <summary>
@@ -149,6 +163,11 @@ namespace TourGuide.Domain.Data
         /// </summary>
         /// <value>The destinations.</value>
         public DbSet<Destination> Destinations { get; set; }
+        /// <summary>
+        /// Gets or sets the locations.
+        /// </summary>
+        /// <value>The locations.</value>
+        public DbSet<BaseLocation> BaseLocations { get; set; }
         /// <summary>
         /// Gets or sets the places.
         /// </summary>

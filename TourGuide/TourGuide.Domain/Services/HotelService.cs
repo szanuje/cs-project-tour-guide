@@ -30,8 +30,8 @@ namespace TourGuide.Domain.Services
         /// <param name="destination">The destination.</param>
         /// <param name="address">The address.</param>
         /// <returns><c>true</c> if hotel added, <c>false</c> otherwise.</returns>
-        public bool AddNewHotel(String name, String rating, Double price,
-            Destination destination, Address address)
+        public bool AddNewHotel(String name, String rating, String price,
+            int destinationId, Address address)
         {
             using (var db = new TourGuideContext())
             {
@@ -40,7 +40,7 @@ namespace TourGuide.Domain.Services
                     Name = name,
                     Rating = rating,
                     Price = price,
-                    //Destination = destination,
+                    DestinationFK = destinationId,
                     Address = address
                 };
                 db.Add(hotel);
@@ -48,7 +48,6 @@ namespace TourGuide.Domain.Services
 
                 return entries > 0;
             }
-
         }
 
         /// <summary>
@@ -58,7 +57,43 @@ namespace TourGuide.Domain.Services
         /// <returns>ICollection&lt;Hotel&gt;.</returns>
         public ICollection<Hotel> GetAllHotelsForTrip(IList<Place> tripPlaces)
         {
+            if(tripPlaces == null || tripPlaces.Count == 0)
+            {
+                return new HashSet<Hotel>();
+            }
+
             return tripPlaces.SelectMany(p => p.Destination.Hotels).ToHashSet();
+        }
+
+        public List<Hotel> GetHotelsForDestination(int destinationId)
+        {
+            using (var db = new TourGuideContext())
+            {
+                var destination = db.Destinations
+                    .Where(d => d.DestinationId == destinationId)
+                    .FirstOrDefault();
+
+                if (destination == null) return new List<Hotel>();
+
+                return destination.Hotels;
+            }
+        }
+
+        public bool RemoveHotel(int locationId)
+        {
+            using (var db = new TourGuideContext())
+            {
+                var hotel = db.Hotels
+                    .Where(d => d.LocationId == locationId)
+                    .FirstOrDefault();
+
+                if (hotel == null) return false;
+
+                db.Hotels.Remove(hotel);
+                int entries = db.SaveChanges();
+
+                return entries > 0;
+            }
         }
     }
 }

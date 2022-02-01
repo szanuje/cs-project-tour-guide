@@ -151,6 +151,7 @@ namespace TourGuide.UI
         /// The hotel service
         /// </summary>
         public HotelService hotelService;
+        public PlaceService placeService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
@@ -168,6 +169,7 @@ namespace TourGuide.UI
             this.destinationService = new DestinationService();
             this.locationService = new UserLocationService();
             this.hotelService = new HotelService();
+            this.placeService = new PlaceService();
 
             this.destinations = destinationService.GetAllDestinations();
             this.DestinationList.ItemsSource = destinations;
@@ -186,11 +188,14 @@ namespace TourGuide.UI
         /// <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
         private void DestinationList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            Destination selectedDest = (Destination)(e.AddedItems[0]);
-            if (selectedDest != null)
+            if (e.AddedItems.Count > 0)
             {
-                loadPlacesOnDestinationSet(selectedDest);
-                switchToPlacesStack();
+                Destination selectedDest = (Destination)(e.AddedItems[0]);
+                if (selectedDest != null)
+                {
+                    loadPlacesOnDestinationSet(selectedDest);
+                    switchToPlacesStack();
+                }
             }
         }
 
@@ -198,7 +203,7 @@ namespace TourGuide.UI
         /// Loads the places on destination set.
         /// </summary>
         /// <param name="selectedDestination">The selected destination.</param>
-        private void loadPlacesOnDestinationSet(Destination selectedDestination)
+        public void loadPlacesOnDestinationSet(Destination selectedDestination)
         {
             var placesUIList = (System.Windows.Controls.ListView)this.FindName("PlacesList");
             placesUIList.ItemsSource = selectedDestination.Places;
@@ -252,13 +257,17 @@ namespace TourGuide.UI
         /// <summary>
         /// Switches to destination stack.
         /// </summary>
-        private void switchToDestinationStack()
+        public void switchToDestinationStack()
         {
             this.PlacesPanel.Visibility = Visibility.Collapsed;
             this.TripPanel.Visibility = Visibility.Collapsed;
             this.HotelPanel.Visibility = Visibility.Collapsed;
 
             this.DestinationPanel.Visibility = Visibility.Visible;
+
+            this.HotelsMenu.IsChecked = false;
+            this.TripMenu.IsChecked = false;
+            this.ExploreMenu.IsChecked = true;
         }
         /// <summary>
         /// Switches to trip stack.
@@ -393,6 +402,24 @@ namespace TourGuide.UI
         {
             this.destinations = destinationService.GetAllDestinations();
             this.DestinationList.ItemsSource = destinations;
+        }
+        public void UpdatePlaces()
+        {
+            if (this.selectedDestination != null)
+            {
+                this.PlacesList.ItemsSource = this.placeService.GetPlacesForDestination(this.selectedDestination.DestinationId);
+            }
+
+            this.UpdateDestinations();
+            this.userTrips = locationService.GetAllUserPlaces(user.Username);
+            this.UserTripList.ItemsSource = userTrips;
+
+        }
+        public void UpdateHotels()
+        {
+            this.UpdateDestinations();
+            this.hotels = hotelService.GetAllHotelsForTrip(userTrips);
+            this.HotelList.ItemsSource = hotels;
         }
     }
 }

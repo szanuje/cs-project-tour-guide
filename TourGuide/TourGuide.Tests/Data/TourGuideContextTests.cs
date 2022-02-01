@@ -49,7 +49,7 @@ namespace TourGuideTests.models
                             {
                                 City = "Zakopane",
                                 Country = "Polska",
-                                HouseNumber = 1,
+                                HouseNumber = "1",
                                 PostalCode = "34-500",
                                 Street = "Kuźnice",
                             }

@@ -10,8 +10,8 @@ using TourGuide.Domain.Data;
 namespace TourGuide.Domain.Migrations
 {
     [DbContext(typeof(TourGuideContext))]
-    [Migration("20220125101851_AddUserLocation")]
-    partial class AddUserLocation
+    [Migration("20220201172912_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,8 +35,9 @@ namespace TourGuide.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("HouseNumber")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("HouseNumber")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("PostalCode")
                         .IsRequired()
@@ -79,7 +80,7 @@ namespace TourGuide.Domain.Migrations
 
                     b.HasKey("LocationId");
 
-                    b.ToTable("BaseLocation");
+                    b.ToTable("BaseLocations");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("BaseLocation");
                 });
@@ -111,7 +112,15 @@ namespace TourGuide.Domain.Migrations
                     b.Property<bool>("Admin")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -139,8 +148,9 @@ namespace TourGuide.Domain.Migrations
                 {
                     b.HasBaseType("TourGuide.Domain.Data.Models.BaseLocation");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("REAL");
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Rating")
                         .IsRequired()

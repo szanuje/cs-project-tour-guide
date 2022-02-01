@@ -9,23 +9,6 @@ namespace TourGuide.Domain.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "BaseLocation",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
-                    DestinationFK = table.Column<int>(type: "INTEGER", nullable: false),
-                    Discriminator = table.Column<string>(type: "TEXT", nullable: false),
-                    Rating = table.Column<string>(type: "TEXT", nullable: true),
-                    Price = table.Column<double>(type: "REAL", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BaseLocation", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Destinations",
                 columns: table => new
                 {
@@ -44,12 +27,38 @@ namespace TourGuide.Domain.Migrations
                 columns: table => new
                 {
                     Username = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Surname = table.Column<string>(type: "TEXT", nullable: false),
                     Password = table.Column<string>(type: "TEXT", nullable: false),
                     Admin = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Username);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BaseLocations",
+                columns: table => new
+                {
+                    LocationId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    DestinationFK = table.Column<int>(type: "INTEGER", nullable: false),
+                    Discriminator = table.Column<string>(type: "TEXT", nullable: false),
+                    Rating = table.Column<string>(type: "TEXT", nullable: true),
+                    Price = table.Column<string>(type: "TEXT", nullable: true),
+                    Description = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BaseLocations", x => x.LocationId);
+                    table.ForeignKey(
+                        name: "FK_BaseLocations_Destinations_DestinationFK",
+                        column: x => x.DestinationFK,
+                        principalTable: "Destinations",
+                        principalColumn: "DestinationId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -62,7 +71,7 @@ namespace TourGuide.Domain.Migrations
                     City = table.Column<string>(type: "TEXT", nullable: false),
                     Street = table.Column<string>(type: "TEXT", nullable: false),
                     PostalCode = table.Column<string>(type: "TEXT", nullable: false),
-                    HouseNumber = table.Column<int>(type: "INTEGER", nullable: false),
+                    HouseNumber = table.Column<string>(type: "TEXT", nullable: false),
                     lat = table.Column<double>(type: "REAL", nullable: false),
                     lng = table.Column<double>(type: "REAL", nullable: false),
                     BaseLocationFK = table.Column<int>(type: "INTEGER", nullable: false)
@@ -71,31 +80,34 @@ namespace TourGuide.Domain.Migrations
                 {
                     table.PrimaryKey("PK_Addresses", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Addresses_BaseLocation_BaseLocationFK",
+                        name: "FK_Addresses_BaseLocations_BaseLocationFK",
                         column: x => x.BaseLocationFK,
-                        principalTable: "BaseLocation",
-                        principalColumn: "Id",
+                        principalTable: "BaseLocations",
+                        principalColumn: "LocationId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Places",
+                name: "UserLocations",
                 columns: table => new
                 {
-                    PostId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Description = table.Column<string>(type: "TEXT", nullable: false),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
-                    DestinationFK = table.Column<int>(type: "INTEGER", nullable: false)
+                    LocationId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Username = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Places", x => x.PostId);
+                    table.PrimaryKey("PK_UserLocations", x => new { x.Username, x.LocationId });
                     table.ForeignKey(
-                        name: "FK_Places_Destinations_DestinationFK",
-                        column: x => x.DestinationFK,
-                        principalTable: "Destinations",
-                        principalColumn: "DestinationId",
+                        name: "FK_UserLocations_BaseLocations_LocationId",
+                        column: x => x.LocationId,
+                        principalTable: "BaseLocations",
+                        principalColumn: "LocationId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UserLocations_Users_Username",
+                        column: x => x.Username,
+                        principalTable: "Users",
+                        principalColumn: "Username",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -106,9 +118,14 @@ namespace TourGuide.Domain.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Places_DestinationFK",
-                table: "Places",
+                name: "IX_BaseLocations_DestinationFK",
+                table: "BaseLocations",
                 column: "DestinationFK");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UserLocations_LocationId",
+                table: "UserLocations",
+                column: "LocationId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -117,13 +134,13 @@ namespace TourGuide.Domain.Migrations
                 name: "Addresses");
 
             migrationBuilder.DropTable(
-                name: "Places");
+                name: "UserLocations");
+
+            migrationBuilder.DropTable(
+                name: "BaseLocations");
 
             migrationBuilder.DropTable(
                 name: "Users");
-
-            migrationBuilder.DropTable(
-                name: "BaseLocation");
 
             migrationBuilder.DropTable(
                 name: "Destinations");

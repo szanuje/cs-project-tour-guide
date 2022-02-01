@@ -30,6 +30,6 @@ namespace TourGuide.Domain.Data.Models
         /// Gets or sets the price.
         /// </summary>
         /// <value>The price.</value>
-        public Double Price { get; set; }
+        public string Price { get; set; }
     }
 }

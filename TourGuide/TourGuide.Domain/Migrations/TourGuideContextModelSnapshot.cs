@@ -33,8 +33,9 @@ namespace TourGuide.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("HouseNumber")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("HouseNumber")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("PostalCode")
                         .IsRequired()
@@ -77,7 +78,7 @@ namespace TourGuide.Domain.Migrations
 
                     b.HasKey("LocationId");
 
-                    b.ToTable("BaseLocation");
+                    b.ToTable("BaseLocations");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("BaseLocation");
                 });
@@ -145,8 +146,9 @@ namespace TourGuide.Domain.Migrations
                 {
                     b.HasBaseType("TourGuide.Domain.Data.Models.BaseLocation");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("REAL");
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Rating")
                         .IsRequired()

@@ -47,7 +47,7 @@ namespace TourGuide.Domain.Data
                             {
                                 City = "Zakopane",
                                 Country = "Polska",
-                                HouseNumber = 1,
+                                HouseNumber = "1",
                                 PostalCode = "34-500",
                                 Street = "Kuźnice",
                                 lat = 49.27141297798237,
@@ -61,12 +61,12 @@ namespace TourGuide.Domain.Data
                         {
                             Name = "Hotel Marriott",
                             Rating = "5/5",
-                            Price = 1199.90,
+                            Price = "1199.90",
                             Address = new Address
                             {
                                 City = "Warszawa",
                                 Country = "Polska",
-                                HouseNumber = 79,
+                                HouseNumber = "79",
                                 PostalCode = "00-697",
                                 Street = "al. Jerozolimskie 65",
                                 lat = 52.228245070997936,
@@ -99,7 +99,7 @@ namespace TourGuide.Domain.Data
                             {
                                 City = "Barcelona",
                                 Country = "Hiszpania",
-                                HouseNumber = 1,
+                                HouseNumber = "1",
                                 PostalCode = "08002",
                                 Street = "Pla de la Seu",
                                 lat = 41.38399417837509, 
@@ -114,7 +114,7 @@ namespace TourGuide.Domain.Data
                             {
                                 City = "Barcelona",
                                 Country = "Hiszpania",
-                                HouseNumber = 12,
+                                HouseNumber = "12",
                                 PostalCode = "08028",
                                 Street = "C. d'Arístides Maillol",
                                 lat = 41.38097458889179, 
@@ -128,12 +128,12 @@ namespace TourGuide.Domain.Data
                         {
                             Name = "Wilson Boutique Hotel",
                             Rating = "5/5",
-                            Price = 1199.90,
+                            Price = "1199.90",
                             Address = new Address
                             {
                                 City = "Barcelona",
                                 Country = "Hiszpania",
-                                HouseNumber = 568,
+                                HouseNumber = "568",
                                 PostalCode = "08-021",
                                 Street = "Avinguda Diagonal",
                                 lat = 41.3949276085681, 
@@ -166,7 +166,7 @@ namespace TourGuide.Domain.Data
                             {
                                 City = "Lizbona",
                                 Country = "Portugalia",
-                                HouseNumber = 1,
+                                HouseNumber = "1",
                                 PostalCode = "140038",
                                 Street = "Av. Brasília",
                                 lat = 38.693664270348975, 
@@ -181,7 +181,7 @@ namespace TourGuide.Domain.Data
                             {
                                 City = "Lizbona",
                                 Country = "Portugalia",
-                                HouseNumber = 1,
+                                HouseNumber = "1",
                                 PostalCode = "1990005",
                                 Street = "Esplanada Dom Carlos I",
                                 lat = 38.7635853078075, 
@@ -195,12 +195,12 @@ namespace TourGuide.Domain.Data
                         {
                             Name = "Wilson Boutique Hotel",
                             Rating = "5/5",
-                            Price = 1199.90,
+                            Price = "1199.90",
                             Address = new Address
                             {
                                 City = "Lizbona",
                                 Country = "Portugalia",
-                                HouseNumber = 88,
+                                HouseNumber = "88",
                                 PostalCode = "1150-266",
                                 Street = "R. das Portas de Santo Antao",
                                 lat = 38.71667931664545,
@@ -233,7 +233,7 @@ namespace TourGuide.Domain.Data
                             {
                                 City = "Londyn",
                                 Country = "Anglia",
-                                HouseNumber = 1,
+                                HouseNumber = "1",
                                 PostalCode = "0",
                                 Street = "Great Russell St",
                                 lat = 51.51944665958745, 
@@ -248,7 +248,7 @@ namespace TourGuide.Domain.Data
                             {
                                 City = "Londyn",
                                 Country = "Anglia",
-                                HouseNumber = 1,
+                                HouseNumber = "1",
                                 PostalCode = "0",
                                 Street = "Riverside Building",
                                 lat = 51.50331063628315, 
@@ -262,12 +262,12 @@ namespace TourGuide.Domain.Data
                         {
                             Name = "Kimpton Fitzroy London Hotel",
                             Rating = "5/5",
-                            Price = 1440.0,
+                            Price = "1440.0",
                             Address = new Address
                             {
                                 City = "Londyn",
                                 Country = "Wielka Brytania",
-                                HouseNumber = 1,
+                                HouseNumber = "1",
                                 PostalCode = "WC1B 5BE",
                                 Street = "Russell Square",
                                 lat = 51.52312233625544,

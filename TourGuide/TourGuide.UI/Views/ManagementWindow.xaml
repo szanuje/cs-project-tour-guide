@@ -16,11 +16,12 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" x:Name="DestinationPanel" Width="auto" Visibility="Visible">
+        <StackPanel Grid.Row="0" x:Name="DestinationsPanel" Width="auto" Visibility="Visible">
             <Label x:Name="DesignationsLabel" Content="Destinations" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
-            <ListView x:Name="DestinationsList" ItemsSource="{Binding Destinations}" SelectionMode="Single" SelectionChanged="DestinationSList_SelectionChanged"  Width="auto" Height="450">
+            <ListView x:Name="DestinationsList" ItemsSource="{Binding Destinations}" SelectionMode="Single" SelectionChanged="DestinationsList_SelectionChanged"  Width="auto" Height="450">
                 <ListView.View>
                     <GridView AllowsColumnReorder="True">
                         <GridViewColumn Header="Name" Width="202">
@@ -42,7 +43,69 @@
             </ListView>
         </StackPanel>
 
-        <StackPanel Width="400" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Margin="50 0">
+        <StackPanel Grid.Row="0" x:Name="HotelsPanel" Width="auto" Visibility="Collapsed">
+            <Label x:Name="HotelsLabel" Content="Hotels"  FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
+            <ListView x:Name="HotelsList" ItemsSource="{Binding Hotels}" SelectionMode="Single" SelectionChanged="HotelsList_SelectionChanged"  Width="auto" Height="450">
+                <ListView.View>
+                    <GridView AllowsColumnReorder="True">
+                        <GridViewColumn Header="Name" Width="202">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="Wrap" Text="{Binding  Path=Name}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Rating" Width="47">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="Wrap" Text="{Binding Path=Rating}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Price" Width="65">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="Wrap" Text="{Binding Path=Price}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Address" Width="450">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="Wrap" Text="{Binding Path=Address}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" x:Name="PlacesPanel" Width="auto" Visibility="Collapsed">
+            <Label x:Name="PlacesLabel" Content="Places" FontSize="24" Width="164" HorizontalAlignment="Left" Foreground="White"/>
+            <ListView x:Name="PlacesList" ItemsSource="{Binding Places}" SelectionMode="Single" SelectionChanged="PlacesList_SelectionChanged"  Width="auto" Height="450">
+                <ListView.View>
+                    <GridView AllowsColumnReorder="True">
+                        <GridViewColumn Header="Name" Width="202">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="Wrap" Text="{Binding  Path=Name}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Description" Width="478">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock TextWrapping="Wrap" Text="{Binding Path=Description}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Name="AddNewDestinationPanel" Visibility="Visible" Width="400" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Margin="50 0">
             <Label Content="Add new destination" FontSize="24" Foreground="White"/>
 
             <Label Content="Name" FontSize="16" Foreground="White"/>
@@ -52,15 +115,128 @@
             <TextBox Name="DestinationDescriptionBox" Background="#FFFFFF" FontSize="16"/>
 
             <Button 
-                x:Name="DestinationButtonAdd"
+                x:Name="AddDestinationConfirmButton"
                 Content="Add destination" 
                 Width="140" 
                 Height="36" 
                 Visibility="Visible" 
                 Background="MediumSpringGreen"
                 Margin="40"
-                Click="DestinationButtonAdd_Click"
+                Click="AddDestinationConfirmButton_Click"
+                Foreground="White"
                 />
         </StackPanel>
+
+        <StackPanel Name="AddNewHotelPanel" Visibility="Collapsed" Width="400" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Margin="50 0">
+            <Label Content="Add new hotel" FontSize="24" Foreground="White"/>
+
+            <Label Content="Name" FontSize="16" Foreground="White"/>
+            <TextBox Name="HotelNameBox" Background="#FFFFFF" FontSize="16"/>
+
+            <Label Content="Rating" FontSize="16" Foreground="White"/>
+            <TextBox Name="HotelRatingBox" Background="#FFFFFF" FontSize="16"/>
+
+            <Label Content="Price" FontSize="16" Foreground="White"/>
+            <TextBox Name="HotelPriceBox" Background="#FFFFFF" FontSize="16" PreviewTextInput="NumberValidationTextBox"/>
+
+            <Label Content="City" FontSize="16" Foreground="White"/>
+            <TextBox Name="HotelCityBox" Background="#FFFFFF" FontSize="16"/>
+
+            <Label Content="Street" FontSize="16" Foreground="White"/>
+            <TextBox Name="HotelStreetBox" Background="#FFFFFF" FontSize="16"/>
+
+            <Label Content="Postal code" FontSize="16" Foreground="White"/>
+            <TextBox Name="HotelPostalCodeBox" Background="#FFFFFF" FontSize="16"/>
+
+            <Label Content="House number" FontSize="16" Foreground="White"/>
+            <TextBox Name="HotelHouseNumberBox" Background="#FFFFFF" FontSize="16"/>
+
+            <Button 
+                x:Name="AddHotelConfirmButton"
+                Click="AddHotelConfirmButton_Click"
+                Content="Add hotel" 
+                Width="140" 
+                Height="36" 
+                Visibility="Visible" 
+                Background="MediumSpringGreen"
+                Margin="0 30 0 0"
+                Foreground="White"
+                />
+        </StackPanel>
+
+        <StackPanel Name="AddNewPlacePanel" Visibility="Collapsed" Width="400" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Margin="50 0">
+            <Label Content="Add new place" FontSize="24" Foreground="White"/>
+
+            <Label Content="Name" FontSize="16" Foreground="White"/>
+            <TextBox Name="PlaceNameBox" Background="#FFFFFF" FontSize="16"/>
+
+            <Label Content="Description" FontSize="16" Foreground="White"/>
+            <TextBox Name="PlaceDescriptionBox" Background="#FFFFFF" FontSize="16"/>
+
+            <Label Content="City" FontSize="16" Foreground="White"/>
+            <TextBox Name="PlaceCityBox" Background="#FFFFFF" FontSize="16"/>
+            
+            <Label Content="Street" FontSize="16" Foreground="White"/>
+            <TextBox Name="PlaceStreetBox" Background="#FFFFFF" FontSize="16"/>
+            
+            <Label Content="Postal code" FontSize="16" Foreground="White"/>
+            <TextBox Name="PlacePostalCodeBox" Background="#FFFFFF" FontSize="16"/>
+            
+            <Label Content="House number" FontSize="16" Foreground="White"/>
+            <TextBox Name="PlaceHouseNumberBox" Background="#FFFFFF" FontSize="16"/>
+
+            <Button 
+                x:Name="AddPlaceConfirmButton"
+                Content="Add place" 
+                Width="140" 
+                Height="36" 
+                Visibility="Visible" 
+                Background="MediumSpringGreen"
+                Margin="0 30 0 0"
+                Click="AddPlaceConfirmButton_Click"
+                Foreground="White"
+                />
+        </StackPanel>
+
+        <Grid Grid.Row="2" Margin="0 25" Name="DestinationsButtonsGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            
+            <Button Visibility="Collapsed" Grid.Column="0" x:Name="RemoveDestinationButton" Content="Remove destination" Click="RemoveDestinationButton_Click" Width="142" HorizontalAlignment="Left" Height="36" Background="IndianRed" Foreground="White"/>
+            <Button Visibility="Collapsed" Grid.Column="1" x:Name="AddHotelButton" Content="Hotels" Click="AddHotelButton_Click" Width="142" HorizontalAlignment="Right" Height="36" Background="DeepSkyBlue" Foreground="White"/>
+            <Button Visibility="Collapsed" Grid.Column="2" x:Name="AddPlaceButton" Content="Places" Click="AddPlaceButton_Click" Width="142" HorizontalAlignment="Right" Height="36" Margin="25 0 0 0" Background="MediumSpringGreen" Foreground="White"/>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="0 25"  Name="HotelsButtonsGrid" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" x:Name="BackToDestinationsButtonHotels" Click="BackToDestinationsButton_Click" Content="Back" Width="142" HorizontalAlignment="Left" Height="36"/>
+            <Button Visibility="Collapsed" Grid.Column="1" x:Name="RemoveHotelButton" Content="Remove hotel" Click="RemoveHotelButton_Click" Width="142" HorizontalAlignment="Left" Height="36" Background="IndianRed" Foreground="White"/>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="0 25" Name="PlacesButtonsGrid" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" x:Name="BackToDestinationsButton" Click="BackToDestinationsButton_Click" Content="Back" Width="142" HorizontalAlignment="Left" Height="36"/>
+            <Button Visibility="Collapsed" Grid.Column="1" x:Name="RemovePlaceButton" Click="RemovePlaceButton_Click" Content="Remove place" Width="142" HorizontalAlignment="Left" Height="36" Background="IndianRed" Foreground="White"/>
+        </Grid>
     </Grid>
 </Window>

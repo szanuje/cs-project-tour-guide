@@ -19,7 +19,7 @@ namespace TourGuide.Domain.Data.Models
     /// <summary>
     /// Class BaseLocation.
     /// </summary>
-    public abstract class BaseLocation
+    public class BaseLocation
     {
         /// <summary>
         /// Gets or sets the location identifier.

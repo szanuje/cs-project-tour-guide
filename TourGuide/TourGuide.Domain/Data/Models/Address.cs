@@ -52,7 +52,7 @@ namespace TourGuide.Domain.Data.Models
         /// Gets or sets the house number.
         /// </summary>
         /// <value>The house number.</value>
-        public int HouseNumber { get; set; }
+        public string HouseNumber { get; set; }
         /// <summary>
         /// Gets or sets the lat.
         /// </summary>
