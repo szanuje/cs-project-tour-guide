@@ -30,7 +30,7 @@ namespace TourGuide.Domain.Services
         /// <param name="destinationId">The destination identifier.</param>
         /// <param name="address">The address.</param>
         /// <returns><c>true</c> if hotel added, <c>false</c> otherwise.</returns>
-        public bool AddNewHotel(String name, String rating, String price,
+        public bool AddNewHotel(String name, String rating, decimal price,
             int destinationId, Address address)
         {
             using (var db = new TourGuideContext())

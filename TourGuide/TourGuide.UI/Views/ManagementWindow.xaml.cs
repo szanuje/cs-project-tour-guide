@@ -399,7 +399,7 @@ namespace TourGuide.UI.Views
                     HouseNumber = this.HotelHouseNumberBox.Text
                 };
 
-                bool added = this.HotelService.AddNewHotel(this.HotelNameBox.Text, this.HotelRatingBox.Text, this.HotelPriceBox.Text, this.SelectedDestination.DestinationId, address);
+                bool added = this.HotelService.AddNewHotel(this.HotelNameBox.Text, this.HotelRatingBox.Text, decimal.Parse(this.HotelPriceBox.Text), this.SelectedDestination.DestinationId, address);
 
                 if (added)
                 {
@@ -435,8 +435,11 @@ namespace TourGuide.UI.Views
         /// <param name="e">The <see cref="TextCompositionEventArgs"/> instance containing the event data.</param>
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+");
-            e.Handled = regex.IsMatch(e.Text);
+            e.Handled = !IsDecimal(e.Text);
+        }
+        bool IsDecimal(string input)
+        {
+            return Decimal.TryParse(input, out Decimal d);
         }
     }
 }

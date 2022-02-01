@@ -61,7 +61,7 @@ namespace TourGuide.Domain.Data
                         {
                             Name = "Hotel Marriott",
                             Rating = "5/5",
-                            Price = "1199.90",
+                            Price = 1199.9m,
                             Address = new Address
                             {
                                 City = "Warszawa",
@@ -128,7 +128,7 @@ namespace TourGuide.Domain.Data
                         {
                             Name = "Wilson Boutique Hotel",
                             Rating = "5/5",
-                            Price = "1199.90",
+                            Price = 1199.9m,
                             Address = new Address
                             {
                                 City = "Barcelona",
@@ -195,7 +195,7 @@ namespace TourGuide.Domain.Data
                         {
                             Name = "Wilson Boutique Hotel",
                             Rating = "5/5",
-                            Price = "1199.90",
+                            Price = 1199.9m,
                             Address = new Address
                             {
                                 City = "Lizbona",
@@ -262,7 +262,7 @@ namespace TourGuide.Domain.Data
                         {
                             Name = "Kimpton Fitzroy London Hotel",
                             Rating = "5/5",
-                            Price = "1440.0",
+                            Price = 1440.0m,
                             Address = new Address
                             {
                                 City = "Londyn",
