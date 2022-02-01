@@ -4,7 +4,7 @@
 // Created          : 01-22-2022
 //
 // Last Modified By : szanu
-// Last Modified On : 01-22-2022
+// Last Modified On : 01-28-2022
 // ***********************************************************************
 // <copyright file="LoginWindow.xaml.cs" company="TourGuide.UI">
 //     Copyright (c) . All rights reserved.
@@ -28,7 +28,7 @@ namespace TourGuide.UI
         private UserService userService = new UserService();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LoginWindow"/> class.
+        /// Initializes a new instance of the <see cref="LoginWindow" /> class.
         /// </summary>
         public LoginWindow()
         {
@@ -39,7 +39,7 @@ namespace TourGuide.UI
         /// Creates new profile_mousedown.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="MouseButtonEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="MouseButtonEventArgs" /> instance containing the event data.</param>
         private void NewProfile_MouseDown(object sender, MouseButtonEventArgs e)
         {
             RegisterWindow registerScreen = new RegisterWindow();
@@ -51,7 +51,7 @@ namespace TourGuide.UI
         /// Handles the Click event of the userSubmit control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void userSubmit_Click(object sender, RoutedEventArgs e)
         {
             var user = userService.LoginUser(username.Text, password.Password);

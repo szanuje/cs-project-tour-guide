@@ -4,7 +4,7 @@
 // Created          : 01-22-2022
 //
 // Last Modified By : ulmii
-// Last Modified On : 01-22-2022
+// Last Modified On : 02-01-2022
 // ***********************************************************************
 // <copyright file="ManagementWindow.xaml.cs" company="TourGuide.UI">
 //     Copyright (c) . All rights reserved.
@@ -26,19 +26,53 @@ namespace TourGuide.UI.Views
     /// </summary>
     public partial class ManagementWindow : Window
     {
+        /// <summary>
+        /// The main window
+        /// </summary>
         private MainWindow _mainWindow;
+        /// <summary>
+        /// The destination service
+        /// </summary>
         private DestinationService DestinationService;
+        /// <summary>
+        /// The destinations
+        /// </summary>
         public ICollection<Destination> Destinations;
+        /// <summary>
+        /// The selected destination
+        /// </summary>
         private Destination? SelectedDestination;
 
+        /// <summary>
+        /// The place service
+        /// </summary>
         private PlaceService PlaceService;
+        /// <summary>
+        /// The places
+        /// </summary>
         public ICollection<Place> Places;
+        /// <summary>
+        /// The selected place
+        /// </summary>
         private Place? SelectedPlace;
 
+        /// <summary>
+        /// The hotel service
+        /// </summary>
         private HotelService HotelService;
+        /// <summary>
+        /// The hotels
+        /// </summary>
         public ICollection<Hotel> Hotels;
+        /// <summary>
+        /// The selected hotel
+        /// </summary>
         private Hotel? SelectedHotel;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ManagementWindow"/> class.
+        /// </summary>
+        /// <param name="_mainWindow">The main window.</param>
         public ManagementWindow(MainWindow _mainWindow)
         {
             InitializeComponent();
@@ -52,6 +86,11 @@ namespace TourGuide.UI.Views
             this.UpdateDestinations();
         }
 
+        /// <summary>
+        /// Handles the SelectionChanged event of the DestinationsList control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
         private void DestinationsList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
@@ -71,6 +110,11 @@ namespace TourGuide.UI.Views
                 this.SelectedDestination = null;
             }
         }
+        /// <summary>
+        /// Handles the SelectionChanged event of the PlacesList control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
         private void PlacesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
@@ -86,6 +130,11 @@ namespace TourGuide.UI.Views
                 this.SelectedPlace = null;
             }
         }
+        /// <summary>
+        /// Handles the SelectionChanged event of the HotelsList control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
         private void HotelsList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
@@ -102,6 +151,11 @@ namespace TourGuide.UI.Views
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the AddDestinationConfirmButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void AddDestinationConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.DestinationNameBox.Text.Length > 0 && this.DestinationDescriptionBox.Text.Length > 0)
@@ -118,11 +172,17 @@ namespace TourGuide.UI.Views
             }
         }
 
+        /// <summary>
+        /// Updates the destinations.
+        /// </summary>
         private void UpdateDestinations()
         {
             this.Destinations = this.DestinationService.GetAllDestinations();
             this.DestinationsList.ItemsSource = this.Destinations;
         }
+        /// <summary>
+        /// Updates the places.
+        /// </summary>
         private void UpdatePlaces()
         {
             if (this.SelectedDestination != null)
@@ -131,6 +191,9 @@ namespace TourGuide.UI.Views
                 this.PlacesList.ItemsSource = this.Places;
             }
         }
+        /// <summary>
+        /// Updates the hotels.
+        /// </summary>
         private void UpdateHotels()
         {
             if (this.SelectedDestination != null)
@@ -140,18 +203,31 @@ namespace TourGuide.UI.Views
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the AddHotelButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void AddHotelButton_Click(object sender, RoutedEventArgs e)
         {
             this.SwitchToHotelPanel();
             this.UpdateHotels();
         }
 
+        /// <summary>
+        /// Handles the Click event of the AddPlaceButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void AddPlaceButton_Click(object sender, RoutedEventArgs e)
         {
             this.SwitchToPlacePanel();
             this.UpdatePlaces();
         }
 
+        /// <summary>
+        /// Switches to destination panel.
+        /// </summary>
         private void SwitchToDestinationPanel()
         {
             this.PlacesPanel.Visibility = Visibility.Collapsed;
@@ -167,6 +243,9 @@ namespace TourGuide.UI.Views
             this.DestinationsButtonsGrid.Visibility = Visibility.Visible;
         }
 
+        /// <summary>
+        /// Switches to place panel.
+        /// </summary>
         private void SwitchToPlacePanel()
         {
             this.DestinationsPanel.Visibility = Visibility.Collapsed;
@@ -177,6 +256,9 @@ namespace TourGuide.UI.Views
             this.AddNewPlacePanel.Visibility = Visibility.Visible;
             this.PlacesButtonsGrid.Visibility = Visibility.Visible;
         }
+        /// <summary>
+        /// Switches to hotel panel.
+        /// </summary>
         private void SwitchToHotelPanel()
         {
             this.DestinationsPanel.Visibility = Visibility.Collapsed;
@@ -188,6 +270,11 @@ namespace TourGuide.UI.Views
             this.HotelsButtonsGrid.Visibility = Visibility.Visible;
         }
 
+        /// <summary>
+        /// Handles the Click event of the RemoveDestinationButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void RemoveDestinationButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.SelectedDestination != null)
@@ -206,6 +293,11 @@ namespace TourGuide.UI.Views
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the RemoveHotelButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void RemoveHotelButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.SelectedHotel != null)
@@ -215,14 +307,17 @@ namespace TourGuide.UI.Views
                 if (result)
                 {
                     this.UpdateHotels();
-                    this.UpdatePlaces();
                     this._mainWindow.UpdateHotels();
-                    this._mainWindow.UpdatePlaces();
                     this._mainWindow.switchToDestinationStack();
                 }
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the RemovePlaceButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void RemovePlaceButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.SelectedPlace != null && this.SelectedDestination != null)
@@ -238,6 +333,11 @@ namespace TourGuide.UI.Views
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the AddPlaceConfirmButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void AddPlaceConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.SelectedDestination != null
@@ -274,6 +374,11 @@ namespace TourGuide.UI.Views
                 }
             }
         }
+        /// <summary>
+        /// Handles the Click event of the AddHotelConfirmButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void AddHotelConfirmButton_Click(object sender, RoutedEventArgs e)
         {
             if (this.SelectedDestination != null
@@ -313,11 +418,21 @@ namespace TourGuide.UI.Views
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the BackToDestinationsButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void BackToDestinationsButton_Click(object sender, RoutedEventArgs e)
         {
             this.SwitchToDestinationPanel();
         }
 
+        /// <summary>
+        /// Numbers the validation text box.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="TextCompositionEventArgs"/> instance containing the event data.</param>
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");

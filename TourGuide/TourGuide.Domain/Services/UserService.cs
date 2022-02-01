@@ -4,7 +4,7 @@
 // Created          : 01-22-2022
 //
 // Last Modified By : szanu
-// Last Modified On : 01-28-2022
+// Last Modified On : 01-30-2022
 // ***********************************************************************
 // <copyright file="UserService.cs" company="TourGuide.Domain">
 //     Copyright (c) . All rights reserved.
@@ -25,6 +25,8 @@ namespace TourGuide.Domain.Services
         /// Adds the new user.
         /// </summary>
         /// <param name="username">The username.</param>
+        /// <param name="name">The name.</param>
+        /// <param name="surname">The surname.</param>
         /// <param name="password">The password.</param>
         /// <returns><c>true</c> if user added, <c>false</c> otherwise.</returns>
         public bool AddNewUser(String username, String name, String surname, String password)

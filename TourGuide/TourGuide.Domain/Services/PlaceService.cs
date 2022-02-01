@@ -1,10 +1,31 @@
-﻿using TourGuide.Domain.Data;
+﻿// ***********************************************************************
+// Assembly         : TourGuide.Domain
+// Author           : Konrad Ulman
+// Created          : 02-01-2022
+//
+// Last Modified By : Konrad Ulman
+// Last Modified On : 02-01-2022
+// ***********************************************************************
+// <copyright file="PlaceService.cs" company="TourGuide.Domain">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using TourGuide.Domain.Data;
 using TourGuide.Domain.Data.Models;
 
 namespace TourGuide.Domain.Services
 {
+    /// <summary>
+    /// Class PlaceService.
+    /// </summary>
     public class PlaceService
     {
+        /// <summary>
+        /// Gets the places for destination.
+        /// </summary>
+        /// <param name="destinationId">The destination identifier.</param>
+        /// <returns>List&lt;Place&gt;.</returns>
         public List<Place> GetPlacesForDestination(int destinationId)
         {
             using (var db = new TourGuideContext())
@@ -19,6 +40,14 @@ namespace TourGuide.Domain.Services
             }
         }
 
+        /// <summary>
+        /// Adds the new place.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <param name="description">The description.</param>
+        /// <param name="destinationId">The destination identifier.</param>
+        /// <param name="address">The address.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public bool AddNewPlace(String name, String description,
             int destinationId, Address address)
         {
@@ -43,6 +72,11 @@ namespace TourGuide.Domain.Services
                 return entries > 0;
             }
         }
+        /// <summary>
+        /// Removes the place.
+        /// </summary>
+        /// <param name="locationId">The location identifier.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public bool RemovePlace(int locationId)
         {
             using (var db = new TourGuideContext())

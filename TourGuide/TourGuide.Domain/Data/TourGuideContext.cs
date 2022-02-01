@@ -4,7 +4,7 @@
 // Created          : 01-22-2022
 //
 // Last Modified By : szanu
-// Last Modified On : 01-28-2022
+// Last Modified On : 02-01-2022
 // ***********************************************************************
 // <copyright file="TourGuideContext.cs" company="TourGuide.Domain">
 //     Copyright (c) . All rights reserved.
@@ -30,7 +30,7 @@ namespace TourGuide.Domain.Data
         /// <value>The database path.</value>
         public string DbPath { get; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TourGuideContext"/> class.
+        /// Initializes a new instance of the <see cref="TourGuideContext" /> class.
         /// </summary>
         /// <remarks>See <see href="https://aka.ms/efcore-docs-dbcontext">DbContext lifetime, configuration, and initialization</see>
         /// for more information.</remarks>

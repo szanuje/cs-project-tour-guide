@@ -1,3 +1,16 @@
+// ***********************************************************************
+// Assembly         : TourGuide.UI
+// Author           : Konrad Ulman
+// Created          : 01-20-2022
+//
+// Last Modified By : Konrad Ulman
+// Last Modified On : 01-17-2022
+// ***********************************************************************
+// <copyright file="AssemblyInfo.cs" company="TourGuide.UI">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
 using System.Windows;
 
 [assembly: ThemeInfo(

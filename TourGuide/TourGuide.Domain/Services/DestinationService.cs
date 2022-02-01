@@ -4,7 +4,7 @@
 // Created          : 01-22-2022
 //
 // Last Modified By : szanu
-// Last Modified On : 01-22-2022
+// Last Modified On : 02-01-2022
 // ***********************************************************************
 // <copyright file="DestinationService.cs" company="TourGuide.Domain">
 //     Copyright (c) . All rights reserved.
@@ -71,6 +71,11 @@ namespace TourGuide.Domain.Services
             }
         }
 
+        /// <summary>
+        /// Removes the destination.
+        /// </summary>
+        /// <param name="destinationId">The destination identifier.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public bool RemoveDestination(int destinationId)
         {
             using (var db = new TourGuideContext())

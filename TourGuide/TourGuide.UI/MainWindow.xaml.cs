@@ -4,7 +4,7 @@
 // Created          : 01-22-2022
 //
 // Last Modified By : szanu
-// Last Modified On : 01-28-2022
+// Last Modified On : 02-01-2022
 // ***********************************************************************
 // <copyright file="MainWindow.xaml.cs" company="TourGuide.UI">
 //     Copyright (c) . All rights reserved.
@@ -23,8 +23,10 @@ using TourGuide.Domain.Services;
 namespace TourGuide.UI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Class ObservableObject.
+    /// Implements the <see cref="System.ComponentModel.INotifyPropertyChanged" />
     /// </summary>
+    /// <seealso cref="System.ComponentModel.INotifyPropertyChanged" />
     class ObservableObject : INotifyPropertyChanged
     {
         /// <summary>
@@ -69,7 +71,7 @@ namespace TourGuide.UI
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="RelayCommand"/> class.
+        /// Initializes a new instance of the <see cref="RelayCommand" /> class.
         /// </summary>
         /// <param name="execute">The execute.</param>
         /// <param name="canExecute">The can execute.</param>
@@ -151,10 +153,13 @@ namespace TourGuide.UI
         /// The hotel service
         /// </summary>
         public HotelService hotelService;
+        /// <summary>
+        /// The place service
+        /// </summary>
         public PlaceService placeService;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// Initializes a new instance of the <see cref="MainWindow" /> class.
         /// </summary>
         /// <param name="user">The user.</param>
         public MainWindow(User user)
@@ -185,7 +190,7 @@ namespace TourGuide.UI
         /// Handles the SelectionChanged event of the DestinationList control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs" /> instance containing the event data.</param>
         private void DestinationList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
@@ -213,7 +218,7 @@ namespace TourGuide.UI
         /// Handles the SelectionChanged event of the PlacesList control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs" /> instance containing the event data.</param>
         private void PlacesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             this.selectedPlaces = new List<Place>();
@@ -236,7 +241,7 @@ namespace TourGuide.UI
         /// Goes the back to destination menu.
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void goBackToDestinationMenu(object sender, RoutedEventArgs e)
         {
             switchToDestinationStack();
@@ -296,7 +301,7 @@ namespace TourGuide.UI
         /// Handles the Click event of the PlacesButtonAdd control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void PlacesButtonAdd_Click(object sender, RoutedEventArgs e)
         {
             foreach (var place in this.selectedPlaces)
@@ -333,7 +338,7 @@ namespace TourGuide.UI
         /// Handles the Click event of the ExploreMenu control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void ExploreMenu_Click(object sender, RoutedEventArgs e)
         {
             this.ExploreMenu.IsChecked = true;
@@ -344,7 +349,7 @@ namespace TourGuide.UI
         /// Handles the Click event of the HotelsMenu control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void HotelsMenu_Click(object sender, RoutedEventArgs e)
         {
             this.HotelsMenu.IsChecked = true;
@@ -355,7 +360,7 @@ namespace TourGuide.UI
         /// Handles the Click event of the TripMenu control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void TripMenu_Click(object sender, RoutedEventArgs e)
         {
             this.TripMenu.IsChecked = true;
@@ -365,7 +370,7 @@ namespace TourGuide.UI
         /// Handles the SelectionChanged event of the UserTripList control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="System.Windows.Controls.SelectionChangedEventArgs" /> instance containing the event data.</param>
         private void UserTripList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             this.placesToRemove = new List<Place>();
@@ -388,7 +393,7 @@ namespace TourGuide.UI
         /// Handles the Click event of the TripRemove control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void TripRemove_Click(object sender, RoutedEventArgs e)
         {
             foreach (var place in this.placesToRemove)
@@ -398,11 +403,17 @@ namespace TourGuide.UI
             this.RefreshUserTrips(this.user.Username);
         }
 
+        /// <summary>
+        /// Updates the destinations.
+        /// </summary>
         public void UpdateDestinations()
         {
             this.destinations = destinationService.GetAllDestinations();
             this.DestinationList.ItemsSource = destinations;
         }
+        /// <summary>
+        /// Updates the places.
+        /// </summary>
         public void UpdatePlaces()
         {
             if (this.selectedDestination != null)
@@ -413,8 +424,13 @@ namespace TourGuide.UI
             this.UpdateDestinations();
             this.userTrips = locationService.GetAllUserPlaces(user.Username);
             this.UserTripList.ItemsSource = userTrips;
+            this.hotels = hotelService.GetAllHotelsForTrip(userTrips);
+            this.HotelList.ItemsSource = hotels;
 
         }
+        /// <summary>
+        /// Updates the hotels.
+        /// </summary>
         public void UpdateHotels()
         {
             this.UpdateDestinations();

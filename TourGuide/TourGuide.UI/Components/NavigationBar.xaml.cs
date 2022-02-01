@@ -4,7 +4,7 @@
 // Created          : 01-22-2022
 //
 // Last Modified By : szanu
-// Last Modified On : 01-28-2022
+// Last Modified On : 01-30-2022
 // ***********************************************************************
 // <copyright file="NavigationBar.xaml.cs" company="TourGuide.UI">
 //     Copyright (c) . All rights reserved.
@@ -27,16 +27,22 @@ namespace TourGuide.UI.Components
         /// The user
         /// </summary>
         public User user;
+        /// <summary>
+        /// The main window
+        /// </summary>
         public MainWindow MainWindow;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="NavigationBar"/> class.
+        /// Initializes a new instance of the <see cref="NavigationBar" /> class.
         /// </summary>
         public NavigationBar()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Initializes the content.
+        /// </summary>
         public void InitializeContent()
         {
             this.AccountNameLabel.Content = user.Name + " " + user.Surname + (user.Admin ? " (Admin)" : "");
@@ -46,6 +52,11 @@ namespace TourGuide.UI.Components
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the ManagementButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void ManagementButton_Click(object sender, RoutedEventArgs e)
         {
             var managementWindow = new ManagementWindow(this.MainWindow);

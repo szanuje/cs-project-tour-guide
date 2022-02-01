@@ -1,4 +1,17 @@
-﻿using System;
+﻿// ***********************************************************************
+// Assembly         : TourGuide.UI
+// Author           : Konrad Ulman
+// Created          : 01-20-2022
+//
+// Last Modified By : Konrad Ulman
+// Last Modified On : 01-21-2022
+// ***********************************************************************
+// <copyright file="App.xaml.cs" company="TourGuide.UI">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
