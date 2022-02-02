@@ -30,7 +30,12 @@ W ramach testu, udostępnione jest również konto admina:
 - Username: admin
 - Password: admin
 
-Pozwala ono na przeglądniecie destynacji, oraz posiada uprawnienia do dodawania nowych destynacji.
+Pozwala ono na przeglądniecie destynacji, posiada uprawnienia do dodawania oraz usuwania nowych destynacji, miejsc i hoteli. Przykładowy scenariusz:
+- Logujemy się na konto admin
+- Klikamy w przycisk "Manage" w prawym górnym rogu, obok wyświetlonego imienia i nazwiska usera
+- Dodajemy destynacje w panelu po prawej
+- Wybieramy destynacje i przechodzimy do miejsc przyciskiem "Places"
+- Wybieramy miejsce i usuwamy je z destynacji przyciskiem "Remove place"
 
 ## Documentation
 W ramach dokumentacji opisano wszystkie używane metody oraz parametry w postaci znaczników XML w kodzie źródłowym programu.
