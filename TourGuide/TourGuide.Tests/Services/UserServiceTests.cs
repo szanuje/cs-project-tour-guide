@@ -87,7 +87,7 @@ namespace TourGuide.Tests.Services
                     db.Users.Add(new Domain.Data.Models.User()
                     {
                         Username = _USERNAME_TEST,
-                        Password = "123",
+                        Password = _PASSWORD_TEST,
                         Name = "Name",
                         Surname = "Surname"
                     });
