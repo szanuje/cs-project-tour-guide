@@ -33,8 +33,8 @@ W ramach testu, udostępnione jest również konto admina:
 Pozwala ono na przeglądniecie destynacji, posiada uprawnienia do dodawania oraz usuwania nowych destynacji, miejsc i hoteli. Przykładowy scenariusz:
 - Logujemy się na konto admin
 - Klikamy w przycisk "Manage" w prawym górnym rogu, obok wyświetlonego imienia i nazwiska usera
-- Dodajemy destynacje w panelu po prawej
-- Wybieramy destynacje i przechodzimy do miejsc przyciskiem "Places"
+- Dodajemy destynację w panelu po prawej
+- Wybieramy wcześniej istniejącą destynację i przechodzimy do miejsc przyciskiem "Places"
 - Wybieramy miejsce i usuwamy je z destynacji przyciskiem "Remove place"
 
 ## Documentation
