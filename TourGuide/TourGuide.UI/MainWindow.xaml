@@ -24,7 +24,7 @@
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="JelonCorp" Foreground="White" 
+                <TextBlock Text="Menu" Foreground="White" 
                        HorizontalAlignment="Center" VerticalAlignment="Center" 
                        FontSize="22" TextAlignment="Center"/>
             </StackPanel>
