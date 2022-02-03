@@ -8,76 +8,77 @@ using System.Collections.Generic;
 
 namespace TourGuide.Tests.Services
 {
-
     [TestFixture]
-    public class HotelServiceTests
+    public class PlaceServiceTests
     {
         readonly static string _EXISTING_DESTINATION_NAME = "DestinationName";
-        readonly static string _EXISTING_DESTINATION_NAME_WITH_HOTEL = "DestinationNameWithHotel";
+        readonly static string _EXISTING_DESTINATION_WITH_PLACE_NAME = "DestinationWithPlaceName";
         readonly static string _EXISTING_DESTINATION_DESCRIPTION = "DestinationDescription";
+
 
         [SetUp]
         public void DerivedSetUp() 
         {
             addTestDestination();
-            addTestDestinationWithHotel();
+            addTestDestinationWithPlace();
         }
 
         [TearDown]
-        public void HotelServiceTearDown()
+        public void PlaceServiceTearDown()
         {
             deleteTestDestination(_EXISTING_DESTINATION_NAME);
-            deleteTestDestination(_EXISTING_DESTINATION_NAME_WITH_HOTEL);
+            deleteTestDestination(_EXISTING_DESTINATION_WITH_PLACE_NAME);
         }
 
+
         [Test]
-        public void AddNewHotelTest()
+        public void AddNewPlaceTest()
         {
             var destination = getDestination(_EXISTING_DESTINATION_NAME);
-            var service = new HotelService();
+            var service = new PlaceService();
 
             // Act
-            var result = service.AddNewHotel(
-                 "DummyName","1", 1234, destination.DestinationId, getDummyAddress());
+            var result = service.AddNewPlace(
+                 "DummyName", "DummyDescription", destination.DestinationId, getDummyAddress());
 
             // Assert
             Assert.IsTrue(result);
         }
 
         [Test]
-        public void getHotelsForDestination_WhenEmptyList()
+        public void getPlacesForDestination_WhenEmptyList()
         {
             var destination = getDestination(_EXISTING_DESTINATION_NAME);
-            var service = new HotelService();
+            var service = new PlaceService();
 
             // Act
-            var result = service.GetHotelsForDestination(destination.DestinationId);
+            var result = service.GetPlacesForDestination(destination.DestinationId);
 
             // Assert
             Assert.IsEmpty(result);
         }
 
         [Test]
-        public void getHotelsForDestination_WhenNotEmptyList()
+        public void getPlacesForDestination_WhenNotEmptyList()
         {
-            var destination = getDestination(_EXISTING_DESTINATION_NAME_WITH_HOTEL);
-            var service = new HotelService();
+            var destination = getDestination(_EXISTING_DESTINATION_WITH_PLACE_NAME);
+            var service = new PlaceService();
 
             // Act
-            var result = service.GetHotelsForDestination(destination.DestinationId);
+            var result = service.GetPlacesForDestination(destination.DestinationId);
 
             // Assert
             Assert.IsNotEmpty(result);
         }
 
         [Test]
-        public void removeHotelTest()
+        public void removePlaceTest()
         {
-            var hotelId = getHotelIdForDestination(_EXISTING_DESTINATION_NAME_WITH_HOTEL);
-            var service = new HotelService();
+            var placeId = getPlaceIdForDestination(_EXISTING_DESTINATION_WITH_PLACE_NAME);
+            var service = new PlaceService();
 
             // Act
-            var result = service.RemoveHotel(hotelId);
+            var result = service.RemovePlace(placeId);
 
             // Assert
             Assert.IsTrue(result);
@@ -100,23 +101,22 @@ namespace TourGuide.Tests.Services
             }
         }
 
-        private void addTestDestinationWithHotel()
+        private void addTestDestinationWithPlace()
         {
             using (var db = new TourGuideContext())
             {
-                var destination = db.Destinations.Where(u => u.Name.Equals(_EXISTING_DESTINATION_NAME_WITH_HOTEL)).FirstOrDefault();
+                var destination = db.Destinations.Where(u => u.Name.Equals(_EXISTING_DESTINATION_WITH_PLACE_NAME)).FirstOrDefault();
 
                 if (destination == null)
                 {
                     db.Destinations.Add(new Destination()
                     {
-                        Name = _EXISTING_DESTINATION_NAME_WITH_HOTEL,
+                        Name = _EXISTING_DESTINATION_WITH_PLACE_NAME,
                         Description = _EXISTING_DESTINATION_DESCRIPTION,
-                        Hotels = new List<Hotel>() { new Hotel()
+                        Places = new List<Place>() { new Place()
                         {
                                 Name = "DummyHotel",
-                                Rating = "1",
-                                Price = 1234,
+                                Description = "DummyDescription",
                                 Address = new Address()
                                     {
                                         Country = "DummyCountry",
@@ -134,6 +134,20 @@ namespace TourGuide.Tests.Services
             }
         }
 
+        private int getPlaceIdForDestination(string name)
+        {
+            using (var db = new TourGuideContext())
+            {
+                var destination = db.Destinations.Where(u => u.Name.Equals(name)).FirstOrDefault();
+
+                if (destination != null)
+                {
+                    return destination.Places.FirstOrDefault().LocationId;
+                }
+            }
+            return -1;
+        }
+
         private Destination getDestination(string name)
         {
             using (var db = new TourGuideContext())
@@ -146,17 +160,6 @@ namespace TourGuide.Tests.Services
                 }
             }
             return null;
-        }
-
-        private Address getDummyAddress() {
-            return new Address()
-            {
-                Country = "DummyCountry",
-                City = "DummyCity",
-                Street = "DummyStreet",
-                PostalCode = "DummyPostalCode",
-                HouseNumber = "DummyHouseNumber"
-            };
         }
 
         private void deleteTestDestination(string name)
@@ -173,18 +176,16 @@ namespace TourGuide.Tests.Services
             }
         }
 
-        private int getHotelIdForDestination(string name)
+        private Address getDummyAddress()
         {
-            using (var db = new TourGuideContext())
+            return new Address()
             {
-                var destination = db.Destinations.Where(u => u.Name.Equals(name)).FirstOrDefault();
-
-                if (destination != null)
-                { 
-                    return destination.Hotels.FirstOrDefault().LocationId;
-                }
-            }
-            return -1;
+                Country = "DummyCountry",
+                City = "DummyCity",
+                Street = "DummyStreet",
+                PostalCode = "DummyPostalCode",
+                HouseNumber = "DummyHouseNumber"
+            };
         }
 
     }
