@@ -29,6 +29,8 @@ namespace TourGuide.Tests.Services
         public void UserServiceTearDown()
         {
             this.DeleteTestUser();
+            this.DeleteDestination(_EXISTING_DESTINATION_WITH_PLACE_NAME);
+            this.DeletePlace(_PLACE_NAME_TEST);
         }
 
         [Test]
@@ -173,6 +175,34 @@ namespace TourGuide.Tests.Services
                 if (user != null)
                 {
                     db.Users.Remove(user);
+                    db.SaveChanges();
+                }
+            }
+        }
+
+        private void DeleteDestination(string name)
+        {
+            using (var db = new TourGuideContext())
+            {
+                var destination = db.Destinations.Where(u => u.Name.Equals(name)).FirstOrDefault();
+
+                if (destination != null)
+                {
+                    db.Destinations.Remove(destination);
+                    db.SaveChanges();
+                }
+            }
+        }
+
+        private void DeletePlace(string name)
+        {
+            using (var db = new TourGuideContext())
+            {
+                var place = db.Places.Where(u => u.Name.Equals(name)).FirstOrDefault();
+
+                if (place != null)
+                {
+                    db.Places.Remove(place);
                     db.SaveChanges();
                 }
             }

@@ -3,7 +3,6 @@ using System.Linq;
 using TourGuide.Domain.Data;
 using TourGuide.Domain.Services;
 using TourGuide.Domain.Data.Models;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace TourGuide.Tests.Services
@@ -13,6 +12,7 @@ namespace TourGuide.Tests.Services
     {
         readonly static string _EXISTING_DESTINATION_NAME = "DestinationName";
         readonly static string _EXISTING_DESTINATION_WITH_PLACE_NAME = "DestinationWithPlaceName";
+        readonly static string _EXISTING_PLACE_NAME = "PlaceName";
         readonly static string _EXISTING_DESTINATION_DESCRIPTION = "DestinationDescription";
 
 
@@ -28,6 +28,7 @@ namespace TourGuide.Tests.Services
         {
             deleteTestDestination(_EXISTING_DESTINATION_NAME);
             deleteTestDestination(_EXISTING_DESTINATION_WITH_PLACE_NAME);
+            DeletePlace(_EXISTING_PLACE_NAME);
         }
 
 
@@ -115,7 +116,7 @@ namespace TourGuide.Tests.Services
                         Description = _EXISTING_DESTINATION_DESCRIPTION,
                         Places = new List<Place>() { new Place()
                         {
-                                Name = "DummyHotel",
+                                Name = _EXISTING_PLACE_NAME,
                                 Description = "DummyDescription",
                                 Address = new Address()
                                     {
@@ -186,6 +187,20 @@ namespace TourGuide.Tests.Services
                 PostalCode = "DummyPostalCode",
                 HouseNumber = "DummyHouseNumber"
             };
+        }
+
+        private void DeletePlace(string name)
+        {
+            using (var db = new TourGuideContext())
+            {
+                var place = db.Places.Where(u => u.Name.Equals(name)).FirstOrDefault();
+
+                if (place != null)
+                {
+                    db.Places.Remove(place);
+                    db.SaveChanges();
+                }
+            }
         }
 
     }

@@ -14,6 +14,7 @@ namespace TourGuide.Tests.Services
     {
         readonly static string _EXISTING_DESTINATION_NAME = "DestinationName";
         readonly static string _EXISTING_DESTINATION_NAME_WITH_HOTEL = "DestinationNameWithHotel";
+        readonly static string _EXISTING_HOTEL_NAME = "HotelName";
         readonly static string _EXISTING_DESTINATION_DESCRIPTION = "DestinationDescription";
 
         [SetUp]
@@ -28,6 +29,7 @@ namespace TourGuide.Tests.Services
         {
             deleteTestDestination(_EXISTING_DESTINATION_NAME);
             deleteTestDestination(_EXISTING_DESTINATION_NAME_WITH_HOTEL);
+            DeleteHotel(_EXISTING_HOTEL_NAME);
         }
 
         [Test]
@@ -114,7 +116,7 @@ namespace TourGuide.Tests.Services
                         Description = _EXISTING_DESTINATION_DESCRIPTION,
                         Hotels = new List<Hotel>() { new Hotel()
                         {
-                                Name = "DummyHotel",
+                                Name = _EXISTING_HOTEL_NAME,
                                 Rating = "1",
                                 Price = 1234,
                                 Address = new Address()
@@ -187,5 +189,18 @@ namespace TourGuide.Tests.Services
             return -1;
         }
 
+        private void DeleteHotel(string name)
+        {
+            using (var db = new TourGuideContext())
+            {
+                var hotel = db.Hotels.Where(u => u.Name.Equals(name)).FirstOrDefault();
+
+                if (hotel != null)
+                {
+                    db.Hotels.Remove(hotel);
+                    db.SaveChanges();
+                }
+            }
+        }
     }
 }
