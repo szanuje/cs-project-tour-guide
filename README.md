@@ -21,7 +21,7 @@ Aplikację stworzono przy pomocy Visual Studio 2022 oraz:
 - Visual Studio:
     - uruchomić solucję TourGuide.UI
 - Release:
-    - uruchomić plik wykonawczy `\TourGuide\TourGuide.UI\bin\Release\net6.0-windows\TourGuide.UI.exe`
+    - uruchomić plik wykonawczy `TourGuide.UI.exe`
 
 ## How to Use
 Użytkowanie aplikacji wymaga poprawnego zalogowania. Nowe konto można stworzyć klikając w niebieski tekst "Create a new profile" na ekranie logowania.
